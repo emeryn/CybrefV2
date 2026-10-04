@@ -1,0 +1,123 @@
+# Scheduled pipeline. Runs from `download` (default branch: code), publishes to `main` (data only).
+# `main` is rebuilt as a single orphan commit at every run: no history, no code.
+name: Refsets
+
+on:
+  schedule:
+    - cron: '17 1 * * *'   # daily sources
+    - cron: '17 3 * * 0'   # weekly sources, then the mobile CVE catalog (needs fresh NVD feeds)
+  workflow_dispatch:
+    inputs:
+      groups:
+        description: 'Groups to run, in order (daily weekly mobile)'
+        default: 'daily'
+      only:
+        description: 'Optional: comma-separated source ids (overrides groups)'
+        default: ''
+      force:
+        description: 'Ignore HTTP caches and shrink guards (mobile: rebuild from scratch)'
+        type: boolean
+        default: false
+
+# Every run rewrites main: never two at once, and never cancel one halfway.
+concurrency:
+  group: refsets-publish
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+env:
+  DATA_BRANCH: main
+
+jobs:
+  refsets:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - name: Checkout tool
+        uses: actions/checkout@v4
+        with:
+          path: tool
+          persist-credentials: false
+
+      - name: Checkout data
+        id: data
+        continue-on-error: true  # first run: the data branch may not exist yet
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.DATA_BRANCH }}
+          path: data
+          fetch-depth: 1
+
+      - name: Init empty data dir (first run)
+        if: ${{ steps.data.outcome == 'failure' }}
+        run: |
+          rm -rf data && mkdir data && cd data
+          git init -q -b "$DATA_BRANCH"
+          git remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+          cache-dependency-glob: tool/pyproject.toml
+
+      - name: Install tool
+        run: uv sync --project tool --no-dev
+
+      - name: Fetch
+        id: fetch
+        env:
+          NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
+          ABUSECH_AUTH_KEY: ${{ secrets.ABUSECH_AUTH_KEY }}
+          EVENT: ${{ github.event_name }}
+          CRON: ${{ github.event.schedule }}
+          IN_GROUPS: ${{ inputs.groups }}
+          IN_ONLY: ${{ inputs.only }}
+          IN_FORCE: ${{ inputs.force }}
+        run: |
+          cybref() { tool/.venv/bin/cybref --catalog tool/sources.yaml --data-branch "$DATA_BRANCH" "$@"; }
+          extra=()
+          [ "$IN_FORCE" = "true" ] && extra+=(--force)
+
+          if [ "$EVENT" = "schedule" ]; then
+            [ "$CRON" = "17 3 * * 0" ] && groups="weekly mobile" || groups="daily"
+          else
+            groups="${IN_GROUPS:-daily}"
+          fi
+
+          status=0
+          if [ -n "$IN_ONLY" ]; then
+            cybref fetch --out data --only "$IN_ONLY" "${extra[@]}" || status=1
+          else
+            # Sequential on purpose: mobile reads the NVD feeds that weekly just refreshed.
+            for g in $groups; do
+              echo "::group::$g"
+              cybref fetch --out data --group "$g" "${extra[@]}" || status=1
+              echo "::endgroup::"
+            done
+          fi
+          cybref prune --out data
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+
+      - name: Publish (single orphan commit, no history)
+        # Only after the fetch step completed: never publish a half-prepared tree.
+        if: ${{ !cancelled() && steps.fetch.outputs.status != '' }}
+        env:
+          TOKEN: ${{ github.token }}
+        run: |
+          cd data
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git checkout --quiet --orphan publish
+          git add -A
+          git commit --quiet -m "refsets $(date -u +'%Y-%m-%d %H:%M') UTC"
+          # Pushing on top of the fetched commit: only new/changed blobs are uploaded.
+          git push --force "https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git" "publish:${DATA_BRANCH}"
+
+      - name: Report failures
+        if: ${{ steps.fetch.outputs.status == '1' }}
+        run: |
+          echo "::error::Some sources failed - previous versions were kept. See the job summary and catalog.json."
+          exit 1

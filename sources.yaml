@@ -1,0 +1,1123 @@
+# Cybref dataset catalog - single source of truth for downloads, workflows and docs.
+#
+# NAMING CONVENTION (checked when the catalog loads)
+#   <category>/<provider>_<dataset>[_<variant>].<ext>[.gz]
+#   - category: top-level folder, one of threat_intel, lol, vulnerabilities, frameworks, network,
+#     domains, registries, detection
+#   - provider first (abusech_, mitre_, ieee_...), then the dataset, then the variant (_ipv4, _recent...)
+#   - lowercase snake_case; the file stem IS the source id
+#   - the extension tells the real format: json, jsonl (one JSON per line), csv, tsv,
+#     txt (one entry per line, # comments), xml, yaml, pem; .gz when compressed
+#   - multi-file sources (NVD, mobile) use a folder and keep upstream file names
+#
+# FIELDS
+#   name, group (daily|weekly|mobile), homepage, description   required, used in docs
+#   url          one URL or a list of fallbacks; supports {today:%Y-%m} / {last_month:%Y-%m}
+#   output       file path (or list / glob patterns for processors)
+#   extract      gunzip | unzip   (member: name or glob inside the zip)
+#   encoding     source charset, re-encoded to UTF-8 (e.g. utf-16)
+#   compress     true -> stored gzipped (output must end with .gz). Required above ~90 MB.
+#   min_bytes / min_lines / shrink_guard   validation (shrink_guard: reject if new size < ratio * old, 0 = off)
+#   retries      download attempts (default 5)
+#   headers      extra HTTP headers, ${ENV_VAR} substituted (header dropped if unset)
+#   user_agent   browser -> send browser-like headers
+#   processor    custom Python step (src/cybref/processors), with free-form `options`
+
+sources:
+
+  # ============================================================== threat_intel
+
+  abusech_threatfox_recent:
+    name: ThreatFox
+    group: daily
+    homepage: https://threatfox.abuse.ch/
+    description: IOCs of the last 48h (IP:port, domains, URLs, hashes) tagged by malware family.
+    url: https://threatfox.abuse.ch/export/json/recent/
+    output: threat_intel/abusech_threatfox_recent.json
+    headers: {Auth-Key: "${ABUSECH_AUTH_KEY}"}
+    shrink_guard: 0.1
+
+  abusech_feodotracker_c2_ips:
+    name: Feodo Tracker
+    group: daily
+    homepage: https://feodotracker.abuse.ch/
+    description: Botnet C2 servers (Dridex, Emotet, QakBot, Pikabot...).
+    url: https://feodotracker.abuse.ch/downloads/ipblocklist.json
+    output: threat_intel/abusech_feodotracker_c2_ips.json
+    headers: {Auth-Key: "${ABUSECH_AUTH_KEY}"}
+    min_bytes: 2
+    shrink_guard: 0
+
+  abusech_urlhaus_online:
+    name: URLhaus
+    group: daily
+    homepage: https://urlhaus.abuse.ch/
+    description: Malware distribution URLs currently online.
+    url: https://urlhaus.abuse.ch/downloads/csv_online/
+    output: threat_intel/abusech_urlhaus_online.csv
+    headers: {Auth-Key: "${ABUSECH_AUTH_KEY}"}
+    shrink_guard: 0.2
+
+  abusech_malwarebazaar_recent:
+    name: MalwareBazaar
+    group: daily
+    homepage: https://bazaar.abuse.ch/
+    description: Malware samples of the last 48h (hashes, signature, file type, tags).
+    url: https://bazaar.abuse.ch/export/csv/recent/
+    output: threat_intel/abusech_malwarebazaar_recent.csv
+    headers: {Auth-Key: "${ABUSECH_AUTH_KEY}"}
+    shrink_guard: 0.1
+
+  abusech_sslbl_certificates:
+    name: SSL Blacklist
+    group: daily
+    homepage: https://sslbl.abuse.ch/
+    description: SHA1 fingerprints of TLS certificates used by botnet C2 servers.
+    url: https://sslbl.abuse.ch/blacklist/sslblacklist.csv
+    output: threat_intel/abusech_sslbl_certificates.csv
+
+  openphish_urls:
+    name: OpenPhish
+    group: daily
+    homepage: https://openphish.com/
+    description: Community feed of currently active phishing URLs.
+    url: https://openphish.com/feed.txt
+    output: threat_intel/openphish_urls.txt
+    shrink_guard: 0.1
+
+  malwarefilter_phishing_domains:
+    name: Phishing Filter
+    group: daily
+    homepage: https://gitlab.com/malware-filter/phishing-filter
+    description: Phishing domains aggregated from OpenPhish, PhishTank and others, with false positives (top sites) removed.
+    url: https://malware-filter.gitlab.io/malware-filter/phishing-filter-domains.txt
+    output: threat_intel/malwarefilter_phishing_domains.txt
+    shrink_guard: 0.2
+
+  proofpoint_et_compromised_ips:
+    name: ET Compromised IPs
+    group: daily
+    homepage: https://rules.emergingthreats.net/
+    description: Proofpoint Emerging Threats list of known compromised hosts.
+    url: https://rules.emergingthreats.net/blockrules/compromised-ips.txt
+    output: threat_intel/proofpoint_et_compromised_ips.txt
+    shrink_guard: 0.2
+
+  spamhaus_drop_ipv4:
+    name: Spamhaus DROP (IPv4)
+    group: daily
+    homepage: https://www.spamhaus.org/blocklists/do-not-route-or-peer/
+    description: Do Not Route Or Peer - hijacked or criminal netblocks.
+    url: https://www.spamhaus.org/drop/drop_v4.json
+    output: threat_intel/spamhaus_drop_ipv4.jsonl
+
+  spamhaus_drop_ipv6:
+    name: Spamhaus DROP (IPv6)
+    group: daily
+    homepage: https://www.spamhaus.org/blocklists/do-not-route-or-peer/
+    description: IPv6 counterpart of the DROP list.
+    url: https://www.spamhaus.org/drop/drop_v6.json
+    output: threat_intel/spamhaus_drop_ipv6.jsonl
+
+  spamhaus_asndrop:
+    name: Spamhaus ASN-DROP
+    group: daily
+    homepage: https://www.spamhaus.org/blocklists/do-not-route-or-peer/
+    description: Autonomous systems operated by cybercriminals.
+    url: https://www.spamhaus.org/drop/asndrop.json
+    output: threat_intel/spamhaus_asndrop.jsonl
+
+  firehol_level1:
+    name: FireHOL Level 1
+    group: daily
+    homepage: https://iplists.firehol.org/
+    description: Aggregated "safe to block" networks (fullbogons, DROP, Feodo, DShield...).
+    url: https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level1.netset
+    output: threat_intel/firehol_level1.txt
+
+  stamparm_ipsum:
+    name: IPsum
+    group: daily
+    homepage: https://github.com/stamparm/ipsum
+    description: Malicious IPs aggregated from 30+ blocklists, with the number of lists each IP appears on (filter on >= 3 for a reliable set).
+    url: https://raw.githubusercontent.com/stamparm/ipsum/master/ipsum.txt
+    output: threat_intel/stamparm_ipsum.txt
+    shrink_guard: 0.2
+
+  dshield_block:
+    name: DShield block list
+    group: daily
+    homepage: https://isc.sans.edu/block.html
+    description: SANS ISC top 20 attacking /24 subnets of the last 3 days.
+    url: https://feeds.dshield.org/block.txt
+    output: threat_intel/dshield_block.txt
+    shrink_guard: 0
+
+  cinsscore_badguys:
+    name: CINS Army
+    group: daily
+    homepage: https://cinsscore.com/
+    description: IPs with poor reputation seen by the Sentinel IPS network.
+    url: https://cinsscore.com/list/ci-badguys.txt
+    output: threat_intel/cinsscore_badguys.txt
+    shrink_guard: 0.2
+
+  blocklistde_all:
+    name: blocklist.de
+    group: daily
+    homepage: https://www.blocklist.de/
+    description: IPs reported for attacks (SSH, mail, web, FTP brute force) in the last 48h.
+    url: https://lists.blocklist.de/lists/all.txt
+    output: threat_intel/blocklistde_all.txt
+    shrink_guard: 0.2
+
+  ransomwarelive_groups:
+    name: Ransomware.live groups
+    group: daily
+    homepage: https://www.ransomware.live/
+    description: Ransomware groups with their leak sites, aliases and activity.
+    url: https://api.ransomware.live/v2/groups
+    output: threat_intel/ransomwarelive_groups.json
+
+  ransomwarelive_victims_recent:
+    name: Ransomware.live victims
+    group: daily
+    homepage: https://www.ransomware.live/
+    description: Latest victims claimed on ransomware leak sites (group, sector, country, dates).
+    url: https://api.ransomware.live/v2/recentvictims
+    output: threat_intel/ransomwarelive_victims_recent.json
+    shrink_guard: 0.1
+
+  # ============================================================== lol
+
+  lolbas:
+    name: LOLBAS
+    group: weekly
+    homepage: https://lolbas-project.github.io/
+    description: Windows Living Off The Land binaries, scripts and libraries.
+    url: https://lolbas-project.github.io/api/lolbas.json
+    output: lol/lolbas.json
+
+  gtfobins:
+    name: GTFOBins
+    group: weekly
+    homepage: https://gtfobins.github.io/
+    description: Unix binaries usable to bypass local security restrictions.
+    url: https://gtfobins.org/api.json
+    output: lol/gtfobins.json
+
+  loobins:
+    name: LOOBins
+    group: weekly
+    homepage: https://www.loobins.io/
+    description: macOS Living Off the Orchard binaries.
+    url: https://www.loobins.io/loobins.json
+    output: lol/loobins.json
+
+  loldrivers:
+    name: LOLDrivers
+    group: weekly
+    homepage: https://www.loldrivers.io/
+    description: Vulnerable and malicious Windows drivers (hashes, metadata).
+    url: https://www.loldrivers.io/api/drivers.json
+    output: lol/loldrivers.json
+
+  lolrmm:
+    name: LOLRMM
+    group: weekly
+    homepage: https://lolrmm.io/
+    description: Remote Monitoring & Management tools abused by attackers (artifacts, domains).
+    url: https://lolrmm.io/api/rmm_tools.json
+    output: lol/lolrmm.json
+
+  lolesxi:
+    name: LOLESXi
+    group: weekly
+    homepage: https://lolesxi-project.github.io/LOLESXi/
+    description: VMware ESXi native binaries used by adversaries.
+    url: https://lolesxi-project.github.io/LOLESXi/api/lolesxi.json
+    output: lol/lolesxi.json
+
+  lofl:
+    name: LOFL
+    group: weekly
+    homepage: https://lofl-project.github.io/
+    description: Living Off the Foreign Land cmdlets and binaries.
+    url: https://lofl-project.github.io/api/loflcab.json
+    output: lol/lofl.json
+
+  lolapps:
+    name: LOLApps
+    group: weekly
+    homepage: https://lolapps-project.github.io/
+    description: Legitimate applications (Greenshot, Notepad++, Teams...) abusable for persistence or execution.
+    url: https://lolapps-project.github.io/api/lolapps.json
+    output: lol/lolapps.json
+
+  lolc2:
+    name: LOLC2
+    group: weekly
+    homepage: https://lolc2.github.io/
+    description: C2 frameworks hiding in legitimate services.
+    url: https://raw.githubusercontent.com/lolc2/lolc2.github.io/main/c2_data.json
+    output: lol/lolc2.json
+
+  bootloaders:
+    name: Bootloaders.io
+    group: weekly
+    homepage: https://www.bootloaders.io/
+    description: Known vulnerable or malicious bootloaders.
+    url: https://www.bootloaders.io/api/bootloaders.json
+    output: lol/bootloaders.json
+
+  hijacklibs:
+    name: HijackLibs
+    group: weekly
+    homepage: https://hijacklibs.net/
+    description: DLL hijacking candidates (DLL, vulnerable executables, expected paths).
+    url: https://hijacklibs.net/api/hijacklibs.json
+    output: lol/hijacklibs.json
+
+  lottunnels_binaries:
+    name: LoTtunnels
+    group: weekly
+    homepage: https://lottunnels.github.io/
+    description: Tunneling binaries usable for proxying or exfiltration.
+    processor: lottunnels
+    output: lol/lottunnels_binaries.json
+
+  lottunnels_domains:
+    name: LoTtunnels domains
+    group: weekly
+    homepage: https://lottunnels.github.io/
+    description: Domains used by tunneling services.
+    url: https://raw.githubusercontent.com/LoTtunnels/LoTtunnels.github.io/main/_lottunnels/CSVs/domains.csv
+    output: lol/lottunnels_domains.csv
+
+  lots:
+    name: LOTS Project
+    group: weekly
+    homepage: https://lots-project.com/
+    description: Legitimate trusted sites abused for C2, phishing or exfiltration.
+    processor: html_table
+    url: https://lots-project.com/
+    output: lol/lots.csv
+    user_agent: browser
+
+  filesec_extensions:
+    name: FileSec
+    group: weekly
+    homepage: https://filesec.io/
+    description: File extensions abused by attackers.
+    processor: html_table
+    url: https://filesec.io/
+    output: lol/filesec_extensions.csv
+    user_agent: browser
+
+  malapi_winapi:
+    name: MalAPI.io
+    group: weekly
+    homepage: https://malapi.io/
+    description: Windows APIs abused by malware, by technique.
+    processor: malapi
+    url: https://malapi.io/
+    output: lol/malapi_winapi.csv
+    user_agent: browser
+
+  lothardware:
+    name: LOTHardware
+    group: weekly
+    homepage: https://github.com/enesilhaydin/lothardware
+    description: Hardware implants and malicious devices (USB, network, RF...).
+    url: https://raw.githubusercontent.com/enesilhaydin/lothardware/main/hardwares.json
+    output: lol/lothardware.json
+
+  # ============================================================== vulnerabilities
+
+  cisa_kev:
+    name: CISA KEV
+    group: daily
+    homepage: https://www.cisa.gov/known-exploited-vulnerabilities-catalog
+    description: Known Exploited Vulnerabilities catalog (US).
+    url: https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json
+    output: vulnerabilities/cisa_kev.json
+
+  enisa_euvd_exploited:
+    name: EUVD exploited
+    group: daily
+    homepage: https://euvd.enisa.europa.eu/
+    description: European Vulnerability Database entries flagged as exploited (ENISA) - the EU counterpart of KEV.
+    processor: euvd_exploited
+    output: vulnerabilities/enisa_euvd_exploited.json
+
+  first_epss:
+    name: EPSS
+    group: daily
+    homepage: https://www.first.org/epss/
+    description: Exploit Prediction Scoring System - daily probability of exploitation for every CVE.
+    url:
+      - https://epss.empiricalsecurity.com/epss_scores-current.csv.gz
+      - https://epss.cyentia.com/epss_scores-current.csv.gz
+    extract: gunzip
+    output: vulnerabilities/first_epss.csv
+    min_lines: 100000
+
+  certfr_alertes:
+    name: CERT-FR alertes
+    group: daily
+    homepage: https://www.cert.ssi.gouv.fr/alerte/
+    description: ANSSI CERT-FR security alerts (RSS, latest entries).
+    url: https://www.cert.ssi.gouv.fr/alerte/feed/
+    output: vulnerabilities/certfr_alertes.xml
+    shrink_guard: 0.2
+
+  certfr_avis:
+    name: CERT-FR avis
+    group: daily
+    homepage: https://www.cert.ssi.gouv.fr/avis/
+    description: ANSSI CERT-FR security advisories (RSS, latest entries).
+    url: https://www.cert.ssi.gouv.fr/avis/feed/
+    output: vulnerabilities/certfr_avis.xml
+    shrink_guard: 0.2
+
+  exploitdb_exploits:
+    name: Exploit-DB
+    group: weekly
+    homepage: https://www.exploit-db.com/
+    description: Exploit index with CVE mapping.
+    url: https://gitlab.com/exploit-database/exploitdb/-/raw/main/files_exploits.csv
+    output: vulnerabilities/exploitdb_exploits.csv
+    min_lines: 40000
+
+  metasploit_modules:
+    name: Metasploit modules
+    group: weekly
+    homepage: https://github.com/rapid7/metasploit-framework
+    description: Metadata of every Metasploit module (CVE / references, targets, rank) - "is there a weaponized exploit?".
+    url: https://raw.githubusercontent.com/rapid7/metasploit-framework/master/db/modules_metadata_base.json
+    output: vulnerabilities/metasploit_modules.json
+
+  nuclei_cve_templates:
+    name: Nuclei CVE templates
+    group: weekly
+    homepage: https://github.com/projectdiscovery/nuclei-templates
+    description: CVEs with a Nuclei detection template (severity, CVSS, EPSS, template path).
+    url: https://raw.githubusercontent.com/projectdiscovery/nuclei-templates/main/cves.json
+    output: vulnerabilities/nuclei_cve_templates.jsonl
+
+  github_advisories:
+    name: GitHub Advisories
+    group: weekly
+    homepage: https://github.com/advisories
+    description: All GitHub-reviewed security advisories (OSV format) in one JSON array.
+    processor: github_advisories
+    output: vulnerabilities/github_advisories.json.gz
+
+  nvd_cve:
+    name: NVD CVE
+    group: weekly
+    homepage: https://nvd.nist.gov/vuln/data-feeds
+    description: Full NVD CVE JSON 2.0 feeds per year + recent + modified (original gzip, re-downloaded only when NVD's sha256 changes).
+    processor: nvd_cve_feeds
+    output: vulnerabilities/nvd/nvdcve-2.0-*.json.gz
+    options: {dir: vulnerabilities/nvd}
+
+  nvd_cpe:
+    name: NVD CPE dictionary
+    group: weekly
+    homepage: https://nvd.nist.gov/products/cpe
+    description: CPE 2.0 dictionary split by vendor initial (a.json.gz ... z, 0-9, other) - a single file would exceed GitHub's 100 MB limit.
+    processor: nvd_cpe_dictionary
+    output: vulnerabilities/nvd/cpe/*.json.gz
+    options: {dir: vulnerabilities/nvd/cpe}
+
+  mobile_cve:
+    name: Mobile CVE
+    group: mobile
+    homepage: https://github.com/emeryn/CybrefV2/tree/download/src/mcb
+    description: Samsung / Pixel / iPhone devices with their patch level, and the CVEs of every mobile bulletin (NVD-enriched). Index + per-year CVE details.
+    processor: mobile_cve
+    output:
+      - vulnerabilities/mobile/index.json
+      - vulnerabilities/mobile/cves/*.json
+    options: {dir: vulnerabilities/mobile, nvd_dir: vulnerabilities/nvd, csc: XEF, concurrency: 20}
+
+  # ============================================================== frameworks
+
+  mitre_attack_enterprise:
+    name: MITRE ATT&CK Enterprise
+    group: weekly
+    homepage: https://attack.mitre.org/
+    description: ATT&CK Enterprise matrix (STIX 2.1).
+    url: https://raw.githubusercontent.com/mitre/cti/master/enterprise-attack/enterprise-attack.json
+    output: frameworks/mitre_attack_enterprise.json
+
+  mitre_attack_mobile:
+    name: MITRE ATT&CK Mobile
+    group: weekly
+    homepage: https://attack.mitre.org/matrices/mobile/
+    description: ATT&CK Mobile matrix (STIX 2.1).
+    url: https://raw.githubusercontent.com/mitre/cti/master/mobile-attack/mobile-attack.json
+    output: frameworks/mitre_attack_mobile.json
+
+  mitre_attack_ics:
+    name: MITRE ATT&CK ICS
+    group: weekly
+    homepage: https://attack.mitre.org/matrices/ics/
+    description: ATT&CK for Industrial Control Systems (STIX 2.1).
+    url: https://raw.githubusercontent.com/mitre/cti/master/ics-attack/ics-attack.json
+    output: frameworks/mitre_attack_ics.json
+
+  mitre_d3fend:
+    name: MITRE D3FEND
+    group: weekly
+    homepage: https://d3fend.mitre.org/
+    description: Defensive countermeasures knowledge graph, mapped to ATT&CK (JSON-LD).
+    url: https://d3fend.mitre.org/ontologies/d3fend.json
+    output: frameworks/mitre_d3fend.json
+
+  mitre_atlas:
+    name: MITRE ATLAS
+    group: weekly
+    homepage: https://atlas.mitre.org/
+    description: Adversarial Threat Landscape for AI Systems - tactics, techniques and case studies against ML/AI.
+    processor: mitre_atlas
+    output: frameworks/mitre_atlas.yaml
+
+  mitre_cwe:
+    name: MITRE CWE
+    group: weekly
+    homepage: https://cwe.mitre.org/
+    description: Common Weakness Enumeration catalog.
+    url: https://cwe.mitre.org/data/xml/cwec_latest.xml.zip
+    extract: unzip
+    member: "*.xml"
+    output: frameworks/mitre_cwe.xml
+
+  mitre_capec:
+    name: MITRE CAPEC
+    group: weekly
+    homepage: https://capec.mitre.org/
+    description: Common Attack Pattern Enumeration and Classification.
+    url: https://capec.mitre.org/data/xml/capec_latest.xml
+    output: frameworks/mitre_capec.xml
+
+  redcanary_atomic_tests:
+    name: Atomic Red Team
+    group: weekly
+    homepage: https://atomicredteam.io/
+    description: Index of Atomic Red Team tests (ATT&CK technique, test name, GUID, platform) to validate detections.
+    url: https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/Indexes/Indexes-CSV/index.csv
+    output: frameworks/redcanary_atomic_tests.csv
+
+  # ============================================================== network
+
+  aws_ip_ranges:
+    name: AWS IP ranges
+    group: weekly
+    homepage: https://docs.aws.amazon.com/vpc/latest/userguide/aws-ip-ranges.html
+    description: Amazon Web Services public IP ranges by service and region.
+    url: https://ip-ranges.amazonaws.com/ip-ranges.json
+    output: network/aws_ip_ranges.json
+
+  azure_ip_ranges:
+    name: Azure IP ranges
+    group: weekly
+    homepage: https://github.com/enzo-g/azureIPranges
+    description: Microsoft Azure service tags and IP ranges (stable URL mirror).
+    url: https://enzo-g.github.io/azureIPranges/json-history/ServiceTags_Public.json
+    output: network/azure_ip_ranges.json
+
+  gcp_ip_ranges:
+    name: Google Cloud IP ranges
+    group: weekly
+    homepage: https://cloud.google.com/compute/docs/faq#find_ip_range
+    description: Google Cloud customer IP ranges.
+    url: https://www.gstatic.com/ipranges/cloud.json
+    output: network/gcp_ip_ranges.json
+
+  google_ip_ranges:
+    name: Google IP ranges
+    group: weekly
+    homepage: https://support.google.com/a/answer/10026322
+    description: IP ranges of Google services (Gmail, APIs...) outside Google Cloud.
+    url: https://www.gstatic.com/ipranges/goog.json
+    output: network/google_ip_ranges.json
+
+  oracle_ip_ranges:
+    name: Oracle Cloud IP ranges
+    group: weekly
+    homepage: https://docs.oracle.com/en-us/iaas/Content/General/Concepts/addressranges.htm
+    description: Oracle Cloud Infrastructure public IP ranges.
+    url: https://docs.oracle.com/en-us/iaas/tools/public_ip_ranges.json
+    output: network/oracle_ip_ranges.json
+
+  digitalocean_ip_ranges:
+    name: DigitalOcean IP ranges
+    group: weekly
+    homepage: https://docs.digitalocean.com/platform/
+    description: DigitalOcean IP ranges with location (geofeed CSV).
+    url: https://digitalocean.com/geo/google.csv
+    output: network/digitalocean_ip_ranges.csv
+
+  cloudflare_ip_ranges:
+    name: Cloudflare IP ranges
+    group: weekly
+    homepage: https://www.cloudflare.com/ips/
+    description: Cloudflare edge IPv4/IPv6 ranges.
+    url: https://api.cloudflare.com/client/v4/ips
+    output: network/cloudflare_ip_ranges.json
+
+  fastly_ip_ranges:
+    name: Fastly IP ranges
+    group: weekly
+    homepage: https://www.fastly.com/documentation/reference/api/utils/public-ip-list/
+    description: Fastly CDN public IP ranges.
+    url: https://api.fastly.com/public-ip-list
+    output: network/fastly_ip_ranges.json
+
+  github_ip_ranges:
+    name: GitHub IP ranges
+    group: weekly
+    homepage: https://docs.github.com/en/rest/meta/meta
+    description: GitHub service IP ranges (actions, hooks, git, pages...).
+    url: https://api.github.com/meta
+    output: network/github_ip_ranges.json
+
+  microsoft365_endpoints:
+    name: Microsoft 365 endpoints
+    group: weekly
+    homepage: https://learn.microsoft.com/en-us/microsoft-365/enterprise/microsoft-365-ip-web-service
+    description: URLs and IP ranges used by Microsoft 365 (worldwide instance).
+    url: https://endpoints.office.com/endpoints/worldwide?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7
+    output: network/microsoft365_endpoints.json
+
+  tor_relays:
+    name: Tor relays
+    group: daily
+    homepage: https://metrics.torproject.org/onionoo.html
+    description: Details of every running Tor relay (Onionoo).
+    url: https://onionoo.torproject.org/details
+    output: network/tor_relays.json
+
+  tor_exit_relays:
+    name: Tor exit relays
+    group: daily
+    homepage: https://metrics.torproject.org/onionoo.html
+    description: Details of Tor exit relays (Onionoo).
+    url: https://onionoo.torproject.org/details?search=flag:Exit
+    output: network/tor_exit_relays.json
+
+  tor_exit_ips:
+    name: Tor exit IPs
+    group: daily
+    homepage: https://check.torproject.org/
+    description: Plain list of Tor exit IPs (TorDNSEL), ideal for quick matching.
+    url: https://check.torproject.org/torbulkexitlist
+    output: network/tor_exit_ips.txt
+
+  apple_private_relay_ranges:
+    name: iCloud Private Relay
+    group: weekly
+    homepage: https://developer.apple.com/support/prepare-your-network-for-icloud-private-relay/
+    description: Egress IP ranges of iCloud Private Relay with their geolocation.
+    url: https://mask-api.icloud.com/egress-ip-ranges.csv
+    output: network/apple_private_relay_ranges.csv
+    min_lines: 10000
+
+  mullvad_relays:
+    name: Mullvad relays
+    group: weekly
+    homepage: https://mullvad.net/en/servers
+    description: Mullvad VPN servers with their IPv4/IPv6 addresses.
+    url: https://api.mullvad.net/www/relays/all/
+    output: network/mullvad_relays.json
+
+  x4bnet_vpn_ipv4:
+    name: X4BNet VPN ranges
+    group: weekly
+    homepage: https://github.com/X4BNet/lists_vpn
+    description: Commercial VPN provider IPv4 ranges.
+    url: https://raw.githubusercontent.com/X4BNet/lists_vpn/main/output/vpn/ipv4.txt
+    output: network/x4bnet_vpn_ipv4.txt
+
+  x4bnet_datacenter_ipv4:
+    name: X4BNet datacenter ranges
+    group: weekly
+    homepage: https://github.com/X4BNet/lists_vpn
+    description: Datacenter and hosting IPv4 ranges.
+    url: https://raw.githubusercontent.com/X4BNet/lists_vpn/main/output/datacenter/ipv4.txt
+    output: network/x4bnet_datacenter_ipv4.txt
+
+  google_googlebot_ips:
+    name: Googlebot IPs
+    group: weekly
+    homepage: https://developers.google.com/search/docs/crawling-indexing/verifying-googlebot
+    description: IP ranges of Googlebot (verify that a "Googlebot" user agent is genuine).
+    url: https://developers.google.com/static/search/apis/ipranges/googlebot.json
+    output: network/google_googlebot_ips.json
+
+  google_special_crawlers_ips:
+    name: Google special crawlers IPs
+    group: weekly
+    homepage: https://developers.google.com/search/docs/crawling-indexing/verifying-googlebot
+    description: IP ranges of Google special-case crawlers (AdsBot...).
+    url: https://developers.google.com/static/search/apis/ipranges/special-crawlers.json
+    output: network/google_special_crawlers_ips.json
+
+  bing_bingbot_ips:
+    name: Bingbot IPs
+    group: weekly
+    homepage: https://www.bing.com/webmasters/help/how-to-verify-bingbot-3905dc26
+    description: IP ranges of Bingbot.
+    url: https://www.bing.com/toolbox/bingbot.json
+    output: network/bing_bingbot_ips.json
+
+  apple_applebot_ips:
+    name: Applebot IPs
+    group: weekly
+    homepage: https://support.apple.com/en-us/119829
+    description: IP ranges of Applebot.
+    url: https://search.developer.apple.com/applebot.json
+    output: network/apple_applebot_ips.json
+
+  openai_gptbot_ips:
+    name: OpenAI GPTBot IPs
+    group: weekly
+    homepage: https://platform.openai.com/docs/bots
+    description: IP ranges of OpenAI's training crawler.
+    url: https://openai.com/gptbot.json
+    output: network/openai_gptbot_ips.json
+
+  openai_chatgpt_user_ips:
+    name: OpenAI ChatGPT-User IPs
+    group: weekly
+    homepage: https://platform.openai.com/docs/bots
+    description: IP ranges used when ChatGPT browses on behalf of a user.
+    url: https://openai.com/chatgpt-user.json
+    output: network/openai_chatgpt_user_ips.json
+
+  iptoasn_ipv4:
+    name: IPtoASN (IPv4)
+    group: weekly
+    homepage: https://iptoasn.com/
+    description: IPv4 range -> ASN, country, AS name.
+    url: https://iptoasn.com/data/ip2asn-v4.tsv.gz
+    extract: gunzip
+    output: network/iptoasn_ipv4.tsv
+    min_lines: 100000
+
+  iptoasn_ipv6:
+    name: IPtoASN (IPv6)
+    group: weekly
+    homepage: https://iptoasn.com/
+    description: IPv6 range -> ASN, country, AS name.
+    url: https://iptoasn.com/data/ip2asn-v6.tsv.gz
+    extract: gunzip
+    output: network/iptoasn_ipv6.tsv
+    min_lines: 10000
+
+  dbip_country_lite:
+    name: DB-IP Country Lite
+    group: weekly
+    homepage: https://db-ip.com/db/download/ip-to-country-lite
+    description: IP range -> country (IPv4 + IPv6). CC BY 4.0, attribution to DB-IP.com required.
+    url:
+      - https://download.db-ip.com/free/dbip-country-lite-{today:%Y-%m}.csv.gz
+      - https://download.db-ip.com/free/dbip-country-lite-{last_month:%Y-%m}.csv.gz
+    extract: gunzip
+    output: network/dbip_country_lite.csv
+    min_lines: 100000
+
+  dbip_asn_lite:
+    name: DB-IP ASN Lite
+    group: weekly
+    homepage: https://db-ip.com/db/download/ip-to-asn-lite
+    description: IP range -> ASN and organisation (IPv4 + IPv6). CC BY 4.0, attribution to DB-IP.com required.
+    url:
+      - https://download.db-ip.com/free/dbip-asn-lite-{today:%Y-%m}.csv.gz
+      - https://download.db-ip.com/free/dbip-asn-lite-{last_month:%Y-%m}.csv.gz
+    extract: gunzip
+    output: network/dbip_asn_lite.csv
+    min_lines: 100000
+
+  teamcymru_fullbogons_ipv4:
+    name: Team Cymru fullbogons (IPv4)
+    group: weekly
+    homepage: https://www.team-cymru.com/bogon-networks
+    description: Unallocated and reserved IPv4 space - traffic from there is spoofed or hijacked.
+    url: https://www.team-cymru.org/Services/Bogons/fullbogons-ipv4.txt
+    output: network/teamcymru_fullbogons_ipv4.txt
+
+  teamcymru_fullbogons_ipv6:
+    name: Team Cymru fullbogons (IPv6)
+    group: weekly
+    homepage: https://www.team-cymru.com/bogon-networks
+    description: Unallocated and reserved IPv6 space.
+    url: https://www.team-cymru.org/Services/Bogons/fullbogons-ipv6.txt
+    output: network/teamcymru_fullbogons_ipv6.txt
+
+  # ============================================================== domains
+
+  tranco_top1m:
+    name: Tranco Top 1M
+    group: weekly
+    homepage: https://tranco-list.eu/
+    description: Research-grade ranking of the top 1M domains (rank,domain).
+    url: https://tranco-list.eu/top-1m.csv.zip
+    extract: unzip
+    output: domains/tranco_top1m.csv
+    min_lines: 900000
+
+  publicsuffix_list:
+    name: Public Suffix List
+    group: weekly
+    homepage: https://publicsuffix.org/
+    description: Effective TLDs, needed to compute registrable domains.
+    url: https://publicsuffix.org/list/public_suffix_list.dat
+    output: domains/publicsuffix_list.txt
+
+  iana_tlds:
+    name: IANA TLDs
+    group: weekly
+    homepage: https://www.iana.org/domains/root/db
+    description: Official list of top-level domains in the root zone.
+    url: https://data.iana.org/TLD/tlds-alpha-by-domain.txt
+    output: domains/iana_tlds.txt
+    min_lines: 1000
+
+  disposable_email_domains:
+    name: Disposable email domains
+    group: weekly
+    homepage: https://github.com/disposable-email-domains/disposable-email-domains
+    description: Throw-away email providers.
+    url: https://raw.githubusercontent.com/disposable-email-domains/disposable-email-domains/main/disposable_email_blocklist.conf
+    output: domains/disposable_email_domains.txt
+
+  free_email_domains:
+    name: Free email domains
+    group: weekly
+    homepage: https://github.com/Kikobeats/free-email-domains
+    description: Free webmail providers (gmail.com, gmx.fr...) - not corporate addresses.
+    url: https://raw.githubusercontent.com/Kikobeats/free-email-domains/master/domains.json
+    output: domains/free_email_domains.json
+
+  url_shorteners:
+    name: URL shorteners
+    group: weekly
+    homepage: https://github.com/PeterDaveHello/url-shorteners
+    description: URL shortener domains (often used to hide phishing or malware links).
+    url: https://raw.githubusercontent.com/PeterDaveHello/url-shorteners/master/list
+    output: domains/url_shorteners.txt
+
+  # ============================================================== registries
+
+  ieee_oui:
+    name: IEEE MA-L (OUI)
+    group: weekly
+    homepage: https://standards.ieee.org/products-programs/regauth/
+    description: MAC address large-block assignments.
+    url: https://standards-oui.ieee.org/oui/oui.csv
+    output: registries/ieee_oui.csv
+    user_agent: browser
+
+  ieee_oui36:
+    name: IEEE MA-S (OUI-36)
+    group: weekly
+    homepage: https://standards.ieee.org/products-programs/regauth/
+    description: MAC address small-block assignments.
+    url: https://standards-oui.ieee.org/oui36/oui36.csv
+    output: registries/ieee_oui36.csv
+    user_agent: browser
+
+  ieee_iab:
+    name: IEEE IAB
+    group: weekly
+    homepage: https://standards.ieee.org/products-programs/regauth/
+    description: Individual Address Blocks (legacy).
+    url: https://standards-oui.ieee.org/iab/iab.csv
+    output: registries/ieee_iab.csv
+    user_agent: browser
+
+  ieee_cid:
+    name: IEEE CID
+    group: weekly
+    homepage: https://standards.ieee.org/products-programs/regauth/
+    description: Company IDs.
+    url: https://standards-oui.ieee.org/cid/cid.csv
+    output: registries/ieee_cid.csv
+    user_agent: browser
+
+  ieee_manid:
+    name: IEEE MANID
+    group: weekly
+    homepage: https://standards.ieee.org/products-programs/regauth/
+    description: Manufacturer IDs.
+    url: https://standards-oui.ieee.org/manid/manid.csv
+    output: registries/ieee_manid.csv
+    user_agent: browser
+
+  wireshark_manuf:
+    name: Wireshark manuf
+    group: weekly
+    homepage: https://www.wireshark.org/tools/oui-lookup.html
+    description: All IEEE MAC registries merged with short vendor names - the easiest MAC vendor lookup.
+    url: https://www.wireshark.org/download/automated/data/manuf
+    output: registries/wireshark_manuf.txt
+    min_lines: 10000
+
+  usb_ids:
+    name: USB IDs
+    group: weekly
+    homepage: http://www.linux-usb.org/usb-ids.html
+    description: USB vendors and products as JSON ({vendor_id - name, products}).
+    processor: usb_ids
+    url: https://raw.githubusercontent.com/usbids/usbids/master/usb.ids
+    output: registries/usb_ids.json
+
+  pci_ids:
+    name: PCI IDs
+    group: weekly
+    homepage: https://pci-ids.ucw.cz/
+    description: PCI vendors and devices (raw pci.ids format).
+    url: https://pci-ids.ucw.cz/v2.2/pci.ids
+    output: registries/pci_ids.txt
+
+  bluetooth_company_ids:
+    name: Bluetooth company IDs
+    group: weekly
+    homepage: https://www.bluetooth.com/specifications/assigned-numbers/
+    description: Bluetooth SIG company identifiers (BLE manufacturer data -> vendor).
+    url: https://bitbucket.org/bluetooth-SIG/public/raw/main/assigned_numbers/company_identifiers/company_identifiers.yaml
+    output: registries/bluetooth_company_ids.yaml
+
+  google_play_devices:
+    name: Android devices (Google Play)
+    group: weekly
+    homepage: https://support.google.com/googleplay/answer/1727131
+    description: Every Google Play certified Android device - brand, marketing name, device and model codes (re-encoded to UTF-8).
+    url: https://storage.googleapis.com/play_public/supported_devices.csv
+    encoding: utf-16
+    output: registries/google_play_devices.csv
+    min_lines: 10000
+
+  iana_service_ports:
+    name: IANA ports
+    group: weekly
+    homepage: https://www.iana.org/assignments/service-names-port-numbers/
+    description: Service name and transport protocol port number registry.
+    url: https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.csv
+    output: registries/iana_service_ports.csv
+
+  curl_ca_bundle:
+    name: CA certificates (Mozilla)
+    group: weekly
+    homepage: https://curl.se/docs/caextract.html
+    description: Root CAs trusted by Mozilla, as a PEM bundle (extracted by curl).
+    url: https://curl.se/ca/cacert.pem
+    output: registries/curl_ca_bundle.pem
+
+  # ============================================================== detection
+
+  mthcht_suspicious_user_agents:
+    name: Suspicious User-Agents
+    group: weekly
+    homepage: https://github.com/mthcht/awesome-lists
+    description: HTTP User-Agents of offensive tools, scanners and malware.
+    url: https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/suspicious_http_user_agents_list.csv
+    output: detection/mthcht_suspicious_user_agents.csv
+
+  mthcht_suspicious_named_pipes:
+    name: Suspicious named pipes
+    group: weekly
+    homepage: https://github.com/mthcht/awesome-lists
+    description: Named pipes used by C2 frameworks and offensive tools.
+    url: https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/suspicious_named_pipe_list.csv
+    output: detection/mthcht_suspicious_named_pipes.csv
+
+  mthcht_suspicious_mutexes:
+    name: Suspicious mutexes
+    group: weekly
+    homepage: https://github.com/mthcht/awesome-lists
+    description: Mutex names created by malware families.
+    url: https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/suspicious_mutex_names_list.csv
+    output: detection/mthcht_suspicious_mutexes.csv
+
+  mthcht_suspicious_services:
+    name: Suspicious Windows services
+    group: weekly
+    homepage: https://github.com/mthcht/awesome-lists
+    description: Windows service names created by malware and offensive tools.
+    url: https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/suspicious_windows_services_names_list.csv
+    output: detection/mthcht_suspicious_services.csv
+
+  mthcht_suspicious_scheduled_tasks:
+    name: Suspicious scheduled tasks
+    group: weekly
+    homepage: https://github.com/mthcht/awesome-lists
+    description: Scheduled task names used by malware for persistence.
+    url: https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/suspicious_windows_tasks_list.csv
+    output: detection/mthcht_suspicious_scheduled_tasks.csv
+
+  mthcht_suspicious_firewall_rules:
+    name: Suspicious firewall rules
+    group: weekly
+    homepage: https://github.com/mthcht/awesome-lists
+    description: Windows firewall rule names added by malware and offensive tools.
+    url: https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/suspicious_windows_firewall_rules_list.csv
+    output: detection/mthcht_suspicious_firewall_rules.csv
+
+  mthcht_suspicious_hostnames:
+    name: Suspicious hostnames
+    group: weekly
+    homepage: https://github.com/mthcht/awesome-lists
+    description: Default hostnames of attacker machines (Kali, VPS images...).
+    url: https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/suspicious_hostnames_list.csv
+    output: detection/mthcht_suspicious_hostnames.csv
+
+  mthcht_suspicious_ports:
+    name: Suspicious ports
+    group: weekly
+    homepage: https://github.com/mthcht/awesome-lists
+    description: Network ports associated with malware and offensive tooling.
+    url: https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/suspicious_ports_list.csv
+    output: detection/mthcht_suspicious_ports.csv
+
+  mthcht_suspicious_tlds:
+    name: Suspicious TLDs
+    group: weekly
+    homepage: https://github.com/mthcht/awesome-lists
+    description: Top-level domains over-represented in malicious activity.
+    url: https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/suspicious_tlds_list.csv
+    output: detection/mthcht_suspicious_tlds.csv
+
+  mthcht_suspicious_double_extensions:
+    name: Suspicious double extensions
+    group: weekly
+    homepage: https://github.com/mthcht/awesome-lists
+    description: Deceptive double file extensions (invoice.pdf.exe...).
+    url: https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/suspicious_file_double_extension.csv
+    output: detection/mthcht_suspicious_double_extensions.csv
+
+  mthcht_suspicious_mac_addresses:
+    name: Suspicious MAC addresses
+    group: weekly
+    homepage: https://github.com/mthcht/awesome-lists
+    description: MAC prefixes of attack hardware, VMs and spoofed devices.
+    url: https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/suspicious_mac_address_list.csv
+    output: detection/mthcht_suspicious_mac_addresses.csv
+
+  mthcht_suspicious_usb_ids:
+    name: Suspicious USB IDs
+    group: weekly
+    homepage: https://github.com/mthcht/awesome-lists
+    description: USB IDs of attack devices (Rubber Ducky, O.MG, Flipper...).
+    url: https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/suspicious_usb_ids_list.csv
+    output: detection/mthcht_suspicious_usb_ids.csv
+
+  mthcht_ransomware_extensions:
+    name: Ransomware extensions
+    group: weekly
+    homepage: https://github.com/mthcht/awesome-lists
+    description: File extensions appended by ransomware families.
+    url: https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/ransomware_extensions_list.csv
+    output: detection/mthcht_ransomware_extensions.csv
+
+  mthcht_ransomware_notes:
+    name: Ransomware notes
+    group: weekly
+    homepage: https://github.com/mthcht/awesome-lists
+    description: Ransom note file names by ransomware family.
+    url: https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/ransomware_notes_list.csv
+    output: detection/mthcht_ransomware_notes.csv
+
+  mthcht_doh_servers:
+    name: DNS-over-HTTPS servers
+    group: weekly
+    homepage: https://github.com/mthcht/awesome-lists
+    description: Public DoH resolvers (DNS bypass and covert channel detection).
+    url: https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/dns_over_https_servers_list.csv
+    output: detection/mthcht_doh_servers.csv
+
+  mthcht_blockchain_rpc:
+    name: Blockchain RPC endpoints
+    group: weekly
+    homepage: https://github.com/mthcht/awesome-lists
+    description: Public blockchain RPC endpoints (abused for C2 resolution, e.g. EtherHiding).
+    url: https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/blockchain_rpc_list.csv
+    output: detection/mthcht_blockchain_rpc.csv
+
+  mthcht_windows_asr_rules:
+    name: Windows ASR rules
+    group: weekly
+    homepage: https://github.com/mthcht/awesome-lists
+    description: Microsoft Defender Attack Surface Reduction rule names and GUIDs.
+    url: https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/windows_asr_rules.csv
+    output: detection/mthcht_windows_asr_rules.csv
+
+  ihebski_default_credentials:
+    name: Default credentials cheat sheet
+    group: weekly
+    homepage: https://github.com/ihebski/DefaultCreds-cheat-sheet
+    description: 3,500+ vendor default credentials (product, username, password).
+    url: https://raw.githubusercontent.com/ihebski/DefaultCreds-cheat-sheet/main/DefaultCreds-Cheat-Sheet.csv
+    output: detection/ihebski_default_credentials.csv
+
+  seclists_default_passwords:
+    name: SecLists default credentials
+    group: weekly
+    homepage: https://github.com/danielmiessler/SecLists
+    description: Vendor default usernames and passwords.
+    url: https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Default-Credentials/default-passwords.csv
+    output: detection/seclists_default_passwords.csv
+
+  seclists_secret_keywords:
+    name: SecLists secret keywords
+    group: weekly
+    homepage: https://github.com/danielmiessler/SecLists
+    description: Variable names that usually hold secrets.
+    url: https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/Variables/secret-keywords.txt
+    output: detection/seclists_secret_keywords.txt
+
+  seclists_webshells:
+    name: SecLists web shells
+    group: weekly
+    homepage: https://github.com/danielmiessler/SecLists
+    description: Known web shell and backdoor file names.
+    url: https://raw.githubusercontent.com/danielmiessler/SecLists/master/Web-Shells/backdoor_list.txt
+    output: detection/seclists_webshells.txt
+
+  badbot_user_agents:
+    name: Bad Bot Blocker - user agents
+    group: weekly
+    homepage: https://github.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker
+    description: Bad bots and scrapers User-Agents.
+    url: https://raw.githubusercontent.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker/master/_generator_lists/bad-user-agents.list
+    output: detection/badbot_user_agents.txt
+
+  badbot_referrers:
+    name: Bad Bot Blocker - referrers
+    group: weekly
+    homepage: https://github.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker
+    description: Spam referrer domains.
+    url: https://raw.githubusercontent.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker/master/_generator_lists/bad-referrers.list
+    output: detection/badbot_referrers.txt
+
+  badbot_fake_googlebots:
+    name: Bad Bot Blocker - fake Googlebots
+    group: weekly
+    homepage: https://github.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker
+    description: IPs pretending to be Googlebot.
+    url: https://raw.githubusercontent.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker/master/_generator_lists/fake-googlebots.list
+    output: detection/badbot_fake_googlebots.txt
+
+  misp_warninglists:
+    name: MISP warninglists
+    group: weekly
+    homepage: https://github.com/MISP/misp-warninglists
+    description: Known-benign indicators (public DNS, CDNs, cloud ranges, known-good Windows hashes...) to cut false positives. One object per list (popularity rankings excluded).
+    processor: misp_warninglists
+    output: detection/misp_warninglists.json.gz
+    options:
+      # Popularity rankings: ~90 MB, and domains/tranco_top1m.csv already covers them.
+      exclude: ["cisco_top*", "google-chrome-crux*", "cloudflare-top*", "tranco*", "majestic*", "alexa*", "umbrella*"]
