@@ -1,0 +1,122 @@
+Extension,Function,OS
+.7z,Phishing File Archiver,Windows Mac Linux
+.a3x,Executable Script,Windows
+.appinstaller,Executable Double Click,Windows
+.applescript,Executable,Mac
+.application,Phishing Executable Double Click,Windows
+.appref-ms,Executable Phishing Double Click,Windows
+.appx,Executable Phishing Double Click,Windows
+.appxbundle,Executable Phishing Double Click,Windows
+.arj,Phishing File Archiver,Windows
+.asd,Phishing Double Click Macros,Windows
+.bat,Executable Script Double Click,Windows
+.bgi,Exploit Script Phishing,Windows
+.bz2,Phishing Double Click File Archiver,Windows Linux Mac
+.cab,Phishing File Archiver,Windows
+.chm,Executable Double Click,Windows
+.cmd,Executable Script Double Click,Windows
+.com,Executable Double Click,Windows
+.cpl,Executable Double Click,Windows
+.cs,Executable,Windows
+.daa,Phishing Executable File Archiver,Windows
+.desktopthemepackfile,Phishing Double Click,Windows
+.diagcab,Double Click Executable,Windows
+.dll,Executable,Windows
+.dmg,Executable Double Click,Mac
+.doc,Phishing Double Click Macros,Windows Mac
+.docm,Phishing Double Click Macros,Windows Mac
+.dot,Phishing Double Click Macros,Windows Mac
+.dotm,Phishing Double Click,Windows Mac
+.eml,Phishing,Windows Linux Mac
+.exe,Executable Double Click,Windows
+.gadget,Phishing Double Click Executable File Archiver,Windows
+.gz,Phishing Double Click File Archiver,Windows Linux Mac
+.hta,Executable Script Double Click,Windows
+.htm,Phishing Script Double Click,Wndows Mac Linux
+.html,Phishing Script Double Click,Wndows Mac Linux
+.hwpx,Phishing,Windows
+.ics,Phishing Double Click,Windows Mac Linux
+.img,Executable Double Click Phishing,Windows Mac
+.iqy,Phishing Double Click,Windows Mac
+.iso,Executable Double Click,Windows Mac
+.jar,Executable,Windows Mac Linux
+.jnlp,Phishing Double Click Executable,Windows Mac Linux
+.js,Executable Script Double Click,Windows
+.jse,Executable Script Double Click,Windows
+.library-ms,Phishing,Windows
+.lnk,Executable Double Click Phishing,Windows
+.mam,Executable Phishing Double Click,Windows
+.mht,Phishing Script Double Click,Windows
+.mhtml,Phishing Script Double Click,Windows
+.mof,Script,Windows
+.msc,Double Click,Windows
+.msi,Executable Double Click,Windows
+.msrcincident,Phishing,Windows
+.ocx,Executable,Windows
+.odt,Exploit Phishing Double Click,Windows
+.oxps,Phishing Double Click,Windows
+.pdf,Phishing Script Double Click,Windows Mac Linux
+.pif,Executable Double Click,Windows
+.pot,Phishing Double Click Macros,Windows Mac
+.potm,Phishing Double Click Macros,Windows Mac
+.ppa,Executable Phishing Doubleclick,Windows Mac
+.ppam,Executable Phishing Doubleclick,Windows Mac
+.ppkg,Executable,Windows
+.pps,Phishing Double Click Macros,Windows Mac
+.ppsm,Phishing Double Click Macros,Windows Mac
+.ppt,Phishing Double Click Macros,Windows Mac
+.pptm,Phishing Double Click Macros,Windows Mac
+.ps1,Executable Script,Windows
+.pub,Phishing Double Click Macros,Windows Mac
+.py,Executable Script,Windows Mac Linux
+.pyc,Executable Script,Windows Mac Linux
+.pyo,Executable Script,Windows Mac Linux
+.pyw,Executable Script,Windows Mac Linux
+.pyz,Executable Script,Windows Mac Linux
+.pyzw,Executable Script,Windows Mac Linux
+.rar,Phishing File Archiver,Windows Mac Linux
+.reg,Double Click,Windows
+.rtf,Phishing Double Click,Windows Mac Linux
+.scf,Phishing,Windows
+.scpt,Executable Script,Mac
+.scr,Executable Double Click,Windows
+.sct,Script,Windows
+.searchConnector-ms,Phishing,Windows
+.service,Executable Script,Linux
+.settingcontent-ms,Phishing Double Click Executable,Windows
+.sh,Executable Script Double Click,Linux
+.sldm,Phishing Double Click Macros,Windows Mac
+.slk,Phishing Double Click Macros,Windows Mac
+.so,Executable,Linux
+.svg,Phishing Script Double Click,Windows Mac
+.tar,Phishing Double Click File Archiver,Windows Linux Mac
+.theme,Phishing Double Click,Windows
+.themepack,Phishing Double Click,Windows
+.timer,Executable,Linux
+.url,Phishing Double Click,Windows
+.uue,Phishing Double Click File Archiver,Windows
+.vb,Executable Script,Windows
+.vbe,Executable Script Double Click,Windows
+.vbs,Executable Script Double Click,Windows
+.vhd,File Archiver,Windows
+.vhdx,File Archiver,Windows
+.wbk,Phishing Double Click Macros,Windows
+.website,Phishing Double Click,Windows
+.wim,Phishing Executable File Archiver,Windows
+.wiz,Phishing,Windows Mac
+.ws,Executable Script,Windows
+.wsf,Executable Script Double Click,Windows
+.wsh,Executable Script Double Click,Windows
+.xlam,Executable Phishing Doubleclick Macros,Windows Mac
+.xll,Executable Phishing Double Click,Windows
+.xlm,Phishing Double Click Macros,Windows Mac
+.xls,Phishing Double Click Macros,Windows Mac
+.xlsb,Phishing Double Click Macros,Windows Mac
+.xlsm,Phishing Double Click Macros,Windows Mac
+.xlt,Phishing Double Click Macros,Windows Mac
+.xltm,Phishing Double Click Macros,Windows Mac
+.xps,Phishing Double Click,Windows
+.xsl,Script,Windows
+.xz,Phishing File Archiver,Windows Linux
+.z,Phishing File Archiver,Windows Linux
+.zip,Phishing Double Click File Archiver,Windows Mac Linux
