@@ -1,0 +1,176 @@
+Website,Tags,Service Provider
+raw.githubusercontent.com,Phishing C&C Download,Github
+github.com,Phishing Download,Github
+1drv.ms,Phishing,Microsoft
+1drv.com,Phishing Download,Microsoft
+docs.google.com,Phishing C&C,Google
+drive.google.com,Phishing Download Exfiltration,Google
+*.azurewebsites.net,Phishing Download Exfiltration C&C,Microsoft
+dropbox.com,Phishing Download Exfiltration C&C,Dropbox
+mega.nz,Phishing Download Exfiltration,Mega Limited
+pcloud.com,Phishing Download Exfiltration,pCloud
+*.amazonaws.com,Phishing Download Exfiltration C&C,Amazon Web Services
+*.twitter.com,C&C,Twitter
+*.web.core.windows.net,Phishing Download Exfiltration C&C,Microsoft
+*.blob.core.windows.net,Phishing Download Exfiltration,Microsoft
+*.box.com,Phishing Download Exfiltration,Box
+sites.google.com,Phishing,Google
+*.cloudfront.net,Phishing C&C Download,Amazon Web Services
+bitbucket.io,Phishing,Atlassian
+bitbucket.org,Phishing Download Exfiltration C&C,Atlassian
+firebasestorage.googleapis.com,Phishing Exfiltration C&C Download,Google
+storage.googleapis.com,Phishing Download Exfiltration C&C,Google
+*.herokuapp.com,Phishing Download Exfiltration C&C,Heroku
+*.zendesk.com,Phishing Download,Zendesk
+*.cloudwaysapps.com,Phishing Download Exfiltration C&C,Cloudways
+*.netlify.app,Phishing,Netlify
+*.cloudapp.azure.com,Phishing Download Exfiltration C&C,Microsoft
+*.cloudapp.net,Phishing Download Exfiltration C&C,Microsoft
+gitlab.com,Phishing Download,GitLab
+filetransfer.io,Phishing Download Exfiltration,Filetransfer.io
+*.sendspace.com,Phishing Download Exfiltration,Sendspace
+wetransfer.com,Phishing Download Exfiltration,WeTransfer B.V
+cdn.fbsbx.com,Phishing,Facebook
+mediafire.com,Phishing Download Exfiltration,Mediafire
+cdn.discordapp.com,Phishing Download,Discord
+*.workers.dev,Phishing Download Exfiltration C&C,Cloudflare
+slack-files.com,Phishing,Slack
+youtube.com,Phishing C&C,Google
+reddit.com,C&C,Reddit
+pastebin.com,Download Exfiltration C&C,Pastebin
+*.sharepoint.com,Phishing Download,Microsoft
+onedrive.live.com,Phishing,Microsoft
+app.milanote.com,Phishing,Milanote
+*.appspot.com,Phishing Download C&C,Google
+*.wordpress.com,Phishing Download C&C Exfiltration,Wordpress Foundation
+*.azureedge.net,Phishing C&C,Microsoft
+*.tumblr.com,Phishing C&C,Tumblr
+*.backblazeb2.com,Phishing Download Exfiltration,BackBlaze
+*.blogspot.com,Phishing C&C,Google
+*.translate.goog,Phishing Download,Google
+*.googleusercontent.com,Phishing C&C,Google
+*.typeform.com,Phishing,Typeform
+*.github.io,Phishing,Github
+*.web.app,Phishing,Google
+*.firebaseapp.com,Phishing C&C,Google
+*.webflow.io,Phishing,Webflow
+icloud.com,Phishing Download Exfiltration,Apple
+*.duckdns.org,Phishing C&C,DuckDNS
+*.pages.dev,Phishing,Cloudflare
+googleweblight.com,Phishing Download,Google
+forms.office.com,Phishing,Microsoft
+sway.office.com,Phishing,Microsoft
+discord.com,C&C Exfiltration,Discord
+slack.com,C&C,Slack
+api.telegram.org,C&C Exfiltration,Telegram
+*.gofile.io,Phishing Exfiltration Download,Gofile
+*.instagram.com,Phishing C&C,Facebook
+facebook.com,C&C,Facebook
+*.glitch.me,Phishing Download,Glitch
+bit.ly,Phishing Download,Bitly Inc.
+*.trycloudflare.com,Phishing Download,Cloudflare
+beautiful.ai,Phishing,Beautiful.ai
+siasky.net,Phishing Exfiltration Download,Siasky
+*.clickfunnels.com,Phishing,ClickFunnels
+*.docusign.com,Phishing,DocuSign
+*.digitaloceanspaces.com,Phishing Download Exfiltration C&C,DigitalOcean
+*.godaddysites.com,Phishing C&C,GoDaddy
+*.weebly.com,Phishing C&C,Weebly
+www.canva.com,Phishing,Canva
+t.co,Phishing C&C,Twitter
+*.mybluemix.net,Phishing Download C&C,IBM
+appdomain.cloud,Phishing Download C&C Exfiltration,IBM
+archive.org,Phishing Download,Archive.org
+spark.adobe.com,Phishing C&C,Adobe
+*.atlassian.net,Phishing C&C,Atlassian
+dogechain.info,C&C,Dogechain.info
+paste.ee,C&C Exfiltration Download,Paste.ee
+gitee.com,C&C Download,Gitee.com
+*.rf.gd,Phishing C&C,InfinityFree
+viewer.joomag.com,Phishing,Joomag
+my.visme.co,Phishing,Visme
+archive.ph,Phishing Download,Archive.ph
+docsend.com,Phishing,Docsend
+*.nimbusweb.me,Phishing,Nimbus Note
+*.oraclecloud.com,Phishing Exfiltration Download C&C,Oracle
+*.azurefd.net,Phishing C&C,Microsoft
+parg.co,Phishing Download,Parg.co
+*.ngrok.io,Phishing C&C Exfiltration Download,Ngrok
+codepen.io,C&C Download,CodePen
+pastetext.net,Download,Pastetext.net
+notion.so,Phishing C&C Exfiltration Download,Notion.so
+*.wixsite.com,Phishing,Wix
+attachment.outlook.live.net,Phishing Download Exfiltration,Microsoft
+attachments.office.net,Phishing Download Exfiltration,Microsoft
+lnkd.in,Phishing Download,Microsoft
+*.myportfolio.com,Phishing,Adobe
+*.notion.site,Phishing Download,Notion.so
+*.wasabisys.com,Phishing C&C Exfiltration Download,Wasabi Technologies
+rebrand.ly,Phishing Download,Rebrandly
+rb.gy,Phishing Download,Rebrandly
+genius.com,C&C,Genius
+inmotionhosting.com,Phishing C&C Exfiltration Download,InMotion Hosting
+stonly.com,Phishing,Stonly
+*.csb.app,Phishing,CodeSandbox
+*.codesandbox.io,Phishing,CodeSandbox
+*.000webhostapp.com,Phishing C&C Exfiltration Download,Hostinger
+*.hostingerapp.com,Phishing C&C Exfiltration Download,Hostinger
+feedproxy.google.com,Phishing,Google
+*.pagecloud.com,Phishing,PageCloud
+*.format.com,Phishing,Format
+s.id,Phishing Download,s.id
+doc.clickup.com,Phishing,ClickUp
+ufile.io,Phishing Exfiltration Download,Ufile
+onenoteonlinesync.onenote.com,Phishing Download Exfiltration,Microsoft
+12ft.io,Phishing,12ft.io
+*.doubleclick.net,Phishing Download,Google
+t.m1.email.samsung.com,Phishing Download,Samsung
+*.repl.co,Phishing C&C Exfiltration Download,Replit
+teletype.in,Phishing,Teletype
+*.easywp.com,Phishing,EasyWP
+telegra.ph,Phishing,Telegraph
+filebin.net,Phishing Exfiltration Download,Filebin
+*.fyi.to,Phishing,FYI.to
+nt.embluemail.com,Phishing Download,emBlue
+transfer.sh,Phishing Exfiltration Download,Transfer.sh
+ct.sendgrid.net,Phishing Download,SendGrid
+nethunt.com,Phishing,NetHunt
+trello.com,Phishing Download Exfiltration,Trello
+evernote.com,Phishing Exfiltration Download,Evernote
+track.adform.net,Phishing Download,Adform
+*.xiti.com,Phishing Download,Xiti
+wtools.io,Download,WTOOLS
+i.imgur.com,Download,Imgur
+workflowy.com,Phishing,WorkFlowy
+*.mybluehost.me,Phishing C&C Download Exfiltration,Bluehost
+*.ondigitalocean.app,Phishing C&C,DigitalOcean
+*.axshare.com,Phishing C&C,Axure
+rentry.co,Exfiltration C&C Download,Rentry.co
+zerobin.net,Exfiltration C&C Download,ZeroBin
+textbin.net,Exfiltration C&C Download,TextBin
+ideone.com,Exfiltration C&C Download,Ideone.com
+4sync.com,Download,4Sync
+pastebin.pl,Exfiltration C&C Download,Pastebin.pl
+www.uplooder.net,Phishing Download Exfiltration,Uplooder
+graph.microsoft.com,C&C Exfiltration,Microsoft
+pastie.org,Exfiltration C&C Download,Pastie.org
+*.slab.com,Phishing,Slab
+*.dropmark.com,Phishing,Dropmark
+filecloudonline.com,Phishing Download,FileCloud
+tinyurl.com,Phishing Download,TinyURL
+*.azurestaticapps.net,Phishing C&C Download,Microsoft
+termbin.com,C&C Exfiltration Download,Termbin
+sprunge.us,C&C Exfiltration Download,Sprunge
+*.plesk.page,Phishing C&C Exfiltration Download,Plesk
+cutt.ly,Phishing Download,Cutt.ly
+*.on.aws,C&C,Amazon
+*.mystrikingly.com,Phishing C&C,Strikingly
+www.surveycake.com,Phishing,SurveyCake
+anonfiles.com,Phishing Exfiltration Download,Anonfiles
+*.linodeobjects.com,Phishing Exfiltration Download,Linode
+express.adobe.com,Phishing,Adobe
+*.fleek.co,Phishing,Fleek
+localhost.run,C&C,Localhost.run
+*.requestbin.net,C&C,RequestBin
+clbin.com,C&C Exfiltration Download,Clbin
+ix.io,C&C Exfiltration Download,Ix.io

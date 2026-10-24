@@ -1,0 +1,3366 @@
+{
+ "sources": {
+  "abusech_feodotracker_c2_ips": {
+   "last_attempt": "2026-10-24T05:49:56+00:00",
+   "state": {
+    "http": {
+     "https://feodotracker.abuse.ch/downloads/ipblocklist.json": {
+      "etag": "\"6e3-6557159bdf633\"",
+      "last_modified": "Tue, 30 Jun 2026 04:53:05 GMT"
+     }
+    }
+   },
+   "fingerprint": "2a32fa9d404c3a3c",
+   "status": "not_modified",
+   "duration_s": 0.1,
+   "last_success": "2026-10-24T05:49:56+00:00",
+   "last_change": "2026-10-04T21:03:06+00:00",
+   "files": {
+    "threat_intel/abusech_feodotracker_c2_ips.json": {
+     "bytes": 1763,
+     "sha256": "ef1c98c807014247b232483e542b5deadb1b8738d30a072f2e2b154b05ebda52",
+     "records": 5,
+     "updated": "2026-10-04T21:03:06+00:00"
+    }
+   }
+  },
+  "abusech_malwarebazaar_recent": {
+   "last_attempt": "2026-10-24T05:51:06+00:00",
+   "state": {
+    "http": {
+     "https://bazaar.abuse.ch/export/csv/recent/": {
+      "etag": "\"bdc33-65e532db3c8cc\"",
+      "last_modified": "Wed, 21 Oct 2026 05:40:02 GMT"
+     }
+    }
+   },
+   "fingerprint": "820ace91505f4345",
+   "status": "failed",
+   "duration_s": 0.1,
+   "last_success": "2026-10-21T06:01:40+00:00",
+   "last_change": "2026-10-21T06:01:40+00:00",
+   "files": {
+    "threat_intel/abusech_malwarebazaar_recent.csv": {
+     "bytes": 777267,
+     "sha256": "9a34feb59713e332d65202cb442c564f93267355d17faebf44d67cf9ee9ed6a6",
+     "records": 1684,
+     "updated": "2026-10-21T06:01:40+00:00"
+    }
+   },
+   "error": "HTTP 410 on https://bazaar.abuse.ch/export/csv/recent/"
+  },
+  "abusech_sslbl_certificates": {
+   "last_attempt": "2026-10-24T05:49:56+00:00",
+   "state": {
+    "http": {
+     "https://sslbl.abuse.ch/blacklist/sslblacklist.csv": {
+      "etag": "\"cb04e-65e8f993b31f6-gzip\"",
+      "last_modified": "Sat, 24 Oct 2026 05:45:04 GMT"
+     }
+    }
+   },
+   "fingerprint": "7c426481b962ced8",
+   "status": "updated",
+   "duration_s": 0.1,
+   "last_success": "2026-10-24T05:49:56+00:00",
+   "last_change": "2026-10-24T05:49:56+00:00",
+   "files": {
+    "threat_intel/abusech_sslbl_certificates.csv": {
+     "bytes": 831566,
+     "sha256": "9debf025d684ed47ec33492e5c8c3d13c6c8284d7933d8140bab595df2568eae",
+     "records": 11034,
+     "updated": "2026-10-24T05:49:56+00:00"
+    }
+   }
+  },
+  "abusech_threatfox_recent": {
+   "last_attempt": "2026-10-24T05:51:06+00:00",
+   "state": {
+    "http": {
+     "https://threatfox.abuse.ch/export/json/recent/": {
+      "etag": "\"4568ef-65e5363e1fa50\"",
+      "last_modified": "Wed, 21 Oct 2026 05:55:11 GMT"
+     }
+    }
+   },
+   "fingerprint": "31e3d6aeb96f4533",
+   "status": "failed",
+   "duration_s": 0.1,
+   "last_success": "2026-10-21T06:01:40+00:00",
+   "last_change": "2026-10-21T06:01:40+00:00",
+   "files": {
+    "threat_intel/abusech_threatfox_recent.json": {
+     "bytes": 4548847,
+     "sha256": "b5dfe1d080626a368dfde98c9d59e71a09b806a26f0be63b2960bbb6df7305e1",
+     "records": 7242,
+     "updated": "2026-10-21T06:01:41+00:00"
+    }
+   },
+   "error": "HTTP 410 on https://threatfox.abuse.ch/export/json/recent/"
+  },
+  "abusech_urlhaus_online": {
+   "last_attempt": "2026-10-24T05:51:06+00:00",
+   "state": {
+    "http": {
+     "https://urlhaus.abuse.ch/downloads/csv_online/": {
+      "etag": "\"72d5fc-65e537608afea-gzip\"",
+      "last_modified": "Wed, 21 Oct 2026 06:00:15 GMT"
+     }
+    }
+   },
+   "fingerprint": "3db3648f1586d756",
+   "status": "failed",
+   "duration_s": 0.1,
+   "last_success": "2026-10-21T06:01:40+00:00",
+   "last_change": "2026-10-21T06:01:40+00:00",
+   "files": {
+    "threat_intel/abusech_urlhaus_online.csv": {
+     "bytes": 7525884,
+     "sha256": "7abc0a27c286b26b7453a05da8cd03dbc711a8fb298d2f79875194273d5e1d56",
+     "records": 27974,
+     "updated": "2026-10-21T06:01:41+00:00"
+    }
+   },
+   "error": "HTTP 410 on https://urlhaus.abuse.ch/downloads/csv_online/"
+  },
+  "apple_applebot_ips": {
+   "last_attempt": "2026-10-18T08:09:17+00:00",
+   "state": {
+    "http": {
+     "https://search.developer.apple.com/applebot.json": {
+      "etag": "W/\"168-1789460234000\"",
+      "last_modified": "Tue, 15 Sep 2026 08:17:14 GMT"
+     }
+    }
+   },
+   "fingerprint": "3843d0843adeaa6a",
+   "status": "not_modified",
+   "duration_s": 0.1,
+   "last_success": "2026-10-18T08:09:17+00:00",
+   "last_change": "2026-10-04T21:03:23+00:00",
+   "files": {
+    "network/apple_applebot_ips.json": {
+     "bytes": 1640,
+     "sha256": "5a5e12188891d998341f4fb50d2b31c80aba5002f5cff9d0fa110c13e4e2edd0",
+     "records": 24,
+     "updated": "2026-10-04T21:03:23+00:00"
+    }
+   }
+  },
+  "apple_private_relay_ranges": {
+   "last_attempt": "2026-10-18T08:09:16+00:00",
+   "state": {
+    "http": {
+     "https://mask-api.icloud.com/egress-ip-ranges.csv": {
+      "etag": "\"6acc40fb-b7d37f\""
+     }
+    }
+   },
+   "fingerprint": "c89dd4bdbdafab21",
+   "status": "updated",
+   "duration_s": 0.5,
+   "last_success": "2026-10-18T08:09:16+00:00",
+   "last_change": "2026-10-18T08:09:16+00:00",
+   "files": {
+    "network/apple_private_relay_ranges.csv": {
+     "bytes": 12047231,
+     "sha256": "c9bb2ecfab4f8308054ea7697754b30dd64d2324466dab808c42b5448c6c9231",
+     "records": 285090,
+     "updated": "2026-10-18T08:09:17+00:00"
+    }
+   }
+  },
+  "aws_ip_ranges": {
+   "last_attempt": "2026-10-18T08:09:16+00:00",
+   "state": {
+    "http": {
+     "https://ip-ranges.amazonaws.com/ip-ranges.json": {
+      "etag": "\"dd26be64586e215de3b0ba919904b7e2\"",
+      "last_modified": "Sun, 18 Oct 2026 07:13:22 GMT"
+     }
+    }
+   },
+   "fingerprint": "fde540b82306f420",
+   "status": "updated",
+   "duration_s": 0.4,
+   "last_success": "2026-10-18T08:09:16+00:00",
+   "last_change": "2026-10-18T08:09:16+00:00",
+   "files": {
+    "network/aws_ip_ranges.json": {
+     "bytes": 2724906,
+     "sha256": "4820d20396a6539219dbf829607747930acf8308826ec227f649610b48ca022a",
+     "records": 10653,
+     "updated": "2026-10-18T08:09:16+00:00"
+    }
+   }
+  },
+  "azure_ip_ranges": {
+   "last_attempt": "2026-10-18T08:09:16+00:00",
+   "state": {
+    "http": {
+     "https://enzo-g.github.io/azureIPranges/json-history/ServiceTags_Public.json": {
+      "etag": "W/\"6acfa3d0-421401\"",
+      "last_modified": "Wed, 14 Oct 2026 15:46:24 GMT"
+     }
+    }
+   },
+   "fingerprint": "6302334580cf9ee7",
+   "status": "unchanged",
+   "duration_s": 0.3,
+   "last_success": "2026-10-18T08:09:16+00:00",
+   "last_change": "2026-10-11T10:08:13+00:00",
+   "files": {
+    "network/azure_ip_ranges.json": {
+     "bytes": 4330497,
+     "sha256": "fed834a26c3847f6c66715c924259d9d6f437078b32decf0b5337e6414f96c98",
+     "records": 3321,
+     "updated": "2026-10-11T10:08:13+00:00"
+    }
+   }
+  },
+  "badbot_fake_googlebots": {
+   "last_attempt": "2026-10-18T08:09:28+00:00",
+   "state": {
+    "http": {
+     "https://raw.githubusercontent.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker/master/_generator_lists/fake-googlebots.list": {
+      "etag": "W/\"8c2be4276e5519c86625580e68fb0c8a79352a646473011eaf599b084dbbe573\""
+     }
+    }
+   },
+   "fingerprint": "2ac7f98ec360200b",
+   "status": "not_modified",
+   "duration_s": 0.1,
+   "last_success": "2026-10-18T08:09:28+00:00",
+   "last_change": "2026-10-04T21:03:34+00:00",
+   "files": {
+    "detection/badbot_fake_googlebots.txt": {
+     "bytes": 3075,
+     "sha256": "3d75553c977b353f7c4e70f9c92cc89208ebfeb3a1669782388a3294a0f9773a",
+     "records": 218,
+     "updated": "2026-10-04T21:03:34+00:00"
+    }
+   }
+  },
+  "badbot_referrers": {
+   "last_attempt": "2026-10-18T08:09:28+00:00",
+   "state": {
+    "http": {
+     "https://raw.githubusercontent.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker/master/_generator_lists/bad-referrers.list": {
+      "etag": "W/\"eda03518f23b25f38b307ee228b7999089669c6fd14a5e4bd0231649248d7713\""
+     }
+    }
+   },
+   "fingerprint": "133f0e5228f21c01",
+   "status": "not_modified",
+   "duration_s": 0.1,
+   "last_success": "2026-10-18T08:09:28+00:00",
+   "last_change": "2026-10-04T21:03:34+00:00",
+   "files": {
+    "detection/badbot_referrers.txt": {
+     "bytes": 118010,
+     "sha256": "6f85ebea5be2cd7db6941c42caea6115b69dade82014022bfaf63f43e886a226",
+     "records": 7117,
+     "updated": "2026-10-04T21:03:34+00:00"
+    }
+   }
+  },
+  "badbot_user_agents": {
+   "last_attempt": "2026-10-18T08:09:28+00:00",
+   "state": {
+    "http": {
+     "https://raw.githubusercontent.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker/master/_generator_lists/bad-user-agents.list": {
+      "etag": "W/\"5efc9ab441e0883f7a626b264162336464bfa7dc6e8eed861e73b6bbb002a0dc\""
+     }
+    }
+   },
+   "fingerprint": "74537e8d1a186df8",
+   "status": "not_modified",
+   "duration_s": 0.0,
+   "last_success": "2026-10-18T08:09:28+00:00",
+   "last_change": "2026-10-04T21:03:34+00:00",
+   "files": {
+    "detection/badbot_user_agents.txt": {
+     "bytes": 7693,
+     "sha256": "afb582c56eb12712bd8192732b0e42b69473bfa38ae6fdbdae3a9f65b82e7257",
+     "records": 700,
+     "updated": "2026-10-04T21:03:34+00:00"
+    }
+   }
+  },
+  "bing_bingbot_ips": {
+   "last_attempt": "2026-10-18T08:09:17+00:00",
+   "state": {
+    "http": {
+     "https://www.bing.com/toolbox/bingbot.json": {
+      "etag": "\"1dd5b82b44ffb2c\"",
+      "last_modified": "Wed, 14 Oct 2026 02:21:22 GMT"
+     }
+    }
+   },
+   "fingerprint": "5b2650dcd4bf86d7",
+   "status": "unchanged",
+   "duration_s": 0.1,
+   "last_success": "2026-10-18T08:09:17+00:00",
+   "last_change": "2026-10-04T21:03:23+00:00",
+   "files": {
+    "network/bing_bingbot_ips.json": {
+     "bytes": 1580,
+     "sha256": "a2d1cf229544205a24c61fb7c459408b1afe18f9fd5b172fe181f0eb73c1594d",
+     "records": 28,
+     "updated": "2026-10-04T21:03:23+00:00"
+    }
+   }
+  },
+  "blocklistde_all": {
+   "last_attempt": "2026-10-24T05:49:57+00:00",
+   "state": {
+    "http": {
+     "https://lists.blocklist.de/lists/all.txt": {
+      "etag": "\"628ff-65e8f671b7e11\"",
+      "last_modified": "Sat, 24 Oct 2026 05:31:03 GMT"
+     }
+    }
+   },
+   "fingerprint": "6742858b13b7082f",
+   "status": "updated",
+   "duration_s": 0.1,
+   "last_success": "2026-10-24T05:49:57+00:00",
+   "last_change": "2026-10-24T05:49:57+00:00",
+   "files": {
+    "threat_intel/blocklistde_all.txt": {
+     "bytes": 403711,
+     "sha256": "3aa20bb04cf4e4602192aa8a83e7f8be7b4d5d8c40dd9b14dc44dc6ac92ebaac",
+     "records": 27625,
+     "updated": "2026-10-24T05:49:57+00:00"
+    }
+   }
+  },
+  "bluetooth_company_ids": {
+   "last_attempt": "2026-10-18T08:09:23+00:00",
+   "state": {
+    "http": {
+     "https://bitbucket.org/bluetooth-SIG/public/raw/main/assigned_numbers/company_identifiers/company_identifiers.yaml": {
+      "last_modified": "Wed, 14 Oct 2026 20:51:39 GMT"
+     }
+    }
+   },
+   "fingerprint": "eb45394141b32834",
+   "status": "updated",
+   "duration_s": 1.1,
+   "last_success": "2026-10-18T08:09:23+00:00",
+   "last_change": "2026-10-18T08:09:23+00:00",
+   "files": {
+    "registries/bluetooth_company_ids.yaml": {
+     "bytes": 210487,
+     "sha256": "7931f9110ef9b817961b3e4bc93518dd409539e6486f3b14339fddec5b47c7a2",
+     "records": 8099,
+     "updated": "2026-10-18T08:09:24+00:00"
+    }
+   }
+  },
+  "bootloaders": {
+   "last_attempt": "2026-10-18T08:09:11+00:00",
+   "state": {
+    "http": {
+     "https://www.bootloaders.io/api/bootloaders.json": {
+      "etag": "W/\"64f0f426-1f9458\"",
+      "last_modified": "Thu, 31 Aug 2023 20:12:22 GMT"
+     }
+    }
+   },
+   "fingerprint": "3e7e43a9843dcd18",
+   "status": "not_modified",
+   "duration_s": 0.4,
+   "last_success": "2026-10-18T08:09:11+00:00",
+   "last_change": "2026-10-04T21:03:16+00:00",
+   "files": {
+    "lol/bootloaders.json": {
+     "bytes": 2069592,
+     "sha256": "54ee991d6f5c6fdb233a15ab0db84952238e1b06937bc57f84d8f95b6edc8d3b",
+     "records": 520,
+     "updated": "2026-10-04T21:03:16+00:00"
+    }
+   }
+  },
+  "certfr_alertes": {
+   "last_attempt": "2026-10-24T05:49:57+00:00",
+   "state": {
+    "http": {
+     "https://www.cert.ssi.gouv.fr/alerte/feed/": {
+      "etag": "\"8ebb4c3925a73f3e9d08bb75118580f1\"",
+      "last_modified": "Fri, 23 Oct 2026 14:25:11 GMT"
+     }
+    }
+   },
+   "fingerprint": "cc2794dafbd39317",
+   "status": "updated",
+   "duration_s": 0.2,
+   "last_success": "2026-10-24T05:49:57+00:00",
+   "last_change": "2026-10-24T05:49:57+00:00",
+   "files": {
+    "vulnerabilities/certfr_alertes.xml": {
+     "bytes": 25949,
+     "sha256": "2245ab489a88e992697ba81dfea6aaf2ade12663bbe231fdc9a7e2c64f1a7e48",
+     "records": null,
+     "updated": "2026-10-24T05:49:57+00:00"
+    }
+   }
+  },
+  "certfr_avis": {
+   "last_attempt": "2026-10-24T05:49:57+00:00",
+   "state": {
+    "http": {
+     "https://www.cert.ssi.gouv.fr/avis/feed/": {
+      "etag": "\"247889af11ad201daa04a5a0d219ec85\"",
+      "last_modified": "Fri, 23 Oct 2026 14:28:25 GMT"
+     }
+    }
+   },
+   "fingerprint": "0790a920dea91487",
+   "status": "updated",
+   "duration_s": 0.1,
+   "last_success": "2026-10-24T05:49:57+00:00",
+   "last_change": "2026-10-24T05:49:57+00:00",
+   "files": {
+    "vulnerabilities/certfr_avis.xml": {
+     "bytes": 23218,
+     "sha256": "69121f1b543053fd2fd0922299684edba0b4ab8c1143313879ddf6e90286caa7",
+     "records": null,
+     "updated": "2026-10-24T05:49:57+00:00"
+    }
+   }
+  },
+  "cinsscore_badguys": {
+   "last_attempt": "2026-10-24T05:49:57+00:00",
+   "state": {
+    "http": {
+     "https://cinsscore.com/list/ci-badguys.txt": {
+      "etag": "\"6adc3c41-33aa1\"",
+      "last_modified": "Sat, 24 Oct 2026 05:04:01 GMT"
+     }
+    }
+   },
+   "fingerprint": "1eda3d50a3ef8a9f",
+   "status": "updated",
+   "duration_s": 0.2,
+   "last_success": "2026-10-24T05:49:57+00:00",
+   "last_change": "2026-10-24T05:49:57+00:00",
+   "files": {
+    "threat_intel/cinsscore_badguys.txt": {
+     "bytes": 211617,
+     "sha256": "9f542690226d82f797881accc9000eba9d417cd38156ddf0852959d2449fa956",
+     "records": 15000,
+     "updated": "2026-10-24T05:49:57+00:00"
+    }
+   }
+  },
+  "cisa_kev": {
+   "last_attempt": "2026-10-24T05:49:57+00:00",
+   "state": {
+    "http": {
+     "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json": {
+      "etag": "\"1b92f2-65e8702af0b70\"",
+      "last_modified": "Fri, 23 Oct 2026 19:30:18 GMT"
+     }
+    }
+   },
+   "fingerprint": "761709c81f157592",
+   "status": "updated",
+   "duration_s": 0.3,
+   "last_success": "2026-10-24T05:49:57+00:00",
+   "last_change": "2026-10-24T05:49:57+00:00",
+   "files": {
+    "vulnerabilities/cisa_kev.json": {
+     "bytes": 1807090,
+     "sha256": "97a6e54bc74c651ab3c55657191db9adec6c63b05ca54e4205327cfd97a8fb70",
+     "records": 1756,
+     "updated": "2026-10-24T05:49:57+00:00"
+    }
+   }
+  },
+  "cloudflare_ip_ranges": {
+   "last_attempt": "2026-10-18T08:09:16+00:00",
+   "state": {
+    "http": {
+     "https://api.cloudflare.com/client/v4/ips": {
+      "etag": "W/\"38f79d050aa027e3be3865e495dcc9bc\""
+     }
+    }
+   },
+   "fingerprint": "197ffd99c8155edc",
+   "status": "unchanged",
+   "duration_s": 0.1,
+   "last_success": "2026-10-18T08:09:16+00:00",
+   "last_change": "2026-10-04T21:03:21+00:00",
+   "files": {
+    "network/cloudflare_ip_ranges.json": {
+     "bytes": 505,
+     "sha256": "f3d0a35768afd4a9a8307aa1033d50b9fa011b73836c9235c170aa31acac5efd",
+     "records": 4,
+     "updated": "2026-10-04T21:03:22+00:00"
+    }
+   }
+  },
+  "curl_ca_bundle": {
+   "last_attempt": "2026-10-18T08:09:25+00:00",
+   "state": {
+    "http": {
+     "https://curl.se/ca/cacert.pem": {
+      "etag": "\"2e1e4-65c461475e240\"",
+      "last_modified": "Fri, 25 Sep 2026 03:12:01 GMT"
+     }
+    }
+   },
+   "fingerprint": "38b1b88780dd0101",
+   "status": "not_modified",
+   "duration_s": 0.1,
+   "last_success": "2026-10-18T08:09:25+00:00",
+   "last_change": "2026-10-04T21:03:30+00:00",
+   "files": {
+    "registries/curl_ca_bundle.pem": {
+     "bytes": 188900,
+     "sha256": "a41b5d356aea97a529fe27e0f7316d2f9d946d75927476cf9cf1b90637d00505",
+     "records": 2808,
+     "updated": "2026-10-04T21:03:31+00:00"
+    }
+   }
+  },
+  "dbip_asn_lite": {
+   "last_attempt": "2026-10-18T08:09:19+00:00",
+   "state": {
+    "http": {}
+   },
+   "fingerprint": "3cd95b23cd9cd218",
+   "status": "unchanged",
+   "duration_s": 0.9,
+   "last_success": "2026-10-18T08:09:19+00:00",
+   "last_change": "2026-10-04T21:03:24+00:00",
+   "files": {
+    "network/dbip_asn_lite.csv": {
+     "bytes": 30360919,
+     "sha256": "f581cd401338239a05f08490bce3da57c9261b96367df4ec10439260f02da4b4",
+     "records": 477361,
+     "updated": "2026-10-04T21:03:25+00:00"
+    }
+   }
+  },
+  "dbip_country_lite": {
+   "last_attempt": "2026-10-18T08:09:18+00:00",
+   "state": {
+    "http": {}
+   },
+   "fingerprint": "da9bdfd76c40f162",
+   "status": "unchanged",
+   "duration_s": 0.9,
+   "last_success": "2026-10-18T08:09:18+00:00",
+   "last_change": "2026-10-04T21:03:23+00:00",
+   "files": {
+    "network/dbip_country_lite.csv": {
+     "bytes": 31210433,
+     "sha256": "53864a68fbfef02c27c717d08d431a6d453e9e00e77d9e8da841d382267fca88",
+     "records": 710833,
+     "updated": "2026-10-04T21:03:25+00:00"
+    }
+   }
+  },
+  "digitalocean_ip_ranges": {
+   "last_attempt": "2026-10-18T08:09:16+00:00",
+   "state": {
+    "http": {
+     "https://digitalocean.com/geo/google.csv": {}
+    }
+   },
+   "fingerprint": "759b5eacfd0dcce8",
+   "status": "updated",
+   "duration_s": 0.6,
+   "last_success": "2026-10-18T08:09:16+00:00",
+   "last_change": "2026-10-18T08:09:16+00:00",
+   "files": {
+    "network/digitalocean_ip_ranges.csv": {
+     "bytes": 53123,
+     "sha256": "259d82de286d2af92abb8bcb50d473b5f5b193659d58b27289aa85f1c5a3086e",
+     "records": 1233,
+     "updated": "2026-10-18T08:09:17+00:00"
+    }
+   }
+  },
+  "disposable_email_domains": {
+   "last_attempt": "2026-10-18T08:09:20+00:00",
+   "state": {
+    "http": {
+     "https://raw.githubusercontent.com/disposable-email-domains/disposable-email-domains/main/disposable_email_blocklist.conf": {
+      "etag": "W/\"6ef1dbef634b70728c6d4811f00f6a1fd2e2495f21fc067a48882255f449747d\""
+     }
+    }
+   },
+   "fingerprint": "28f894f80a8311de",
+   "status": "updated",
+   "duration_s": 0.0,
+   "last_success": "2026-10-18T08:09:20+00:00",
+   "last_change": "2026-10-18T08:09:20+00:00",
+   "files": {
+    "domains/disposable_email_domains.txt": {
+     "bytes": 143266,
+     "sha256": "2a8f3d0ae32228c081d5ff90e8021a9ccb0a4348f96872c511f4b83762d87dde",
+     "records": 9901,
+     "updated": "2026-10-18T08:09:20+00:00"
+    }
+   }
+  },
+  "dshield_block": {
+   "last_attempt": "2026-10-24T05:49:57+00:00",
+   "state": {
+    "http": {
+     "https://feeds.dshield.org/block.txt": {
+      "etag": "W/\"831-65e8f98dae00e\"",
+      "last_modified": "Sat, 24 Oct 2026 05:44:58 GMT"
+     }
+    }
+   },
+   "fingerprint": "fe9cccbbd2e08613",
+   "status": "updated",
+   "duration_s": 0.1,
+   "last_success": "2026-10-24T05:49:57+00:00",
+   "last_change": "2026-10-24T05:49:57+00:00",
+   "files": {
+    "threat_intel/dshield_block.txt": {
+     "bytes": 2097,
+     "sha256": "bf641551148d3d55493bc58bef1eec51ddb13a861aa15ccef90d2d27c301a6bc",
+     "records": 20,
+     "updated": "2026-10-24T05:49:57+00:00"
+    }
+   }
+  },
+  "enisa_euvd_exploited": {
+   "last_attempt": "2026-10-24T05:49:57+00:00",
+   "state": {},
+   "fingerprint": "b688f87e977f2199",
+   "status": "updated",
+   "duration_s": 8.9,
+   "last_success": "2026-10-24T05:49:57+00:00",
+   "last_change": "2026-10-24T05:49:57+00:00",
+   "files": {
+    "vulnerabilities/enisa_euvd_exploited.json": {
+     "bytes": 7075497,
+     "sha256": "72a5cd968dbe41f345fa73ecb0d71212817e6a42130cccb6edc6fbdfe7ccd540",
+     "records": 1772,
+     "updated": "2026-10-24T05:50:06+00:00"
+    }
+   }
+  },
+  "exploitdb_exploits": {
+   "last_attempt": "2026-10-18T08:09:11+00:00",
+   "state": {
+    "http": {
+     "https://gitlab.com/exploit-database/exploitdb/-/raw/main/files_exploits.csv": {
+      "etag": "\"f7b4e8c4bf7ec55bd805761e340bf073\""
+     }
+    }
+   },
+   "fingerprint": "6f56f59f13c673ad",
+   "status": "not_modified",
+   "duration_s": 0.1,
+   "last_success": "2026-10-18T08:09:11+00:00",
+   "last_change": "2026-10-04T21:03:17+00:00",
+   "files": {
+    "vulnerabilities/exploitdb_exploits.csv": {
+     "bytes": 10182721,
+     "sha256": "49ed79cb1bf0878931793318485d21cdc947f1d91ef8accbd09d5d4bf99991b8",
+     "records": 47170,
+     "updated": "2026-10-04T21:03:17+00:00"
+    }
+   }
+  },
+  "fastly_ip_ranges": {
+   "last_attempt": "2026-10-18T08:09:16+00:00",
+   "state": {
+    "http": {
+     "https://api.fastly.com/public-ip-list": {}
+    }
+   },
+   "fingerprint": "6df8297adf38083d",
+   "status": "updated",
+   "duration_s": 0.1,
+   "last_success": "2026-10-18T08:09:16+00:00",
+   "last_change": "2026-10-18T08:09:16+00:00",
+   "files": {
+    "network/fastly_ip_ranges.json": {
+     "bytes": 451,
+     "sha256": "b5e8800ff76c2a8fdcedb7d9b27f23b6cb3158034b157540e594651d42b60bc6",
+     "records": 21,
+     "updated": "2026-10-18T08:09:16+00:00"
+    }
+   }
+  },
+  "filesec_extensions": {
+   "last_attempt": "2026-10-18T08:09:11+00:00",
+   "state": {},
+   "fingerprint": "4fbec521c9eab7a5",
+   "status": "unchanged",
+   "duration_s": 2.7,
+   "last_success": "2026-10-18T08:09:11+00:00",
+   "last_change": "2026-10-04T21:03:16+00:00",
+   "files": {
+    "lol/filesec_extensions.csv": {
+     "bytes": 4960,
+     "sha256": "5fbea1095dbaf3e78f03bc3f4348791d354e72908e62a447eec53e3f5121d15c",
+     "records": 121,
+     "updated": "2026-10-04T21:03:19+00:00"
+    }
+   }
+  },
+  "firehol_level1": {
+   "last_attempt": "2026-10-24T05:49:56+00:00",
+   "state": {
+    "http": {
+     "https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level1.netset": {
+      "etag": "W/\"c268b7d1eab0a76ea3a8846c93dcd6f885e6b86843656bff72b73527e1847832\""
+     }
+    }
+   },
+   "fingerprint": "63f54324b55bd62c",
+   "status": "updated",
+   "duration_s": 0.1,
+   "last_success": "2026-10-24T05:49:56+00:00",
+   "last_change": "2026-10-24T05:49:56+00:00",
+   "files": {
+    "threat_intel/firehol_level1.txt": {
+     "bytes": 73911,
+     "sha256": "f19cc344c8d488c66841bb230a46fae9e0fcd03fa4bf8309731ab86b552459e2",
+     "records": 4638,
+     "updated": "2026-10-24T05:49:57+00:00"
+    }
+   }
+  },
+  "first_epss": {
+   "last_attempt": "2026-10-24T05:49:57+00:00",
+   "state": {
+    "http": {}
+   },
+   "fingerprint": "6596515a65e44e31",
+   "status": "updated",
+   "duration_s": 0.3,
+   "last_success": "2026-10-24T05:49:57+00:00",
+   "last_change": "2026-10-24T05:49:57+00:00",
+   "files": {
+    "vulnerabilities/first_epss.csv": {
+     "bytes": 12002809,
+     "sha256": "590ce61772610c2b351b58bb2f27f08c48fffa5db3d6ab4e0b68182cbfebd284",
+     "records": 394803,
+     "updated": "2026-10-24T05:49:57+00:00"
+    }
+   }
+  },
+  "free_email_domains": {
+   "last_attempt": "2026-10-18T08:09:20+00:00",
+   "state": {
+    "http": {
+     "https://raw.githubusercontent.com/Kikobeats/free-email-domains/master/domains.json": {
+      "etag": "W/\"5b75435a6d0a39c2c3a5e30852f2b44b5b85b2abb862520c83fa78f73d61fcf3\""
+     }
+    }
+   },
+   "fingerprint": "0fe221be92a85338",
+   "status": "updated",
+   "duration_s": 0.1,
+   "last_success": "2026-10-18T08:09:20+00:00",
+   "last_change": "2026-10-18T08:09:20+00:00",
+   "files": {
+    "domains/free_email_domains.json": {
+     "bytes": 657978,
+     "sha256": "d59893ffe8af6489428067710f29b9363951a573255653094a3f4e3f19446f80",
+     "records": 32563,
+     "updated": "2026-10-18T08:09:20+00:00"
+    }
+   }
+  },
+  "gcp_ip_ranges": {
+   "last_attempt": "2026-10-18T08:09:16+00:00",
+   "state": {
+    "http": {
+     "https://www.gstatic.com/ipranges/cloud.json": {
+      "last_modified": "Sun, 18 Oct 2026 02:18:00 GMT"
+     }
+    }
+   },
+   "fingerprint": "7b1048dad58e043c",
+   "status": "updated",
+   "duration_s": 0.1,
+   "last_success": "2026-10-18T08:09:16+00:00",
+   "last_change": "2026-10-18T08:09:16+00:00",
+   "files": {
+    "network/gcp_ip_ranges.json": {
+     "bytes": 115362,
+     "sha256": "7a7ef690f1039a99d5b0207ab7e54e07a673f2364a98f2c7dbdfcac22a378566",
+     "records": 1128,
+     "updated": "2026-10-18T08:09:16+00:00"
+    }
+   }
+  },
+  "github_advisories": {
+   "last_attempt": "2026-10-18T08:09:11+00:00",
+   "state": {},
+   "fingerprint": "6600a587ba36981d",
+   "status": "updated",
+   "duration_s": 96.6,
+   "last_success": "2026-10-18T08:09:11+00:00",
+   "last_change": "2026-10-18T08:09:11+00:00",
+   "files": {
+    "vulnerabilities/github_advisories.json.gz": {
+     "bytes": 26658909,
+     "sha256": "37fc6859cd04b936f3853b1f8f3e8f606680f8eb43816a319ca945fc2119cfa4",
+     "records": 36899,
+     "updated": "2026-10-18T08:10:50+00:00"
+    }
+   }
+  },
+  "github_ip_ranges": {
+   "last_attempt": "2026-10-18T08:09:16+00:00",
+   "state": {
+    "http": {
+     "https://api.github.com/meta": {
+      "etag": "W/\"30de30856e1954ec462e53928cde0b6ed1c57f8cd249d0292a42f86acd463cdd\""
+     }
+    }
+   },
+   "fingerprint": "3b343d44b3a6fefd",
+   "status": "updated",
+   "duration_s": 0.0,
+   "last_success": "2026-10-18T08:09:16+00:00",
+   "last_change": "2026-10-18T08:09:16+00:00",
+   "files": {
+    "network/github_ip_ranges.json": {
+     "bytes": 165200,
+     "sha256": "f9c5746c8249dfd9737f8dfcb969772bcf1c3675973fc2da161648c02811f14f",
+     "records": 7038,
+     "updated": "2026-10-18T08:09:16+00:00"
+    }
+   }
+  },
+  "google_googlebot_ips": {
+   "last_attempt": "2026-10-18T08:09:17+00:00",
+   "state": {
+    "http": {
+     "https://developers.google.com/static/search/apis/ipranges/googlebot.json": {
+      "last_modified": "Fri, 16 Oct 2026 14:46:43 GMT"
+     }
+    }
+   },
+   "fingerprint": "ce8f25af9ddb911c",
+   "status": "updated",
+   "duration_s": 1.2,
+   "last_success": "2026-10-18T08:09:17+00:00",
+   "last_change": "2026-10-18T08:09:17+00:00",
+   "files": {
+    "network/google_googlebot_ips.json": {
+     "bytes": 21768,
+     "sha256": "847a1335fdc5b351626e9e14cffe7c6304d4ab3093b9d8775866097942876223",
+     "records": 317,
+     "updated": "2026-10-18T08:09:18+00:00"
+    }
+   }
+  },
+  "google_ip_ranges": {
+   "last_attempt": "2026-10-18T08:09:16+00:00",
+   "state": {
+    "http": {
+     "https://www.gstatic.com/ipranges/goog.json": {
+      "last_modified": "Sun, 18 Oct 2026 02:18:00 GMT"
+     }
+    }
+   },
+   "fingerprint": "e898de140e44f399",
+   "status": "updated",
+   "duration_s": 0.0,
+   "last_success": "2026-10-18T08:09:16+00:00",
+   "last_change": "2026-10-18T08:09:16+00:00",
+   "files": {
+    "network/google_ip_ranges.json": {
+     "bytes": 6186,
+     "sha256": "1135df096a3d859dd1f77b7a552841802fae14cf330278ace47d5d7b0be834df",
+     "records": 145,
+     "updated": "2026-10-18T08:09:16+00:00"
+    }
+   }
+  },
+  "google_play_devices": {
+   "last_attempt": "2026-10-18T08:09:24+00:00",
+   "state": {
+    "http": {
+     "https://storage.googleapis.com/play_public/supported_devices.csv": {
+      "etag": "\"02f2c0bf24b951df86a3f8b59f137dbf\"",
+      "last_modified": "Sat, 17 Oct 2026 12:06:02 GMT"
+     }
+    }
+   },
+   "fingerprint": "d6ae25161e92382f",
+   "status": "updated",
+   "duration_s": 0.3,
+   "last_success": "2026-10-18T08:09:24+00:00",
+   "last_change": "2026-10-18T08:09:24+00:00",
+   "files": {
+    "registries/google_play_devices.csv": {
+     "bytes": 2401040,
+     "sha256": "3527f4756b1179ea7a024a58dd69f45ab6548a4db70df55d82b6a3f48e32890e",
+     "records": 54192,
+     "updated": "2026-10-18T08:09:25+00:00"
+    }
+   }
+  },
+  "google_special_crawlers_ips": {
+   "last_attempt": "2026-10-18T08:09:17+00:00",
+   "state": {
+    "http": {
+     "https://developers.google.com/static/search/apis/ipranges/special-crawlers.json": {
+      "last_modified": "Fri, 16 Oct 2026 14:46:46 GMT"
+     }
+    }
+   },
+   "fingerprint": "6b5ca8fb5cc4e471",
+   "status": "updated",
+   "duration_s": 1.1,
+   "last_success": "2026-10-18T08:09:17+00:00",
+   "last_change": "2026-10-18T08:09:17+00:00",
+   "files": {
+    "network/google_special_crawlers_ips.json": {
+     "bytes": 19109,
+     "sha256": "53e9d7e05cff7b01f2033796d11afde148894013490aa676d8c940896750da90",
+     "records": 272,
+     "updated": "2026-10-18T08:09:18+00:00"
+    }
+   }
+  },
+  "gtfobins": {
+   "last_attempt": "2026-10-18T08:09:10+00:00",
+   "state": {
+    "http": {
+     "https://gtfobins.org/api.json": {
+      "etag": "W/\"6a16ddf2-2f04d\"",
+      "last_modified": "Wed, 27 May 2026 12:05:06 GMT"
+     }
+    }
+   },
+   "fingerprint": "5cdbd25bc3525475",
+   "status": "unchanged",
+   "duration_s": 0.4,
+   "last_success": "2026-10-18T08:09:10+00:00",
+   "last_change": "2026-10-04T21:03:16+00:00",
+   "files": {
+    "lol/gtfobins.json": {
+     "bytes": 192589,
+     "sha256": "ab877916bc74a58967cd7215287172faeb5b81972732c574262192957da24d76",
+     "records": 3,
+     "updated": "2026-10-04T21:03:16+00:00"
+    }
+   }
+  },
+  "hijacklibs": {
+   "last_attempt": "2026-10-18T08:09:11+00:00",
+   "state": {
+    "http": {
+     "https://hijacklibs.net/api/hijacklibs.json": {
+      "etag": "W/\"6ac6c8f3-ed12d\"",
+      "last_modified": "Wed, 07 Oct 2026 22:34:27 GMT"
+     }
+    }
+   },
+   "fingerprint": "48578ac1a488a98b",
+   "status": "not_modified",
+   "duration_s": 0.2,
+   "last_success": "2026-10-18T08:09:11+00:00",
+   "last_change": "2026-10-11T10:08:04+00:00",
+   "files": {
+    "lol/hijacklibs.json": {
+     "bytes": 971053,
+     "sha256": "8d389bb372d9a6b0f63b2e615b2ce016fab37460dc3a423a8cba8bc2d9abd530",
+     "records": 618,
+     "updated": "2026-10-11T10:08:04+00:00"
+    }
+   }
+  },
+  "iana_service_ports": {
+   "last_attempt": "2026-10-18T08:09:25+00:00",
+   "state": {
+    "http": {
+     "https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.csv": {
+      "last_modified": "Fri, 16 Oct 2026 04:01:56 GMT"
+     }
+    }
+   },
+   "fingerprint": "f37a2cba09821e70",
+   "status": "updated",
+   "duration_s": 0.4,
+   "last_success": "2026-10-18T08:09:25+00:00",
+   "last_change": "2026-10-18T08:09:25+00:00",
+   "files": {
+    "registries/iana_service_ports.csv": {
+     "bytes": 1158271,
+     "sha256": "b6afeefdc6b2c616f9a515d57819a558ebe33250b59b2700b3afc4a4ba1923f2",
+     "records": 15407,
+     "updated": "2026-10-18T08:09:25+00:00"
+    }
+   }
+  },
+  "iana_tlds": {
+   "last_attempt": "2026-10-18T08:09:20+00:00",
+   "state": {
+    "http": {
+     "https://data.iana.org/TLD/tlds-alpha-by-domain.txt": {
+      "etag": "\"2538-65e180b5020fe-br\"",
+      "last_modified": "Sun, 18 Oct 2026 07:07:02 GMT"
+     }
+    }
+   },
+   "fingerprint": "95a5ee60f1021038",
+   "status": "updated",
+   "duration_s": 0.1,
+   "last_success": "2026-10-18T08:09:20+00:00",
+   "last_change": "2026-10-18T08:09:20+00:00",
+   "files": {
+    "domains/iana_tlds.txt": {
+     "bytes": 9528,
+     "sha256": "d692781e5b03b4bba965fa99b647eb12f2b8af5108a19d5e3b977165393c3b1c",
+     "records": 1437,
+     "updated": "2026-10-18T08:09:20+00:00"
+    }
+   }
+  },
+  "ieee_cid": {
+   "last_attempt": "2026-10-18T08:09:23+00:00",
+   "state": {
+    "http": {
+     "https://standards-oui.ieee.org/cid/cid.csv": {
+      "etag": "\"6ad47ca3-4fdb\"",
+      "last_modified": "Sun, 18 Oct 2026 08:00:35 GMT"
+     }
+    }
+   },
+   "fingerprint": "1ff58d943bd2a6b3",
+   "status": "updated",
+   "duration_s": 0.4,
+   "last_success": "2026-10-18T08:09:23+00:00",
+   "last_change": "2026-10-18T08:09:23+00:00",
+   "files": {
+    "registries/ieee_cid.csv": {
+     "bytes": 20443,
+     "sha256": "a07cf5e89d11195c645c60e3e153fe1b4603532eb4c2d793dbc1f50fe98415f8",
+     "records": 221,
+     "updated": "2026-10-18T08:09:23+00:00"
+    }
+   }
+  },
+  "ieee_iab": {
+   "last_attempt": "2026-10-18T08:09:21+00:00",
+   "state": {
+    "http": {
+     "https://standards-oui.ieee.org/iab/iab.csv": {
+      "etag": "\"6ad47cae-5d0bd\"",
+      "last_modified": "Sun, 18 Oct 2026 08:00:46 GMT"
+     }
+    }
+   },
+   "fingerprint": "a1422827506aef10",
+   "status": "unchanged",
+   "duration_s": 1.7,
+   "last_success": "2026-10-18T08:09:21+00:00",
+   "last_change": "2026-10-04T21:03:27+00:00",
+   "files": {
+    "registries/ieee_iab.csv": {
+     "bytes": 381117,
+     "sha256": "6e71aa3d47f00f19d09cb3b31ce1038de1834703420f0ce4ce111da586f1a533",
+     "records": 4575,
+     "updated": "2026-10-04T21:03:28+00:00"
+    }
+   }
+  },
+  "ieee_manid": {
+   "last_attempt": "2026-10-18T08:09:23+00:00",
+   "state": {
+    "http": {
+     "https://standards-oui.ieee.org/manid/manid.csv": {
+      "etag": "\"6ad47cb7-32b8\"",
+      "last_modified": "Sun, 18 Oct 2026 08:00:55 GMT"
+     }
+    }
+   },
+   "fingerprint": "b356834de38b533e",
+   "status": "unchanged",
+   "duration_s": 0.2,
+   "last_success": "2026-10-18T08:09:23+00:00",
+   "last_change": "2026-10-04T21:03:28+00:00",
+   "files": {
+    "registries/ieee_manid.csv": {
+     "bytes": 12984,
+     "sha256": "25342318fe35245b8bba5050bb26a373e16cea95f7eb8ca4678045457a81a00c",
+     "records": 174,
+     "updated": "2026-10-04T21:03:28+00:00"
+    }
+   }
+  },
+  "ieee_oui": {
+   "last_attempt": "2026-10-18T08:09:20+00:00",
+   "state": {
+    "http": {
+     "https://standards-oui.ieee.org/oui/oui.csv": {
+      "etag": "\"6ad47cc0-3ae394\"",
+      "last_modified": "Sun, 18 Oct 2026 08:01:04 GMT"
+     }
+    }
+   },
+   "fingerprint": "9fdbab725a2b9b6b",
+   "status": "updated",
+   "duration_s": 8.5,
+   "last_success": "2026-10-18T08:09:20+00:00",
+   "last_change": "2026-10-18T08:09:20+00:00",
+   "files": {
+    "registries/ieee_oui.csv": {
+     "bytes": 3859348,
+     "sha256": "bdd0377ed4a4b3fa5e1b7445a29a64c39d5179d40dd8a50038789abb2aff5c8d",
+     "records": 40347,
+     "updated": "2026-10-18T08:09:29+00:00"
+    }
+   }
+  },
+  "ieee_oui36": {
+   "last_attempt": "2026-10-18T08:09:20+00:00",
+   "state": {
+    "http": {
+     "https://standards-oui.ieee.org/oui36/oui36.csv": {
+      "etag": "\"6ad47cc5-a4208\"",
+      "last_modified": "Sun, 18 Oct 2026 08:01:09 GMT"
+     }
+    }
+   },
+   "fingerprint": "3811319e2ce1ef05",
+   "status": "updated",
+   "duration_s": 2.2,
+   "last_success": "2026-10-18T08:09:20+00:00",
+   "last_change": "2026-10-18T08:09:20+00:00",
+   "files": {
+    "registries/ieee_oui36.csv": {
+     "bytes": 672264,
+     "sha256": "99f517da5126ca6f8d67fe5cac90bb86f1a4d404bd38450d81cc86f58b043536",
+     "records": 7235,
+     "updated": "2026-10-18T08:09:23+00:00"
+    }
+   }
+  },
+  "ihebski_default_credentials": {
+   "last_attempt": "2026-10-18T08:09:28+00:00",
+   "state": {
+    "http": {
+     "https://raw.githubusercontent.com/ihebski/DefaultCreds-cheat-sheet/main/DefaultCreds-Cheat-Sheet.csv": {
+      "etag": "W/\"e2f85bcf2be4b1b242c726efc1688fee1778e9e4cabb135fe826ffcf713d5e69\""
+     }
+    }
+   },
+   "fingerprint": "0e90bc2176b9854a",
+   "status": "not_modified",
+   "duration_s": 0.1,
+   "last_success": "2026-10-18T08:09:28+00:00",
+   "last_change": "2026-10-04T21:03:33+00:00",
+   "files": {
+    "detection/ihebski_default_credentials.csv": {
+     "bytes": 97300,
+     "sha256": "698895f16a1c2a99fff8f3063d1e77e1cb120b4df6113f83334e3bb5d3f3c932",
+     "records": 3767,
+     "updated": "2026-10-04T21:03:34+00:00"
+    }
+   }
+  },
+  "iptoasn_ipv4": {
+   "last_attempt": "2026-10-18T08:09:18+00:00",
+   "state": {
+    "http": {
+     "https://iptoasn.com/data/ip2asn-v4.tsv.gz": {
+      "etag": "\"6ad469b6-6ae0fc\"",
+      "last_modified": "Sun, 18 Oct 2026 06:39:50 GMT"
+     }
+    }
+   },
+   "fingerprint": "b6262f3cde66ba33",
+   "status": "updated",
+   "duration_s": 1.3,
+   "last_success": "2026-10-18T08:09:18+00:00",
+   "last_change": "2026-10-18T08:09:18+00:00",
+   "files": {
+    "network/iptoasn_ipv4.tsv": {
+     "bytes": 30548541,
+     "sha256": "181193951aaff1558ae0efdc6f843cac098d917580d6f13b9c1fe8fb55ca5314",
+     "records": 539258,
+     "updated": "2026-10-18T08:09:19+00:00"
+    }
+   }
+  },
+  "iptoasn_ipv6": {
+   "last_attempt": "2026-10-18T08:09:18+00:00",
+   "state": {
+    "http": {
+     "https://iptoasn.com/data/ip2asn-v6.tsv.gz": {
+      "etag": "\"6ad45786-1ece31\"",
+      "last_modified": "Sun, 18 Oct 2026 05:22:14 GMT"
+     }
+    }
+   },
+   "fingerprint": "05ca34e4c29cf590",
+   "status": "updated",
+   "duration_s": 0.3,
+   "last_success": "2026-10-18T08:09:18+00:00",
+   "last_change": "2026-10-18T08:09:18+00:00",
+   "files": {
+    "network/iptoasn_ipv6.tsv": {
+     "bytes": 15268355,
+     "sha256": "d3d1d3e30a201031ac1864680e0308ebe2de7aae2fba4bfa2536308522a619c3",
+     "records": 183982,
+     "updated": "2026-10-18T08:09:19+00:00"
+    }
+   }
+  },
+  "lofl": {
+   "last_attempt": "2026-10-18T08:09:11+00:00",
+   "state": {
+    "http": {
+     "https://lofl-project.github.io/api/loflcab.json": {
+      "etag": "W/\"69dea005-446ff\"",
+      "last_modified": "Tue, 14 Apr 2026 20:13:57 GMT"
+     }
+    }
+   },
+   "fingerprint": "c3537137dff80ea9",
+   "status": "not_modified",
+   "duration_s": 0.1,
+   "last_success": "2026-10-18T08:09:11+00:00",
+   "last_change": "2026-10-04T21:03:16+00:00",
+   "files": {
+    "lol/lofl.json": {
+     "bytes": 280319,
+     "sha256": "8d1788fd6072ecc1a881dd83dc8b5526362bd0fce6815765308861f8ad0e8c75",
+     "records": 394,
+     "updated": "2026-10-04T21:03:16+00:00"
+    }
+   }
+  },
+  "lolapps": {
+   "last_attempt": "2026-10-18T08:09:11+00:00",
+   "state": {
+    "http": {
+     "https://lolapps-project.github.io/api/lolapps.json": {
+      "etag": "W/\"67b5100c-1d37\"",
+      "last_modified": "Tue, 18 Feb 2025 22:56:12 GMT"
+     }
+    }
+   },
+   "fingerprint": "029841828fcc0f54",
+   "status": "not_modified",
+   "duration_s": 0.1,
+   "last_success": "2026-10-18T08:09:11+00:00",
+   "last_change": "2026-10-04T21:03:16+00:00",
+   "files": {
+    "lol/lolapps.json": {
+     "bytes": 7479,
+     "sha256": "347af7d93d302d318ab4cea45666bb94122b02ff43bcac1b3e610ce2bc50724f",
+     "records": 15,
+     "updated": "2026-10-04T21:03:16+00:00"
+    }
+   }
+  },
+  "lolbas": {
+   "last_attempt": "2026-10-18T08:09:10+00:00",
+   "state": {
+    "http": {
+     "https://lolbas-project.github.io/api/lolbas.json": {
+      "etag": "W/\"6ab77ee0-6bb55\"",
+      "last_modified": "Sat, 26 Sep 2026 08:14:24 GMT"
+     }
+    }
+   },
+   "fingerprint": "fa66891e12b67729",
+   "status": "not_modified",
+   "duration_s": 0.2,
+   "last_success": "2026-10-18T08:09:10+00:00",
+   "last_change": "2026-10-04T21:03:16+00:00",
+   "files": {
+    "lol/lolbas.json": {
+     "bytes": 441173,
+     "sha256": "4d7f07b19c2960656bb7610a30ebb57d84d3d92c9ea837dfc33d1a0ca569c34e",
+     "records": 245,
+     "updated": "2026-10-04T21:03:16+00:00"
+    }
+   }
+  },
+  "lolc2": {
+   "last_attempt": "2026-10-18T08:09:11+00:00",
+   "state": {
+    "http": {
+     "https://raw.githubusercontent.com/lolc2/lolc2.github.io/main/c2_data.json": {
+      "etag": "W/\"4f4c3724aaea6ff4fffdc3bfe67fdeecdcf21055a6f4b7ba6945c50bf77144b0\""
+     }
+    }
+   },
+   "fingerprint": "44191731b46ffd0a",
+   "status": "not_modified",
+   "duration_s": 0.1,
+   "last_success": "2026-10-18T08:09:11+00:00",
+   "last_change": "2026-10-04T21:03:16+00:00",
+   "files": {
+    "lol/lolc2.json": {
+     "bytes": 89510,
+     "sha256": "c392b09ab1ca458962648817af63ea5465cd3e74bc208a0b21aa52016d931f89",
+     "records": 56,
+     "updated": "2026-10-04T21:03:16+00:00"
+    }
+   }
+  },
+  "loldrivers": {
+   "last_attempt": "2026-10-18T08:09:10+00:00",
+   "state": {
+    "http": {
+     "https://www.loldrivers.io/api/drivers.json": {
+      "etag": "W/\"6ace1675-1fc21e4\"",
+      "last_modified": "Tue, 13 Oct 2026 11:31:01 GMT"
+     }
+    }
+   },
+   "fingerprint": "87a8710706140f9d",
+   "status": "updated",
+   "duration_s": 1.3,
+   "last_success": "2026-10-18T08:09:10+00:00",
+   "last_change": "2026-10-18T08:09:10+00:00",
+   "files": {
+    "lol/loldrivers.json": {
+     "bytes": 33300964,
+     "sha256": "9dd50a8c03e9ae477460b53bb23bc375b8abdbb1df8152b18504ed5789837fa7",
+     "records": 702,
+     "updated": "2026-10-18T08:09:12+00:00"
+    }
+   }
+  },
+  "lolesxi": {
+   "last_attempt": "2026-10-18T08:09:10+00:00",
+   "state": {
+    "http": {
+     "https://lolesxi-project.github.io/LOLESXi/api/lolesxi.json": {
+      "etag": "W/\"6a6525b9-a8de\"",
+      "last_modified": "Sat, 25 Jul 2026 21:08:09 GMT"
+     }
+    }
+   },
+   "fingerprint": "ede8e08473003dfb",
+   "status": "not_modified",
+   "duration_s": 0.2,
+   "last_success": "2026-10-18T08:09:10+00:00",
+   "last_change": "2026-10-04T21:03:16+00:00",
+   "files": {
+    "lol/lolesxi.json": {
+     "bytes": 43230,
+     "sha256": "c9e756b7562be8ff4bdd788c350760ebc4bc1ea200b06cf0640c3401881f5963",
+     "records": 19,
+     "updated": "2026-10-04T21:03:16+00:00"
+    }
+   }
+  },
+  "lolrmm": {
+   "last_attempt": "2026-10-18T08:09:10+00:00",
+   "state": {
+    "http": {
+     "https://lolrmm.io/api/rmm_tools.json": {
+      "etag": "W/\"6acda57e-228428\"",
+      "last_modified": "Tue, 13 Oct 2026 03:29:02 GMT"
+     }
+    }
+   },
+   "fingerprint": "ea51d47493bec4a3",
+   "status": "updated",
+   "duration_s": 0.4,
+   "last_success": "2026-10-18T08:09:10+00:00",
+   "last_change": "2026-10-18T08:09:10+00:00",
+   "files": {
+    "lol/lolrmm.json": {
+     "bytes": 2262056,
+     "sha256": "e37d826d32a0dde3e18eb25107531fec6fd6bfef62bde47dd362a5484237d142",
+     "records": 358,
+     "updated": "2026-10-18T08:09:11+00:00"
+    }
+   }
+  },
+  "loobins": {
+   "last_attempt": "2026-10-18T08:09:10+00:00",
+   "state": {
+    "http": {
+     "https://www.loobins.io/loobins.json": {
+      "etag": "W/\"6ad38d7b-3d11c\"",
+      "last_modified": "Sat, 17 Oct 2026 15:00:11 GMT"
+     }
+    }
+   },
+   "fingerprint": "926738b581cb27ce",
+   "status": "updated",
+   "duration_s": 0.6,
+   "last_success": "2026-10-18T08:09:10+00:00",
+   "last_change": "2026-10-18T08:09:10+00:00",
+   "files": {
+    "lol/loobins.json": {
+     "bytes": 250140,
+     "sha256": "05d7db660c6c0ca682850b3bca3ffb9972a159297f232ba2918098200871c44a",
+     "records": 76,
+     "updated": "2026-10-18T08:09:11+00:00"
+    }
+   }
+  },
+  "lothardware": {
+   "last_attempt": "2026-10-18T08:09:11+00:00",
+   "state": {
+    "http": {
+     "https://raw.githubusercontent.com/enesilhaydin/lothardware/main/hardwares.json": {
+      "etag": "W/\"81dc2fe7f3fd238b1e2a75a73f4b0f05cf52341a3c3744530cb6b3442695a1d4\""
+     }
+    }
+   },
+   "fingerprint": "fa8ffed13ca946bb",
+   "status": "not_modified",
+   "duration_s": 0.2,
+   "last_success": "2026-10-18T08:09:11+00:00",
+   "last_change": "2026-10-04T21:03:16+00:00",
+   "files": {
+    "lol/lothardware.json": {
+     "bytes": 4492,
+     "sha256": "79440db77d2341f0c184f529d28a1b371fc8db5d53c12b40bec29386446945f5",
+     "records": 29,
+     "updated": "2026-10-04T21:03:17+00:00"
+    }
+   }
+  },
+  "lots": {
+   "last_attempt": "2026-10-18T08:09:11+00:00",
+   "state": {},
+   "fingerprint": "7e723d6809cf93b8",
+   "status": "unchanged",
+   "duration_s": 2.6,
+   "last_success": "2026-10-18T08:09:11+00:00",
+   "last_change": "2026-10-04T21:03:16+00:00",
+   "files": {
+    "lol/lots.csv": {
+     "bytes": 7479,
+     "sha256": "6c0c88efebf7aff6f16d6c9b3d7c498d26a296fcb65d77d54104935c5deb5199",
+     "records": 175,
+     "updated": "2026-10-04T21:03:17+00:00"
+    }
+   }
+  },
+  "lottunnels_binaries": {
+   "last_attempt": "2026-10-18T08:09:11+00:00",
+   "state": {
+    "http": {
+     "https://codeload.github.com/LoTtunnels/LoTtunnels.github.io/zip/refs/heads/main": {
+      "etag": "W/\"78d681923f74efbea338db425ad3482812d0661a6d0c90907658961175e06144\""
+     }
+    }
+   },
+   "fingerprint": "579e66355638c38b",
+   "status": "not_modified",
+   "duration_s": 0.1,
+   "last_success": "2026-10-18T08:09:11+00:00",
+   "last_change": "2026-10-11T10:08:04+00:00",
+   "files": {
+    "lol/lottunnels_binaries.json": {
+     "bytes": 143587,
+     "sha256": "8f999846f404f0a309e7de312dc5e57800a4113e3ef42faee88d5cfd3fcd3972",
+     "records": 55,
+     "updated": "2026-10-11T10:08:05+00:00"
+    }
+   }
+  },
+  "lottunnels_domains": {
+   "last_attempt": "2026-10-18T08:09:11+00:00",
+   "state": {
+    "http": {
+     "https://raw.githubusercontent.com/LoTtunnels/LoTtunnels.github.io/main/_lottunnels/CSVs/domains.csv": {
+      "etag": "W/\"66a7d293197a5317dddc149e3905db622cbe816705f5c0b180322f8d0beaa63b\""
+     }
+    }
+   },
+   "fingerprint": "be463f15681922c8",
+   "status": "not_modified",
+   "duration_s": 0.1,
+   "last_success": "2026-10-18T08:09:11+00:00",
+   "last_change": "2026-10-04T21:03:16+00:00",
+   "files": {
+    "lol/lottunnels_domains.csv": {
+     "bytes": 2525,
+     "sha256": "87883c03227878f53743f61f04330339eda36d51083e88ea760039bccfbe3fb6",
+     "records": 91,
+     "updated": "2026-10-04T21:03:16+00:00"
+    }
+   }
+  },
+  "malapi_winapi": {
+   "last_attempt": "2026-10-18T08:09:11+00:00",
+   "state": {},
+   "fingerprint": "70179ec6a0b30bb9",
+   "status": "unchanged",
+   "duration_s": 4.9,
+   "last_success": "2026-10-18T08:09:11+00:00",
+   "last_change": "2026-10-04T21:03:16+00:00",
+   "files": {
+    "lol/malapi_winapi.csv": {
+     "bytes": 29139,
+     "sha256": "201b24438b059b512c79c86fa03d98f2649e9119563ac886dac3a7630119f746",
+     "records": 432,
+     "updated": "2026-10-04T21:03:19+00:00"
+    }
+   }
+  },
+  "malwarefilter_phishing_domains": {
+   "last_attempt": "2026-10-24T05:49:56+00:00",
+   "state": {
+    "http": {
+     "https://malware-filter.gitlab.io/malware-filter/phishing-filter-domains.txt": {
+      "etag": "\"45839e5ffed9cf96ebdfe7ef23604079fc59fee0b555ad90436c23a650e9dcb1-br\"",
+      "last_modified": "Sat, 24 Oct 2026 00:31:41 GMT"
+     }
+    }
+   },
+   "fingerprint": "335d948ad5971c06",
+   "status": "updated",
+   "duration_s": 0.5,
+   "last_success": "2026-10-24T05:49:56+00:00",
+   "last_change": "2026-10-24T05:49:56+00:00",
+   "files": {
+    "threat_intel/malwarefilter_phishing_domains.txt": {
+     "bytes": 776408,
+     "sha256": "6d6bb41327ed9bad17b0b5182f0c61916945458e82ad7bb31aaec9646774ea50",
+     "records": 27552,
+     "updated": "2026-10-24T05:49:57+00:00"
+    }
+   }
+  },
+  "metasploit_modules": {
+   "last_attempt": "2026-10-18T08:09:11+00:00",
+   "state": {
+    "http": {
+     "https://raw.githubusercontent.com/rapid7/metasploit-framework/master/db/modules_metadata_base.json": {
+      "etag": "W/\"aa844be5ea84911118e65376c9abd5ef8ead5d4af5669d482097098552d85942\""
+     }
+    }
+   },
+   "fingerprint": "e1c366ac2d7843e9",
+   "status": "updated",
+   "duration_s": 0.2,
+   "last_success": "2026-10-18T08:09:11+00:00",
+   "last_change": "2026-10-18T08:09:11+00:00",
+   "files": {
+    "vulnerabilities/metasploit_modules.json": {
+     "bytes": 11334709,
+     "sha256": "5f09d8e37678e9c2ec4f2bd93da7c1b56a22defff09b1c8838c72458a869f65b",
+     "records": 7213,
+     "updated": "2026-10-18T08:09:11+00:00"
+    }
+   }
+  },
+  "microsoft365_endpoints": {
+   "last_attempt": "2026-10-18T08:09:16+00:00",
+   "state": {
+    "http": {
+     "https://endpoints.office.com/endpoints/worldwide?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7": {}
+    }
+   },
+   "fingerprint": "b852492fd1b3d7a9",
+   "status": "unchanged",
+   "duration_s": 0.1,
+   "last_success": "2026-10-18T08:09:16+00:00",
+   "last_change": "2026-10-04T21:03:22+00:00",
+   "files": {
+    "network/microsoft365_endpoints.json": {
+     "bytes": 27805,
+     "sha256": "3d72dd4c9d82f8d4b71dcd8c108c89d36e2c3e963d36a2c95c4903c35614d5b4",
+     "records": 63,
+     "updated": "2026-10-04T21:03:22+00:00"
+    }
+   }
+  },
+  "misp_warninglists": {
+   "last_attempt": "2026-10-18T08:09:28+00:00",
+   "state": {
+    "http": {
+     "https://codeload.github.com/MISP/misp-warninglists/zip/refs/heads/main": {
+      "etag": "W/\"0c3f46f8eb522644268835d6c92e706cfc2fcfc779427580304dd718b9d8215b\""
+     }
+    }
+   },
+   "fingerprint": "9c0aee834db05408",
+   "status": "updated",
+   "duration_s": 16.6,
+   "last_success": "2026-10-18T08:09:28+00:00",
+   "last_change": "2026-10-18T08:09:28+00:00",
+   "files": {
+    "detection/misp_warninglists.json.gz": {
+     "bytes": 37196702,
+     "sha256": "4bd04c5235bc760bc062a786e23f3fd3eb0bb078b9f0433ca64434e982620438",
+     "records": null,
+     "updated": "2026-10-18T08:09:45+00:00"
+    }
+   }
+  },
+  "mitre_atlas": {
+   "last_attempt": "2026-10-18T08:09:15+00:00",
+   "state": {
+    "http": {
+     "https://raw.githubusercontent.com/mitre-atlas/atlas-data/main/dist/v6/ATLAS-2026.09.yaml": {
+      "etag": "W/\"f2367d2d73bee3783974f7ab1be9747b9c50bbd3e1bb5be6807df6a6dd3dbf8b\""
+     }
+    }
+   },
+   "fingerprint": "172266524cd08334",
+   "status": "not_modified",
+   "duration_s": 0.3,
+   "last_success": "2026-10-18T08:09:15+00:00",
+   "last_change": "2026-10-04T21:03:20+00:00",
+   "files": {
+    "frameworks/mitre_atlas.yaml": {
+     "bytes": 841482,
+     "sha256": "935efa93e28294432d3e2f537eb94991ef8d1f8c58341cd360ea3321ddb66688",
+     "records": 19314,
+     "updated": "2026-10-04T21:03:20+00:00"
+    }
+   }
+  },
+  "mitre_attack_enterprise": {
+   "last_attempt": "2026-10-18T08:09:13+00:00",
+   "state": {
+    "http": {
+     "https://raw.githubusercontent.com/mitre/cti/master/enterprise-attack/enterprise-attack.json": {
+      "etag": "W/\"995b1202c07fddc185d7479942bb172d7404c6190b1f1dc5b625903421cde7a3\""
+     }
+    }
+   },
+   "fingerprint": "7ec524590fad831f",
+   "status": "updated",
+   "duration_s": 0.6,
+   "last_success": "2026-10-18T08:09:13+00:00",
+   "last_change": "2026-10-18T08:09:13+00:00",
+   "files": {
+    "frameworks/mitre_attack_enterprise.json": {
+     "bytes": 49253343,
+     "sha256": "66f3fe3f07ef1a2de0bd2fe4b3e8a9ea06c1d0bb2c46171bdbb57c7f7b666524",
+     "records": 26689,
+     "updated": "2026-10-18T08:09:14+00:00"
+    }
+   }
+  },
+  "mitre_attack_ics": {
+   "last_attempt": "2026-10-18T08:09:14+00:00",
+   "state": {
+    "http": {
+     "https://raw.githubusercontent.com/mitre/cti/master/ics-attack/ics-attack.json": {
+      "etag": "W/\"20cb55fa88b893324ab76c8f98026951edcc2030082e0e533671494785657236\""
+     }
+    }
+   },
+   "fingerprint": "1ad6344f27e5bf9f",
+   "status": "updated",
+   "duration_s": 0.3,
+   "last_success": "2026-10-18T08:09:14+00:00",
+   "last_change": "2026-10-18T08:09:14+00:00",
+   "files": {
+    "frameworks/mitre_attack_ics.json": {
+     "bytes": 4683721,
+     "sha256": "202328ce7193aa1c1803cbfbf712e81c37a7e9de6c5adc14dd8c11ceb302573e",
+     "records": 2565,
+     "updated": "2026-10-18T08:09:15+00:00"
+    }
+   }
+  },
+  "mitre_attack_mobile": {
+   "last_attempt": "2026-10-18T08:09:14+00:00",
+   "state": {
+    "http": {
+     "https://raw.githubusercontent.com/mitre/cti/master/mobile-attack/mobile-attack.json": {
+      "etag": "W/\"c0fe1396350974968907080a1dea3f69870a0e7593d023c1aafea76f477ec71e\""
+     }
+    }
+   },
+   "fingerprint": "036427381ffeaf7d",
+   "status": "updated",
+   "duration_s": 0.4,
+   "last_success": "2026-10-18T08:09:14+00:00",
+   "last_change": "2026-10-18T08:09:14+00:00",
+   "files": {
+    "frameworks/mitre_attack_mobile.json": {
+     "bytes": 5489646,
+     "sha256": "592d4ee8cb2958de20eef65ebd5829753a8dd686f098b237ddeb867558c81faa",
+     "records": 2683,
+     "updated": "2026-10-18T08:09:14+00:00"
+    }
+   }
+  },
+  "mitre_capec": {
+   "last_attempt": "2026-10-18T08:09:15+00:00",
+   "state": {
+    "http": {
+     "https://capec.mitre.org/data/xml/capec_latest.xml": {
+      "last_modified": "Tue, 24 Jan 2023 18:32:31 GMT"
+     }
+    }
+   },
+   "fingerprint": "bb77e17a5ef528d9",
+   "status": "not_modified",
+   "duration_s": 1.1,
+   "last_success": "2026-10-18T08:09:15+00:00",
+   "last_change": "2026-10-04T21:03:20+00:00",
+   "files": {
+    "frameworks/mitre_capec.xml": {
+     "bytes": 3849998,
+     "sha256": "70279a2dff0cb0ad79e546adb07828335a704ad5210e047e09e986172fc9e34d",
+     "records": null,
+     "updated": "2026-10-04T21:03:21+00:00"
+    }
+   }
+  },
+  "mitre_cwe": {
+   "last_attempt": "2026-10-18T08:09:15+00:00",
+   "state": {
+    "http": {
+     "https://cwe.mitre.org/data/xml/cwec_latest.xml.zip": {
+      "last_modified": "Thu, 30 Apr 2026 09:15:04 GMT"
+     }
+    }
+   },
+   "fingerprint": "1c3c053c7c6cbbe5",
+   "status": "not_modified",
+   "duration_s": 0.3,
+   "last_success": "2026-10-18T08:09:15+00:00",
+   "last_change": "2026-10-04T21:03:20+00:00",
+   "files": {
+    "frameworks/mitre_cwe.xml": {
+     "bytes": 18192305,
+     "sha256": "1f5a78bd62e00f86436b4fe32d5034a57e8f0da88e4063b2072b664ae510912e",
+     "records": null,
+     "updated": "2026-10-04T21:03:21+00:00"
+    }
+   }
+  },
+  "mitre_d3fend": {
+   "last_attempt": "2026-10-18T08:09:14+00:00",
+   "state": {
+    "http": {
+     "https://d3fend.mitre.org/ontologies/d3fend.json": {
+      "etag": "W/\"6ab493b3-49c16d\"",
+      "last_modified": "Thu, 24 Sep 2026 03:06:27 GMT"
+     }
+    }
+   },
+   "fingerprint": "eec42e9424dbfcc8",
+   "status": "not_modified",
+   "duration_s": 1.0,
+   "last_success": "2026-10-18T08:09:14+00:00",
+   "last_change": "2026-10-04T21:03:20+00:00",
+   "files": {
+    "frameworks/mitre_d3fend.json": {
+     "bytes": 4833645,
+     "sha256": "e1546d432c6aa64d45b62dd9e9484b0774ae84de7ff3605ff9dd4e20278957bf",
+     "records": 7688,
+     "updated": "2026-10-04T21:03:21+00:00"
+    }
+   }
+  },
+  "mobile_cve": {
+   "last_attempt": "2026-10-18T08:11:08+00:00",
+   "state": {},
+   "fingerprint": "59abc7cbbb017e0d",
+   "status": "updated",
+   "duration_s": 426.7,
+   "last_success": "2026-10-18T08:11:08+00:00",
+   "last_change": "2026-10-18T08:11:08+00:00",
+   "files": {
+    "vulnerabilities/mobile/cves/2010.json": {
+     "bytes": 6959,
+     "sha256": "adf48f48f83d19504c514124d3c17ed1859d2e0cef5cb27f200bdfdda37f36be",
+     "records": 4,
+     "updated": "2026-10-04T21:27:13+00:00"
+    },
+    "vulnerabilities/mobile/cves/2011.json": {
+     "bytes": 278115,
+     "sha256": "ad2294c2143f9465f54b4538dbd458902c2efd217d5729b13677a0c0d0322ae0",
+     "records": 245,
+     "updated": "2026-10-11T10:22:03+00:00"
+    },
+    "vulnerabilities/mobile/cves/2012.json": {
+     "bytes": 225246,
+     "sha256": "40e03dbb2222c2fd1e159fbe717e023ef9d782bcac324964cd690c035b2ee692",
+     "records": 225,
+     "updated": "2026-10-04T21:27:13+00:00"
+    },
+    "vulnerabilities/mobile/cves/2013.json": {
+     "bytes": 117967,
+     "sha256": "9bd0453185a3a09c27aef370bc9ffa1d10df3849b8eed228f6010f86b073f52c",
+     "records": 126,
+     "updated": "2026-10-11T10:22:03+00:00"
+    },
+    "vulnerabilities/mobile/cves/2014.json": {
+     "bytes": 379428,
+     "sha256": "f898c7b8ac636201993c90911f6ebc45509dff71f656d07d0cfa4a8f3f454ad4",
+     "records": 370,
+     "updated": "2026-10-04T21:27:13+00:00"
+    },
+    "vulnerabilities/mobile/cves/2015.json": {
+     "bytes": 618877,
+     "sha256": "ef4a476e02458d32f0a0af864b414510b083f8ee0b2dcbd71ca4f0c4d0fd480f",
+     "records": 638,
+     "updated": "2026-10-04T21:27:13+00:00"
+    },
+    "vulnerabilities/mobile/cves/2016.json": {
+     "bytes": 1364292,
+     "sha256": "c395073bf5277b89df9e403a25b20392b739619de7ced2f048330f411758b056",
+     "records": 1094,
+     "updated": "2026-10-04T21:27:13+00:00"
+    },
+    "vulnerabilities/mobile/cves/2017.json": {
+     "bytes": 1519633,
+     "sha256": "49194544c3b63e56800f7fe6f9f5d20421222ee8b32638a05d6f65a72b75d491",
+     "records": 1522,
+     "updated": "2026-10-04T21:27:13+00:00"
+    },
+    "vulnerabilities/mobile/cves/2018.json": {
+     "bytes": 882173,
+     "sha256": "f3ebd00fe90dc1e5882d0afe115f1a0a7f3bcc0657b7cb18c7339b70121c52a2",
+     "records": 877,
+     "updated": "2026-10-04T21:27:13+00:00"
+    },
+    "vulnerabilities/mobile/cves/2019.json": {
+     "bytes": 1020828,
+     "sha256": "6f2ddc996173a8aeb6c844e86fe7c3880800411e69729890cd7e64563ad92249",
+     "records": 929,
+     "updated": "2026-10-11T10:22:03+00:00"
+    },
+    "vulnerabilities/mobile/cves/2020.json": {
+     "bytes": 969962,
+     "sha256": "6583f5a486e8d45f9d03d9b52a615ec304c5aaf910a1b733789aae733466ee0c",
+     "records": 1004,
+     "updated": "2026-10-11T10:22:03+00:00"
+    },
+    "vulnerabilities/mobile/cves/2021.json": {
+     "bytes": 1069345,
+     "sha256": "722a81cc9150cbf9ff25e11eecd744b646469d68a38f6ccd0c0da0437d9d28cf",
+     "records": 1252,
+     "updated": "2026-10-11T10:22:03+00:00"
+    },
+    "vulnerabilities/mobile/cves/2022.json": {
+     "bytes": 1033562,
+     "sha256": "ebfc96035d3e8bb2aaff6ecfa9c43867a0db5811a0e3b4b96d2bf5c5fc98ca81",
+     "records": 1280,
+     "updated": "2026-10-11T10:22:03+00:00"
+    },
+    "vulnerabilities/mobile/cves/2023.json": {
+     "bytes": 1176592,
+     "sha256": "2c8f66b2b5be0f9e09081b15568923192d88feefb4448313ca5775d2e6753cad",
+     "records": 1379,
+     "updated": "2026-10-11T10:22:03+00:00"
+    },
+    "vulnerabilities/mobile/cves/2024.json": {
+     "bytes": 864251,
+     "sha256": "a6ac938656272de85b727d64b54c6819b3bdff0faba2a68fedebf5a931b67093",
+     "records": 1077,
+     "updated": "2026-10-11T10:22:03+00:00"
+    },
+    "vulnerabilities/mobile/cves/2025.json": {
+     "bytes": 768134,
+     "sha256": "f06fb21a927fa72f87f894dd6340b05436f4347aa7f01523f9e3131efb849b71",
+     "records": 994,
+     "updated": "2026-10-11T10:22:04+00:00"
+    },
+    "vulnerabilities/mobile/cves/2026.json": {
+     "bytes": 799332,
+     "sha256": "cd09b504c3b9e84c4d67ae16fe8325a62be83a87e9f93fafa24dff82945d5ef5",
+     "records": 1117,
+     "updated": "2026-10-11T10:22:04+00:00"
+    },
+    "vulnerabilities/mobile/index.json": {
+     "bytes": 5891645,
+     "sha256": "9ee571f5c3875610926c496dc1efa34877fce3a9cfbf14eb0281f2d5a0e2e1b6",
+     "records": 19301,
+     "updated": "2026-10-18T08:18:15+00:00"
+    }
+   }
+  },
+  "mthcht_blockchain_rpc": {
+   "last_attempt": "2026-10-18T08:09:27+00:00",
+   "state": {
+    "http": {
+     "https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/blockchain_rpc_list.csv": {
+      "etag": "W/\"62b3e9886d3211b2a83b89df90797ddb67a37b326152568ae21972d159382f12\""
+     }
+    }
+   },
+   "fingerprint": "15ea0924b57dedc6",
+   "status": "not_modified",
+   "duration_s": 0.2,
+   "last_success": "2026-10-18T08:09:27+00:00",
+   "last_change": "2026-10-04T21:03:33+00:00",
+   "files": {
+    "detection/mthcht_blockchain_rpc.csv": {
+     "bytes": 29497,
+     "sha256": "fa06db7b5aa113b279bdcb0280d96de0e0d6d8ef110d983c9aa64edbd0b34e5c",
+     "records": 207,
+     "updated": "2026-10-04T21:03:34+00:00"
+    }
+   }
+  },
+  "mthcht_doh_servers": {
+   "last_attempt": "2026-10-18T08:09:27+00:00",
+   "state": {
+    "http": {
+     "https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/dns_over_https_servers_list.csv": {
+      "etag": "W/\"316286dbfe1c04e9dcf5bdc6a54b519bf8b803b244c3b489fe987f89b4599f6c\""
+     }
+    }
+   },
+   "fingerprint": "6b3cc5cd9c95179a",
+   "status": "not_modified",
+   "duration_s": 0.2,
+   "last_success": "2026-10-18T08:09:27+00:00",
+   "last_change": "2026-10-04T21:03:33+00:00",
+   "files": {
+    "detection/mthcht_doh_servers.csv": {
+     "bytes": 243224,
+     "sha256": "caa66d30b84ff12e58fca93858bb6b4c555d8f91746ff50c8ed4dddb45cf2f88",
+     "records": 1969,
+     "updated": "2026-10-04T21:03:33+00:00"
+    }
+   }
+  },
+  "mthcht_ransomware_extensions": {
+   "last_attempt": "2026-10-18T08:09:27+00:00",
+   "state": {
+    "http": {
+     "https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/ransomware_extensions_list.csv": {
+      "etag": "W/\"8d709a0b224a8032a30bae7b8e821b744202dbd8fa96fd60e95e87216f0d1a2b\""
+     }
+    }
+   },
+   "fingerprint": "b303918c8349a470",
+   "status": "not_modified",
+   "duration_s": 0.3,
+   "last_success": "2026-10-18T08:09:27+00:00",
+   "last_change": "2026-10-04T21:03:33+00:00",
+   "files": {
+    "detection/mthcht_ransomware_extensions.csv": {
+     "bytes": 19834,
+     "sha256": "95ac5d1f16f7f764261a47acfe3323b265d035041f3a0a19b80cd3b67f664082",
+     "records": 738,
+     "updated": "2026-10-04T21:03:33+00:00"
+    }
+   }
+  },
+  "mthcht_ransomware_notes": {
+   "last_attempt": "2026-10-18T08:09:27+00:00",
+   "state": {
+    "http": {
+     "https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/ransomware_notes_list.csv": {
+      "etag": "W/\"4a68d009dfae4f0170a9c480d7a5b8d2b3521041b15f1eff5ca7383855ea8994\""
+     }
+    }
+   },
+   "fingerprint": "2243aea9d2963250",
+   "status": "not_modified",
+   "duration_s": 0.2,
+   "last_success": "2026-10-18T08:09:27+00:00",
+   "last_change": "2026-10-04T21:03:33+00:00",
+   "files": {
+    "detection/mthcht_ransomware_notes.csv": {
+     "bytes": 27430,
+     "sha256": "b1f065b041d31ce81565a9ddb17deb9c4371e624043e91ff9ef9a99d422e8ec4",
+     "records": 222,
+     "updated": "2026-10-04T21:03:33+00:00"
+    }
+   }
+  },
+  "mthcht_suspicious_double_extensions": {
+   "last_attempt": "2026-10-18T08:09:26+00:00",
+   "state": {
+    "http": {
+     "https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/suspicious_file_double_extension.csv": {
+      "etag": "W/\"2d7574b488ac32bee1eba23b56a85300327a1e074ccd120d8429294dac1378d2\""
+     }
+    }
+   },
+   "fingerprint": "57fc877be23f5084",
+   "status": "not_modified",
+   "duration_s": 0.2,
+   "last_success": "2026-10-18T08:09:26+00:00",
+   "last_change": "2026-10-04T21:03:32+00:00",
+   "files": {
+    "detection/mthcht_suspicious_double_extensions.csv": {
+     "bytes": 27670,
+     "sha256": "14a1e8b3801814cad1f2df619bf6036e259708a685e3f3f1d368ef5327b6526a",
+     "records": 204,
+     "updated": "2026-10-04T21:03:33+00:00"
+    }
+   }
+  },
+  "mthcht_suspicious_firewall_rules": {
+   "last_attempt": "2026-10-18T08:09:26+00:00",
+   "state": {
+    "http": {
+     "https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/suspicious_windows_firewall_rules_list.csv": {
+      "etag": "W/\"12f2ecd631c252d59dda7d610e30d0ba5a8ffbc08d006bfba1b2dacc5cc4f51d\""
+     }
+    }
+   },
+   "fingerprint": "327a175662d5c31e",
+   "status": "not_modified",
+   "duration_s": 0.2,
+   "last_success": "2026-10-18T08:09:26+00:00",
+   "last_change": "2026-10-04T21:03:32+00:00",
+   "files": {
+    "detection/mthcht_suspicious_firewall_rules.csv": {
+     "bytes": 9267,
+     "sha256": "f0833a556326bce4de02ab8451f3aaed44139ae5998f6a4ab6c1f97ca9365f39",
+     "records": 49,
+     "updated": "2026-10-04T21:03:32+00:00"
+    }
+   }
+  },
+  "mthcht_suspicious_hostnames": {
+   "last_attempt": "2026-10-18T08:09:26+00:00",
+   "state": {
+    "http": {
+     "https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/suspicious_hostnames_list.csv": {
+      "etag": "W/\"b2a676e13f1bd68d53fed39d0a5a980fe8c7a89335ead10f75e93a50f6d84bcb\""
+     }
+    }
+   },
+   "fingerprint": "a8ab26cb8d4b32cb",
+   "status": "not_modified",
+   "duration_s": 0.1,
+   "last_success": "2026-10-18T08:09:26+00:00",
+   "last_change": "2026-10-04T21:03:32+00:00",
+   "files": {
+    "detection/mthcht_suspicious_hostnames.csv": {
+     "bytes": 4467,
+     "sha256": "5a0dd93efb202f7cfc7a7e8a892f78e03ee3c7a316878ca3bd0614b088d90dc7",
+     "records": 27,
+     "updated": "2026-10-04T21:03:32+00:00"
+    }
+   }
+  },
+  "mthcht_suspicious_mac_addresses": {
+   "last_attempt": "2026-10-18T08:09:26+00:00",
+   "state": {
+    "http": {
+     "https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/suspicious_mac_address_list.csv": {
+      "etag": "W/\"b07a9c4023a52ed3a0029de097399dd7f1d766ff5a678b4d1b73c688419d53a8\""
+     }
+    }
+   },
+   "fingerprint": "3b76a93a1096cf4c",
+   "status": "not_modified",
+   "duration_s": 0.1,
+   "last_success": "2026-10-18T08:09:26+00:00",
+   "last_change": "2026-10-04T21:03:32+00:00",
+   "files": {
+    "detection/mthcht_suspicious_mac_addresses.csv": {
+     "bytes": 4041,
+     "sha256": "0b30cdf0d2efce10e1016a949344f049d1f417bb54dbc384edfe04377a4b54da",
+     "records": 54,
+     "updated": "2026-10-04T21:03:33+00:00"
+    }
+   }
+  },
+  "mthcht_suspicious_mutexes": {
+   "last_attempt": "2026-10-18T08:09:26+00:00",
+   "state": {
+    "http": {
+     "https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/suspicious_mutex_names_list.csv": {
+      "etag": "W/\"a2d0db0ab3aeb66b28b38f3c7ea33607698c29b9363ace0702f7820966954e07\""
+     }
+    }
+   },
+   "fingerprint": "e25a19adea6144c9",
+   "status": "not_modified",
+   "duration_s": 0.2,
+   "last_success": "2026-10-18T08:09:26+00:00",
+   "last_change": "2026-10-04T21:03:32+00:00",
+   "files": {
+    "detection/mthcht_suspicious_mutexes.csv": {
+     "bytes": 61640,
+     "sha256": "20e64ce3103010ae51e4ed58dd0927387604a4fe27a3a87155a32db9453f0e08",
+     "records": 320,
+     "updated": "2026-10-04T21:03:32+00:00"
+    }
+   }
+  },
+  "mthcht_suspicious_named_pipes": {
+   "last_attempt": "2026-10-18T08:09:25+00:00",
+   "state": {
+    "http": {
+     "https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/suspicious_named_pipe_list.csv": {
+      "etag": "W/\"124b55562f029453c19dec80907d96eb831f62b1f5c09ee979efe31e4f24189a\""
+     }
+    }
+   },
+   "fingerprint": "f21517ce623ea93b",
+   "status": "not_modified",
+   "duration_s": 0.3,
+   "last_success": "2026-10-18T08:09:25+00:00",
+   "last_change": "2026-10-04T21:03:31+00:00",
+   "files": {
+    "detection/mthcht_suspicious_named_pipes.csv": {
+     "bytes": 107424,
+     "sha256": "1590ff099fd3843be028ec9caf9e811ca7da8a98da72230bd754abb783df1cbf",
+     "records": 327,
+     "updated": "2026-10-04T21:03:32+00:00"
+    }
+   }
+  },
+  "mthcht_suspicious_ports": {
+   "last_attempt": "2026-10-18T08:09:26+00:00",
+   "state": {
+    "http": {
+     "https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/suspicious_ports_list.csv": {
+      "etag": "W/\"2620d051a9007581ee6757ddc26c837b2d2a652e368af180ff210bbc0ad99bac\""
+     }
+    }
+   },
+   "fingerprint": "add47c8c72719776",
+   "status": "not_modified",
+   "duration_s": 0.1,
+   "last_success": "2026-10-18T08:09:26+00:00",
+   "last_change": "2026-10-04T21:03:32+00:00",
+   "files": {
+    "detection/mthcht_suspicious_ports.csv": {
+     "bytes": 30493,
+     "sha256": "a368c9693477836c941eb6ae170b4228778d64a752b455a238ea735426b9aa4a",
+     "records": 229,
+     "updated": "2026-10-04T21:03:32+00:00"
+    }
+   }
+  },
+  "mthcht_suspicious_scheduled_tasks": {
+   "last_attempt": "2026-10-18T08:09:26+00:00",
+   "state": {
+    "http": {
+     "https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/suspicious_windows_tasks_list.csv": {
+      "etag": "W/\"f2b32643af19ea3820d97021cfc7243d7dbeed630d81feaa2d9707996568178c\""
+     }
+    }
+   },
+   "fingerprint": "ecef5932591cf829",
+   "status": "not_modified",
+   "duration_s": 0.6,
+   "last_success": "2026-10-18T08:09:26+00:00",
+   "last_change": "2026-10-04T21:03:32+00:00",
+   "files": {
+    "detection/mthcht_suspicious_scheduled_tasks.csv": {
+     "bytes": 27152,
+     "sha256": "d51399acb1b77eb2651c4065156316c88f305b8cef0334f549b8307ff908df75",
+     "records": 128,
+     "updated": "2026-10-04T21:03:32+00:00"
+    }
+   }
+  },
+  "mthcht_suspicious_services": {
+   "last_attempt": "2026-10-18T08:09:26+00:00",
+   "state": {
+    "http": {
+     "https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/suspicious_windows_services_names_list.csv": {
+      "etag": "W/\"f1bde3f09074188aa89e89d84891e515b5fc9355a467539b7afb697f4f39e725\""
+     }
+    }
+   },
+   "fingerprint": "44ddd5cd1b8190b9",
+   "status": "not_modified",
+   "duration_s": 0.3,
+   "last_success": "2026-10-18T08:09:26+00:00",
+   "last_change": "2026-10-04T21:03:32+00:00",
+   "files": {
+    "detection/mthcht_suspicious_services.csv": {
+     "bytes": 41479,
+     "sha256": "c2f3b44b29ea3d058a6164f4d1090b1bf70c9f99afe313e40c361afbdeeccf33",
+     "records": 216,
+     "updated": "2026-10-04T21:03:32+00:00"
+    }
+   }
+  },
+  "mthcht_suspicious_tlds": {
+   "last_attempt": "2026-10-18T08:09:26+00:00",
+   "state": {
+    "http": {
+     "https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/suspicious_tlds_list.csv": {
+      "etag": "W/\"e694c831fb5addcf45d63bdf28a1c848798d0c9c511baf146c221e56c8a038dd\""
+     }
+    }
+   },
+   "fingerprint": "73dbd8b22d5aff9f",
+   "status": "not_modified",
+   "duration_s": 0.1,
+   "last_success": "2026-10-18T08:09:26+00:00",
+   "last_change": "2026-10-04T21:03:32+00:00",
+   "files": {
+    "detection/mthcht_suspicious_tlds.csv": {
+     "bytes": 15790,
+     "sha256": "0aac32f2c09bec03bf8c9ac946dc5fd973e9509406adbc28fa970e85c7b1662b",
+     "records": 147,
+     "updated": "2026-10-04T21:03:32+00:00"
+    }
+   }
+  },
+  "mthcht_suspicious_usb_ids": {
+   "last_attempt": "2026-10-18T08:09:27+00:00",
+   "state": {
+    "http": {
+     "https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/suspicious_usb_ids_list.csv": {
+      "etag": "W/\"859d53306d123e9d82dda346fec2d8495f79e4be65d3312786d1710b73796fdc\""
+     }
+    }
+   },
+   "fingerprint": "431a8d7f65d0a99b",
+   "status": "not_modified",
+   "duration_s": 0.2,
+   "last_success": "2026-10-18T08:09:27+00:00",
+   "last_change": "2026-10-04T21:03:32+00:00",
+   "files": {
+    "detection/mthcht_suspicious_usb_ids.csv": {
+     "bytes": 5650,
+     "sha256": "3e3663898d3c64110f663953a60766e846178a8a4149a165ed411c7bd16f86cd",
+     "records": 26,
+     "updated": "2026-10-04T21:03:33+00:00"
+    }
+   }
+  },
+  "mthcht_suspicious_user_agents": {
+   "last_attempt": "2026-10-18T08:09:25+00:00",
+   "state": {
+    "http": {
+     "https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/suspicious_http_user_agents_list.csv": {
+      "etag": "W/\"7fd2c72f4e32012fd165a156f81db5e4cb6b995f2471f21728d4599f08cc54b6\""
+     }
+    }
+   },
+   "fingerprint": "0152cbbed3b64076",
+   "status": "not_modified",
+   "duration_s": 0.4,
+   "last_success": "2026-10-18T08:09:25+00:00",
+   "last_change": "2026-10-04T21:03:31+00:00",
+   "files": {
+    "detection/mthcht_suspicious_user_agents.csv": {
+     "bytes": 431488,
+     "sha256": "835c4b39711b2969ec6f729d324d29e095ec60661a8c6bdd2a87b956852d9f58",
+     "records": 1565,
+     "updated": "2026-10-04T21:03:32+00:00"
+    }
+   }
+  },
+  "mthcht_windows_asr_rules": {
+   "last_attempt": "2026-10-18T08:09:28+00:00",
+   "state": {
+    "http": {
+     "https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/windows_asr_rules.csv": {
+      "etag": "W/\"b7b5606f322db128b26625104913ca0ed7a3547bea746173e7db7612a5496bee\""
+     }
+    }
+   },
+   "fingerprint": "21b74a4e3bb54339",
+   "status": "not_modified",
+   "duration_s": 0.1,
+   "last_success": "2026-10-18T08:09:28+00:00",
+   "last_change": "2026-10-04T21:03:33+00:00",
+   "files": {
+    "detection/mthcht_windows_asr_rules.csv": {
+     "bytes": 3972,
+     "sha256": "772131693e94c3f82246124296f4c62097483e3880fe0c8cfb7a27b6b8713b2b",
+     "records": 19,
+     "updated": "2026-10-04T21:03:34+00:00"
+    }
+   }
+  },
+  "mullvad_relays": {
+   "last_attempt": "2026-10-18T08:09:16+00:00",
+   "state": {
+    "http": {
+     "https://api.mullvad.net/www/relays/all/": {
+      "etag": "\"6ad209d3-965b\"",
+      "last_modified": "Fri, 16 Oct 2026 11:26:11 GMT"
+     }
+    }
+   },
+   "fingerprint": "ad8d2c2892a7d83d",
+   "status": "updated",
+   "duration_s": 0.8,
+   "last_success": "2026-10-18T08:09:16+00:00",
+   "last_change": "2026-10-18T08:09:16+00:00",
+   "files": {
+    "network/mullvad_relays.json": {
+     "bytes": 294012,
+     "sha256": "1cd2b470882d6e7c6ec5d9831c011648a0a8de5105ba1ed342bc2df4bd7a1f5e",
+     "records": 566,
+     "updated": "2026-10-18T08:09:17+00:00"
+    }
+   }
+  },
+  "nuclei_cve_templates": {
+   "last_attempt": "2026-10-18T08:09:11+00:00",
+   "state": {
+    "http": {
+     "https://raw.githubusercontent.com/projectdiscovery/nuclei-templates/main/cves.json": {
+      "etag": "W/\"4f55f6e77dfb6b8f3b7a6eba337f14266797c7bcc8a69749d2320ce4d429e00e\""
+     }
+    }
+   },
+   "fingerprint": "d2863f534149dc77",
+   "status": "updated",
+   "duration_s": 0.3,
+   "last_success": "2026-10-18T08:09:11+00:00",
+   "last_change": "2026-10-18T08:09:11+00:00",
+   "files": {
+    "vulnerabilities/nuclei_cve_templates.jsonl": {
+     "bytes": 2236347,
+     "sha256": "ff748ba49015e019a5d672882e5476f81e6a0d515e24bc1acf15413bc4825a47",
+     "records": 4481,
+     "updated": "2026-10-18T08:09:12+00:00"
+    }
+   }
+  },
+  "nvd_cpe": {
+   "last_attempt": "2026-10-18T08:09:12+00:00",
+   "state": {
+    "http": {
+     "https://nvd.nist.gov/feeds/json/cpe/2.0/nvdcpe-2.0.tar.gz": {
+      "etag": "\"80aa510ec5ddd1:0\"",
+      "last_modified": "Sat, 17 Oct 2026 04:00:09 GMT"
+     }
+    }
+   },
+   "fingerprint": "67dc075c09fdcc2d",
+   "status": "updated",
+   "duration_s": 107.5,
+   "last_success": "2026-10-18T08:09:12+00:00",
+   "last_change": "2026-10-18T08:09:12+00:00",
+   "files": {
+    "vulnerabilities/nvd/cpe/0-9.json.gz": {
+     "bytes": 419875,
+     "sha256": "714f1b367c07e58318ed0ec2cc27f46f5fbf24f3a2354b7e0befd81288f898e4",
+     "records": 9030,
+     "updated": "2026-10-04T21:05:05+00:00"
+    },
+    "vulnerabilities/nvd/cpe/a.json.gz": {
+     "bytes": 7380807,
+     "sha256": "bc260b37065b1901f9db38ee69558632ff41f9d6d4759425f3cc25104b3746b5",
+     "records": 164623,
+     "updated": "2026-10-18T08:11:00+00:00"
+    },
+    "vulnerabilities/nvd/cpe/b.json.gz": {
+     "bytes": 2895611,
+     "sha256": "9b49ac3fb8f98c66db7ca5f00c6c7aa690732a7ce940828cddd8652ad93210f1",
+     "records": 65045,
+     "updated": "2026-10-18T08:11:01+00:00"
+    },
+    "vulnerabilities/nvd/cpe/c.json.gz": {
+     "bytes": 6916545,
+     "sha256": "f3341975395ceec25f4a98442827467a0bd16eb87603df593b319e946f93e116",
+     "records": 149544,
+     "updated": "2026-10-18T08:11:01+00:00"
+    },
+    "vulnerabilities/nvd/cpe/d.json.gz": {
+     "bytes": 3158007,
+     "sha256": "81f47dc1ac1cc8c1afb9ed4d89f93a1775d4ed387acadde07b85c582033a51e3",
+     "records": 66912,
+     "updated": "2026-10-18T08:11:02+00:00"
+    },
+    "vulnerabilities/nvd/cpe/e.json.gz": {
+     "bytes": 2646926,
+     "sha256": "26a496a39e334c58060ccf2a3f1e4c454c138cce0e8af1c1d2456d558f655696",
+     "records": 59607,
+     "updated": "2026-10-11T10:09:38+00:00"
+    },
+    "vulnerabilities/nvd/cpe/f.json.gz": {
+     "bytes": 3077866,
+     "sha256": "a0e0115c5d52106c25bf3585ff59a7fee12eb3242dc6cd8421632e4040e017ce",
+     "records": 66962,
+     "updated": "2026-10-18T08:11:02+00:00"
+    },
+    "vulnerabilities/nvd/cpe/g.json.gz": {
+     "bytes": 4131817,
+     "sha256": "ad759ac00cda371a1aa9dfd01a05a95e5815ddd142626f80dd3531aa595e04e0",
+     "records": 99002,
+     "updated": "2026-10-18T08:11:03+00:00"
+    },
+    "vulnerabilities/nvd/cpe/h.json.gz": {
+     "bytes": 3253616,
+     "sha256": "e42fa9f193b527ef8f3f143fffa194564dc0023d82de77f8ea3a55dc879945b4",
+     "records": 74025,
+     "updated": "2026-10-18T08:11:03+00:00"
+    },
+    "vulnerabilities/nvd/cpe/i.json.gz": {
+     "bytes": 3731697,
+     "sha256": "3d314b22c4d3437fe191ed5da779251683661918c18321afc9d145d0f0550fe1",
+     "records": 75590,
+     "updated": "2026-10-18T08:11:03+00:00"
+    },
+    "vulnerabilities/nvd/cpe/j.json.gz": {
+     "bytes": 2239685,
+     "sha256": "89705e67811b9d940a8a1ab61e72bc663cc6b06845c9e6b53325f9e24b4f4bd8",
+     "records": 48442,
+     "updated": "2026-10-18T08:11:04+00:00"
+    },
+    "vulnerabilities/nvd/cpe/k.json.gz": {
+     "bytes": 1276634,
+     "sha256": "f15499036bb462b520f106fb8700cd06ff744aacd76d48f3da6587d6f3d4cfa4",
+     "records": 28980,
+     "updated": "2026-10-04T21:05:09+00:00"
+    },
+    "vulnerabilities/nvd/cpe/l.json.gz": {
+     "bytes": 3576903,
+     "sha256": "9e2af2c31baa4e69c101959da296b5ee2f97f77452a06497310967e3384ba970",
+     "records": 84576,
+     "updated": "2026-10-18T08:11:04+00:00"
+    },
+    "vulnerabilities/nvd/cpe/m.json.gz": {
+     "bytes": 5391424,
+     "sha256": "190ea83da39cdd14794f7ad412c7bf411bf1825db952b4a5e471098313912252",
+     "records": 116918,
+     "updated": "2026-10-18T08:11:05+00:00"
+    },
+    "vulnerabilities/nvd/cpe/n.json.gz": {
+     "bytes": 3044114,
+     "sha256": "c6b54cda756258a58870ac273dcb911e04693c06ec804088fa18779555a0a1c6",
+     "records": 66296,
+     "updated": "2026-10-18T08:11:05+00:00"
+    },
+    "vulnerabilities/nvd/cpe/o.json.gz": {
+     "bytes": 3424569,
+     "sha256": "bddd75a3062f876652b93e7b985b0786e8b85424d54e351798932af82afbb58b",
+     "records": 74445,
+     "updated": "2026-10-18T08:11:05+00:00"
+    },
+    "vulnerabilities/nvd/cpe/other.json.gz": {
+     "bytes": 1767,
+     "sha256": "0dfd314bffecb807496413491a6b7029a1a27af784b4c42c3226bd07081adf18",
+     "records": 29,
+     "updated": "2026-10-04T21:05:11+00:00"
+    },
+    "vulnerabilities/nvd/cpe/p.json.gz": {
+     "bytes": 4475423,
+     "sha256": "7758f818e3de8dbcfea21a8567cf7bed8d20bedf1af87edbbd2d3adacb47818e",
+     "records": 98024,
+     "updated": "2026-10-18T08:11:06+00:00"
+    },
+    "vulnerabilities/nvd/cpe/q.json.gz": {
+     "bytes": 731228,
+     "sha256": "cdd267d2e787bb13f6492cf77e1c254efea96a54c5a79ae8aa578ee04b22b220",
+     "records": 15912,
+     "updated": "2026-10-18T08:11:06+00:00"
+    },
+    "vulnerabilities/nvd/cpe/r.json.gz": {
+     "bytes": 2831495,
+     "sha256": "93c30eb0d8a50959ea868da1d91e880d6edaefcfc118be068e1c5c4eed669849",
+     "records": 62494,
+     "updated": "2026-10-18T08:11:06+00:00"
+    },
+    "vulnerabilities/nvd/cpe/s.json.gz": {
+     "bytes": 7325846,
+     "sha256": "6b41afcd07f7103e9c10e125ee309cff61b94418b32b6b90b6bef46b93e3e224",
+     "records": 161533,
+     "updated": "2026-10-18T08:11:07+00:00"
+    },
+    "vulnerabilities/nvd/cpe/t.json.gz": {
+     "bytes": 3266912,
+     "sha256": "8438d349e799378283e47c41777b7943da2ee67b7719bf7021a5900e2b2d6b0b",
+     "records": 72120,
+     "updated": "2026-10-18T08:11:07+00:00"
+    },
+    "vulnerabilities/nvd/cpe/u.json.gz": {
+     "bytes": 795131,
+     "sha256": "3f17be4abd39181b2881dd42567bb969c60c29f6df2ef22a84d5fd47f58eb9d9",
+     "records": 16990,
+     "updated": "2026-10-04T21:05:13+00:00"
+    },
+    "vulnerabilities/nvd/cpe/v.json.gz": {
+     "bytes": 2207175,
+     "sha256": "b44b578ee4d22d77f33507eef7e2b81606b2b05f8e957f050f17fac813909aed",
+     "records": 53096,
+     "updated": "2026-10-18T08:11:08+00:00"
+    },
+    "vulnerabilities/nvd/cpe/w.json.gz": {
+     "bytes": 3242511,
+     "sha256": "8d16f4671ca6ce5a4a77b23b91bc94956434bbc015e77f342ce2faf0513b268b",
+     "records": 73379,
+     "updated": "2026-10-11T10:09:43+00:00"
+    },
+    "vulnerabilities/nvd/cpe/x.json.gz": {
+     "bytes": 546023,
+     "sha256": "0715e0241a8e9462032d243734511b0a7f0571039a870b4b51074bc3b2d9832b",
+     "records": 11664,
+     "updated": "2026-10-04T21:05:13+00:00"
+    },
+    "vulnerabilities/nvd/cpe/y.json.gz": {
+     "bytes": 619431,
+     "sha256": "2bec23fbf2091ba964f69ec908e4b539fa3f46c4b842ffb823ebb3df3366df35",
+     "records": 13577,
+     "updated": "2026-10-04T21:05:13+00:00"
+    },
+    "vulnerabilities/nvd/cpe/z.json.gz": {
+     "bytes": 1267791,
+     "sha256": "99a8a480bc161b62d52e9fcb526e914107dd63e0558baf1633c0b54a20cb7860",
+     "records": 27497,
+     "updated": "2026-10-18T08:11:08+00:00"
+    }
+   }
+  },
+  "nvd_cve": {
+   "last_attempt": "2026-10-18T08:09:12+00:00",
+   "state": {
+    "sha256": {
+     "nvdcve-2.0-2003": "b952f9db6def6a462922875710e14e081dedbb2f2db637b920aa8b1cbac49fd6",
+     "nvdcve-2.0-2002": "724c4c7955063d9b1058ad8152d65045a7e92ca090cc16d9af0fa48a7464f704",
+     "nvdcve-2.0-2004": "d14fe509f03097feea3ffc2a4472edd750fd30ade0a2f7743b15513f3a4e45b5",
+     "nvdcve-2.0-2005": "16236c0e2eb2912b14fe056c226439e2b332db32293e178750df534010709c11",
+     "nvdcve-2.0-2006": "a110b014119a1a2d851dc22de81e366825935f8f2c7839f9fc62125b1fa9edc1",
+     "nvdcve-2.0-2007": "90cb14b7022a5e12608872694804f48bbd647432ffe2558d3ab2092b4af5fa91",
+     "nvdcve-2.0-2008": "a5f50779a52067d2e118f32a216938d5af0c3637bc6b73d0bf3cbaed87db4885",
+     "nvdcve-2.0-2009": "01742b33c09c8c5040779bea5ac1e554380c3f26807c2f0033a3ec570f1e00b1",
+     "nvdcve-2.0-2010": "f98856f360d1bd0f8c2b021a2826a4c54cf14677fdebaab3fbd6ac5fd393838f",
+     "nvdcve-2.0-2012": "a39fd67f0533215b0dbfd6f81e3a80bc59937504e1e9050c6e787775de1ea926",
+     "nvdcve-2.0-2011": "91efee94571b389afa3608698bd8d49b2f93d521b659f0ce035b863d4dd8f196",
+     "nvdcve-2.0-2013": "cfc9652aeaa7ab9363ea1f37a6f9fee3d1baa2fb1ff5d6e21fb4edafdf52b67c",
+     "nvdcve-2.0-2014": "13e3476692ec732815074662b80dd30f64dd7c3c9f6a07c4c669f7c941742edf",
+     "nvdcve-2.0-2015": "05ada9c48db35736b601459f44baef9a14c1ad17e8e52022d1a6551c12d3e74b",
+     "nvdcve-2.0-2016": "4f9887e72468ad410ede1f2852f902216cfdd992f174e680f32c83c08a06d390",
+     "nvdcve-2.0-2017": "be24f0e6a04f48305d5fb8ae74bfe48917c3fb66104fc6db58c7447080c7b976",
+     "nvdcve-2.0-2018": "46b1b55ebec6b46b7c756119988f1e47f0d7906c844f5a6cebc47b0a1e75f2eb",
+     "nvdcve-2.0-2019": "0a7eaabb7e8b3aa7600ad1f3aa632175b89730d524cca21f83579e9d41a650f4",
+     "nvdcve-2.0-2020": "fcb92ac8a40d88071d31ce23d14d92365696e1dd9b91efff45aaff2f340876ae",
+     "nvdcve-2.0-2022": "a9cc60a178477dc7e3a4117fbfb8fc4163ed761fe0f04ac9ddee5b8972667cf3",
+     "nvdcve-2.0-2023": "2a209ebbfa35346f42c9f6e66e4468ce3c808cffb58ea0a9170126a81119165e",
+     "nvdcve-2.0-2021": "f804d1bf3d9fa5aad2bab5691b58dffd30ae3095b00033cddf021b636bbfdf97",
+     "nvdcve-2.0-2024": "d05227bee048355dc011ec031beb12fbe6589e080182099ef156291ca54121ff",
+     "nvdcve-2.0-recent": "6726944570d2ad358ec86a87cf36aa85dd7fc1ad7c64423d7ad369c3cb2a5458",
+     "nvdcve-2.0-2025": "65c808b291f0cfc4e108a0f312d096a4bd08f21162d3d17df3b7ae08b3831556",
+     "nvdcve-2.0-modified": "b54e018b3cc9c0e24b0ceecbebc39f0a92be753f7f4b7b27940afec92be67423",
+     "nvdcve-2.0-2026": "e07ba4ecf0960d0080c2a4bcd61cd740fd27cba1f096d21cbb4fabc090d0a2cb"
+    },
+    "http": {}
+   },
+   "fingerprint": "3056a6f59a28bedc",
+   "status": "updated",
+   "duration_s": 59.2,
+   "last_success": "2026-10-18T08:09:12+00:00",
+   "last_change": "2026-10-18T08:09:12+00:00",
+   "files": {
+    "vulnerabilities/nvd/nvdcve-2.0-2002.json.gz": {
+     "bytes": 2190506,
+     "sha256": "34603385bbc01047686ca878b80b5d964538d11aedd368393f928ad84821bba0",
+     "records": 6771,
+     "updated": "2026-10-18T08:10:11+00:00"
+    },
+    "vulnerabilities/nvd/nvdcve-2.0-2003.json.gz": {
+     "bytes": 728838,
+     "sha256": "f18905201a0ff16827309156b2c986627c38a9d94cbe7796a24cd63379c449a3",
+     "records": 1555,
+     "updated": "2026-10-04T21:04:07+00:00"
+    },
+    "vulnerabilities/nvd/nvdcve-2.0-2004.json.gz": {
+     "bytes": 1490098,
+     "sha256": "31acd82654b0240c8cc6a3f0e4c4a85f9099215c82b681af4837b2d151b6b6b8",
+     "records": 2707,
+     "updated": "2026-10-11T10:08:50+00:00"
+    },
+    "vulnerabilities/nvd/nvdcve-2.0-2005.json.gz": {
+     "bytes": 2172836,
+     "sha256": "c28818b772deab89dd93ad47694f374dd844b81ef7393938832f583b1249003c",
+     "records": 4770,
+     "updated": "2026-10-18T08:10:11+00:00"
+    },
+    "vulnerabilities/nvd/nvdcve-2.0-2006.json.gz": {
+     "bytes": 3499544,
+     "sha256": "f8a3c24bd0fd28208e6a7213f5808b20223fa67b03de760fea88f112a4ba19c5",
+     "records": 7145,
+     "updated": "2026-10-18T08:10:12+00:00"
+    },
+    "vulnerabilities/nvd/nvdcve-2.0-2007.json.gz": {
+     "bytes": 3605891,
+     "sha256": "cee97e53521d9838530a0c6a83592f49930a882a111f7f908c52d1d588b0800c",
+     "records": 6580,
+     "updated": "2026-10-04T21:04:09+00:00"
+    },
+    "vulnerabilities/nvd/nvdcve-2.0-2008.json.gz": {
+     "bytes": 4185659,
+     "sha256": "bc6b2f7baad7588f0c5b8304dc6f8bcef4333733057889d85c4eb61c1f20abf1",
+     "records": 7179,
+     "updated": "2026-10-04T21:04:10+00:00"
+    },
+    "vulnerabilities/nvd/nvdcve-2.0-2009.json.gz": {
+     "bytes": 4529444,
+     "sha256": "5ee6a6a70efad2bada5cfb168d5b66cfb1b61b71be1e6b9008e5223f27033f45",
+     "records": 5054,
+     "updated": "2026-10-04T21:04:10+00:00"
+    },
+    "vulnerabilities/nvd/nvdcve-2.0-2010.json.gz": {
+     "bytes": 4359898,
+     "sha256": "04e96709e807ba8145462555539ada1dfd646bdec09636063d7fb97e47086422",
+     "records": 5249,
+     "updated": "2026-10-04T21:04:11+00:00"
+    },
+    "vulnerabilities/nvd/nvdcve-2.0-2011.json.gz": {
+     "bytes": 4275222,
+     "sha256": "8a73698cc66c4975a32e1724a8638fe76fb40c3463f0174db2bcac9d133391cb",
+     "records": 4899,
+     "updated": "2026-10-11T10:08:51+00:00"
+    },
+    "vulnerabilities/nvd/nvdcve-2.0-2012.json.gz": {
+     "bytes": 4865078,
+     "sha256": "f9b23685b5efc5c4a22133c558e9c6ee95198313a3d4311d4df6e48aba414d07",
+     "records": 5939,
+     "updated": "2026-10-11T10:08:51+00:00"
+    },
+    "vulnerabilities/nvd/nvdcve-2.0-2013.json.gz": {
+     "bytes": 5800676,
+     "sha256": "18a584144ccf2daa9f664c787fa8af636fca955cb5955d71dcf0c48e8475d5a1",
+     "records": 6832,
+     "updated": "2026-10-18T08:10:13+00:00"
+    },
+    "vulnerabilities/nvd/nvdcve-2.0-2014.json.gz": {
+     "bytes": 4548818,
+     "sha256": "2df5c4ed5339f91eb167df0d242d45d8c66e4b0e24484f4bfbf06ac24a74327a",
+     "records": 9003,
+     "updated": "2026-10-18T08:10:14+00:00"
+    },
+    "vulnerabilities/nvd/nvdcve-2.0-2015.json.gz": {
+     "bytes": 4211362,
+     "sha256": "9da9d504f9a4dcd75efeb0a552099cf42afc4f464bac3fd36a4aef87f344fe38",
+     "records": 8780,
+     "updated": "2026-10-18T08:10:14+00:00"
+    },
+    "vulnerabilities/nvd/nvdcve-2.0-2016.json.gz": {
+     "bytes": 5169180,
+     "sha256": "0e8f29c5c32e44cbaa2a24fbc0334b3a979a91b7fb4b9a69879e67a508b5fc82",
+     "records": 10651,
+     "updated": "2026-10-18T08:10:15+00:00"
+    },
+    "vulnerabilities/nvd/nvdcve-2.0-2017.json.gz": {
+     "bytes": 7708205,
+     "sha256": "a45fdcfefea9eae4f0e9dced05ccc9c7a81e0984341d96671812bc82f6ce9968",
+     "records": 17109,
+     "updated": "2026-10-18T08:10:16+00:00"
+    },
+    "vulnerabilities/nvd/nvdcve-2.0-2018.json.gz": {
+     "bytes": 8274041,
+     "sha256": "5c9da37b2cf25967d7301dad045d866a230ecd124e4ac36b2a3b6693517a1a6a",
+     "records": 17817,
+     "updated": "2026-10-18T08:10:17+00:00"
+    },
+    "vulnerabilities/nvd/nvdcve-2.0-2019.json.gz": {
+     "bytes": 10197385,
+     "sha256": "cdf3ce6041ccacb36f86ab0e999b9428975f89082f2dffb4050449c7c752403b",
+     "records": 17625,
+     "updated": "2026-10-18T08:10:19+00:00"
+    },
+    "vulnerabilities/nvd/nvdcve-2.0-2020.json.gz": {
+     "bytes": 14012646,
+     "sha256": "ad7950e696dcfc11ed1017dfd40ce4a811ab88666c9778ef866db150396eac00",
+     "records": 21081,
+     "updated": "2026-10-18T08:10:21+00:00"
+    },
+    "vulnerabilities/nvd/nvdcve-2.0-2021.json.gz": {
+     "bytes": 16863771,
+     "sha256": "4d8a3b2c3a2e27c61170ea2925c9e9f4204cf1da9a964528f9c37311d1dff263",
+     "records": 23473,
+     "updated": "2026-10-18T08:10:24+00:00"
+    },
+    "vulnerabilities/nvd/nvdcve-2.0-2022.json.gz": {
+     "bytes": 18388247,
+     "sha256": "dc2a902d21bde11e22925f90716c4f7007114d63b4f0241ba92308a80a0c5a55",
+     "records": 27557,
+     "updated": "2026-10-18T08:10:27+00:00"
+    },
+    "vulnerabilities/nvd/nvdcve-2.0-2023.json.gz": {
+     "bytes": 20226366,
+     "sha256": "eb995b1687e4b0c1d0b57fded1f6d0af79af41cf19946a24984ac8de2bb397cb",
+     "records": 31460,
+     "updated": "2026-10-18T08:10:30+00:00"
+    },
+    "vulnerabilities/nvd/nvdcve-2.0-2024.json.gz": {
+     "bytes": 25050976,
+     "sha256": "db5f87087b74b5a39107d9cec51e8ced28de74882b9972470a6d9d77aebaa543",
+     "records": 39269,
+     "updated": "2026-10-18T08:10:34+00:00"
+    },
+    "vulnerabilities/nvd/nvdcve-2.0-2025.json.gz": {
+     "bytes": 24977798,
+     "sha256": "a7353de02d85e30b116e772aec9287efd35ac8eef55356ec9fddca9473993372",
+     "records": 45373,
+     "updated": "2026-10-18T08:10:37+00:00"
+    },
+    "vulnerabilities/nvd/nvdcve-2.0-2026.json.gz": {
+     "bytes": 36949962,
+     "sha256": "90e879346442d8d90b4e947fa5b4f9aae8408a999620b4905e62d26e8756ed5c",
+     "records": null,
+     "updated": "2026-10-18T08:10:37+00:00"
+    },
+    "vulnerabilities/nvd/nvdcve-2.0-modified.json.gz": {
+     "bytes": 12475853,
+     "sha256": "5959ebd654156c5521b9eddecc1f7177378be92b4e47733cfbe1220684785c11",
+     "records": 22272,
+     "updated": "2026-10-18T08:10:39+00:00"
+    },
+    "vulnerabilities/nvd/nvdcve-2.0-recent.json.gz": {
+     "bytes": 2102942,
+     "sha256": "04dd49a0577769c081fe76afe6e2f8c8d03c69ed2075052e348bda18d087e29b",
+     "records": 6271,
+     "updated": "2026-10-18T08:10:40+00:00"
+    }
+   }
+  },
+  "openai_chatgpt_user_ips": {
+   "last_attempt": "2026-10-18T08:09:17+00:00",
+   "state": {
+    "http": {
+     "https://openai.com/chatgpt-user.json": {
+      "etag": "0x8DF248CD0C0C309",
+      "last_modified": "Wed, 07 Oct 2026 16:05:32 GMT"
+     }
+    }
+   },
+   "fingerprint": "6da568f64d05a9d1",
+   "status": "not_modified",
+   "duration_s": 0.1,
+   "last_success": "2026-10-18T08:09:17+00:00",
+   "last_change": "2026-10-11T10:08:15+00:00",
+   "files": {
+    "network/openai_chatgpt_user_ips.json": {
+     "bytes": 8467,
+     "sha256": "2cd3f361d575deabcc2d4303d7eaf91bf1d0fbc70404601a7b6cd8231b60ac11",
+     "records": 234,
+     "updated": "2026-10-11T10:08:15+00:00"
+    }
+   }
+  },
+  "openai_gptbot_ips": {
+   "last_attempt": "2026-10-18T08:09:17+00:00",
+   "state": {
+    "http": {
+     "https://openai.com/gptbot.json": {
+      "etag": "W/\"4c4f5439a5de299b831d64fbdae91310\"",
+      "last_modified": "Tue, 22 Sep 2026 17:16:01 GMT"
+     }
+    }
+   },
+   "fingerprint": "7430ba44f21f0953",
+   "status": "not_modified",
+   "duration_s": 0.1,
+   "last_success": "2026-10-18T08:09:17+00:00",
+   "last_change": "2026-10-04T21:03:23+00:00",
+   "files": {
+    "network/openai_gptbot_ips.json": {
+     "bytes": 977,
+     "sha256": "a24d1fa34f094d303400bdf13c45c5e9726e0b553780d16a52f9ba1b790acc72",
+     "records": 18,
+     "updated": "2026-10-04T21:03:23+00:00"
+    }
+   }
+  },
+  "openphish_urls": {
+   "last_attempt": "2026-10-24T05:49:56+00:00",
+   "state": {
+    "http": {
+     "https://openphish.com/feed.txt": {
+      "etag": "W/\"c179f26bf1b0c5d910562e14869b40b31085d159a4ccdcf47379079ddd75ff00\""
+     }
+    }
+   },
+   "fingerprint": "3a7f7f9368f1c935",
+   "status": "updated",
+   "duration_s": 0.5,
+   "last_success": "2026-10-24T05:49:56+00:00",
+   "last_change": "2026-10-24T05:49:56+00:00",
+   "files": {
+    "threat_intel/openphish_urls.txt": {
+     "bytes": 16157,
+     "sha256": "377052f845922a85bc62eace4b5d5f271c74fea1f2d9a9644523171c8d139cdb",
+     "records": 300,
+     "updated": "2026-10-24T05:49:57+00:00"
+    }
+   }
+  },
+  "oracle_ip_ranges": {
+   "last_attempt": "2026-10-18T08:09:16+00:00",
+   "state": {
+    "http": {
+     "https://docs.oracle.com/en-us/iaas/tools/public_ip_ranges.json": {
+      "etag": "\"6a8d9d00-39280\"",
+      "last_modified": "Tue, 25 Aug 2026 13:47:44 GMT"
+     }
+    }
+   },
+   "fingerprint": "95de4f16a3a9f4da",
+   "status": "not_modified",
+   "duration_s": 0.1,
+   "last_success": "2026-10-18T08:09:16+00:00",
+   "last_change": "2026-10-04T21:03:21+00:00",
+   "files": {
+    "network/oracle_ip_ranges.json": {
+     "bytes": 234112,
+     "sha256": "59e5ba5e92e38f911ce377f1d71c6eaa89ffcf53f9eb4ccd667d9ffca81ead7d",
+     "records": 56,
+     "updated": "2026-10-04T21:03:22+00:00"
+    }
+   }
+  },
+  "pci_ids": {
+   "last_attempt": "2026-10-18T08:09:23+00:00",
+   "state": {
+    "http": {
+     "https://pci-ids.ucw.cz/v2.2/pci.ids": {
+      "etag": "\"6ad2cc17-5b80a\"",
+      "last_modified": "Sat, 17 Oct 2026 01:15:03 GMT"
+     }
+    }
+   },
+   "fingerprint": "3e1725c210d512dd",
+   "status": "updated",
+   "duration_s": 2.0,
+   "last_success": "2026-10-18T08:09:23+00:00",
+   "last_change": "2026-10-18T08:09:23+00:00",
+   "files": {
+    "registries/pci_ids.txt": {
+     "bytes": 1673604,
+     "sha256": "09212c8b854a9571e3d3c8e00f6707a17c289c65e1e25b3f218dd3f42791bc22",
+     "records": 42512,
+     "updated": "2026-10-18T08:09:25+00:00"
+    }
+   }
+  },
+  "proofpoint_et_compromised_ips": {
+   "last_attempt": "2026-10-24T05:49:56+00:00",
+   "state": {
+    "http": {
+     "https://rules.emergingthreats.net/blockrules/compromised-ips.txt": {
+      "etag": "W/\"6adbbd93-1a97\"",
+      "last_modified": "Fri, 23 Oct 2026 20:03:31 GMT"
+     }
+    }
+   },
+   "fingerprint": "f63fc59bf216cf82",
+   "status": "updated",
+   "duration_s": 0.2,
+   "last_success": "2026-10-24T05:49:56+00:00",
+   "last_change": "2026-10-24T05:49:56+00:00",
+   "files": {
+    "threat_intel/proofpoint_et_compromised_ips.txt": {
+     "bytes": 6807,
+     "sha256": "38e2fccb3db3857f23860cdde099a0dff526e80fce04afb006823d5ca22bd0ed",
+     "records": 482,
+     "updated": "2026-10-24T05:49:57+00:00"
+    }
+   }
+  },
+  "publicsuffix_list": {
+   "last_attempt": "2026-10-18T08:09:20+00:00",
+   "state": {
+    "http": {
+     "https://publicsuffix.org/list/public_suffix_list.dat": {
+      "etag": "W/\"88c8bb61af88879a75c4dbed50f9d10a\"",
+      "last_modified": "Fri, 16 Oct 2026 23:32:25 GMT"
+     }
+    }
+   },
+   "fingerprint": "5acc0b0267a57cb8",
+   "status": "updated",
+   "duration_s": 0.3,
+   "last_success": "2026-10-18T08:09:20+00:00",
+   "last_change": "2026-10-18T08:09:20+00:00",
+   "files": {
+    "domains/publicsuffix_list.txt": {
+     "bytes": 338217,
+     "sha256": "d805bffa0e2e203a8e27ca75c596e5b24ac096d11632904492115248e9ab9bd9",
+     "records": 14499,
+     "updated": "2026-10-18T08:09:20+00:00"
+    }
+   }
+  },
+  "ransomwarelive_groups": {
+   "last_attempt": "2026-10-24T05:49:57+00:00",
+   "state": {
+    "http": {
+     "https://api.ransomware.live/v2/groups": {}
+    }
+   },
+   "fingerprint": "837f648419be34f2",
+   "status": "updated",
+   "duration_s": 1.1,
+   "last_success": "2026-10-24T05:49:57+00:00",
+   "last_change": "2026-10-24T05:49:57+00:00",
+   "files": {
+    "threat_intel/ransomwarelive_groups.json": {
+     "bytes": 796985,
+     "sha256": "ea021d597d449815a208dbde7051fe294f2a9784a74432dac4745f9b4b9b9f0e",
+     "records": 412,
+     "updated": "2026-10-24T05:49:58+00:00"
+    }
+   }
+  },
+  "ransomwarelive_victims_recent": {
+   "last_attempt": "2026-10-24T05:49:57+00:00",
+   "state": {
+    "http": {
+     "https://api.ransomware.live/v2/recentvictims": {}
+    }
+   },
+   "fingerprint": "a178e26f43dbb080",
+   "status": "updated",
+   "duration_s": 0.7,
+   "last_success": "2026-10-24T05:49:57+00:00",
+   "last_change": "2026-10-24T05:49:57+00:00",
+   "files": {
+    "threat_intel/ransomwarelive_victims_recent.json": {
+     "bytes": 85163,
+     "sha256": "359bc90e612509367255c5f8c7212e60b3a5a8589939238aaff51c464e269788",
+     "records": 100,
+     "updated": "2026-10-24T05:49:57+00:00"
+    }
+   }
+  },
+  "redcanary_atomic_tests": {
+   "last_attempt": "2026-10-18T08:09:15+00:00",
+   "state": {
+    "http": {
+     "https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/Indexes/Indexes-CSV/index.csv": {
+      "etag": "W/\"bbf82601892f3e833f0cc618f9e4447becf0d9ba1a43d417a62be7a941b6bbe4\""
+     }
+    }
+   },
+   "fingerprint": "901e658e44fdff8a",
+   "status": "not_modified",
+   "duration_s": 0.1,
+   "last_success": "2026-10-18T08:09:15+00:00",
+   "last_change": "2026-10-04T21:03:21+00:00",
+   "files": {
+    "frameworks/redcanary_atomic_tests.csv": {
+     "bytes": 353998,
+     "sha256": "09c597fd4b9fe86b67177dae4505d8b76765926b9cc6c6c0fd1110bee1628089",
+     "records": 2371,
+     "updated": "2026-10-04T21:03:21+00:00"
+    }
+   }
+  },
+  "seclists_default_passwords": {
+   "last_attempt": "2026-10-18T08:09:28+00:00",
+   "state": {
+    "http": {
+     "https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Default-Credentials/default-passwords.csv": {
+      "etag": "W/\"f7b60f1eeff102624e567ca8d128cfa93fe183b95ad1b6b18c2bcba7a12a3925\""
+     }
+    }
+   },
+   "fingerprint": "da73aedbeb04faef",
+   "status": "not_modified",
+   "duration_s": 0.1,
+   "last_success": "2026-10-18T08:09:28+00:00",
+   "last_change": "2026-10-04T21:03:34+00:00",
+   "files": {
+    "detection/seclists_default_passwords.csv": {
+     "bytes": 90856,
+     "sha256": "af5fb62a1458e053e17630c043306be6c7327738c3f93d1768a2bf1cc4ece45f",
+     "records": 2875,
+     "updated": "2026-10-04T21:03:34+00:00"
+    }
+   }
+  },
+  "seclists_secret_keywords": {
+   "last_attempt": "2026-10-18T08:09:28+00:00",
+   "state": {
+    "http": {
+     "https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/Variables/secret-keywords.txt": {
+      "etag": "W/\"313ba17801cb802203bef1563bb8cee3f28cd2796c6b566cdda9d562af907804\""
+     }
+    }
+   },
+   "fingerprint": "a8c0ef401f447228",
+   "status": "not_modified",
+   "duration_s": 0.1,
+   "last_success": "2026-10-18T08:09:28+00:00",
+   "last_change": "2026-10-04T21:03:34+00:00",
+   "files": {
+    "detection/seclists_secret_keywords.txt": {
+     "bytes": 825,
+     "sha256": "d1932622ea70a456277b9b7a75749d5fccc0712ebc3b15c7f7791fcb21eb0bc8",
+     "records": 69,
+     "updated": "2026-10-04T21:03:34+00:00"
+    }
+   }
+  },
+  "seclists_webshells": {
+   "last_attempt": "2026-10-18T08:09:28+00:00",
+   "state": {
+    "http": {
+     "https://raw.githubusercontent.com/danielmiessler/SecLists/master/Web-Shells/backdoor_list.txt": {
+      "etag": "W/\"c3eb8e8fe9d17c4971cb1fbdb9cd4eb28ecf0aba73015627fafdf3a60004d794\""
+     }
+    }
+   },
+   "fingerprint": "bfc46431a46c197f",
+   "status": "not_modified",
+   "duration_s": 0.1,
+   "last_success": "2026-10-18T08:09:28+00:00",
+   "last_change": "2026-10-04T21:03:34+00:00",
+   "files": {
+    "detection/seclists_webshells.txt": {
+     "bytes": 14703,
+     "sha256": "03c18ae3209dce8e43b4b55454836ea9aae4546469728fd3d96460a65e0e7fa0",
+     "records": 772,
+     "updated": "2026-10-04T21:03:34+00:00"
+    }
+   }
+  },
+  "spamhaus_asndrop": {
+   "last_attempt": "2026-10-24T05:49:56+00:00",
+   "state": {
+    "http": {
+     "https://www.spamhaus.org/drop/asndrop.json": {
+      "last_modified": "Sat, 24 Oct 2026 05:14:02 GMT"
+     }
+    }
+   },
+   "fingerprint": "c2a7596b98cebe94",
+   "status": "updated",
+   "duration_s": 0.2,
+   "last_success": "2026-10-24T05:49:56+00:00",
+   "last_change": "2026-10-24T05:49:56+00:00",
+   "files": {
+    "threat_intel/spamhaus_asndrop.jsonl": {
+     "bytes": 39470,
+     "sha256": "725fcabfe2fafabb371ff5df2c39dcab0e1e14a03e03e24bfc1ce784b9103e76",
+     "records": 443,
+     "updated": "2026-10-24T05:49:57+00:00"
+    }
+   }
+  },
+  "spamhaus_drop_ipv4": {
+   "last_attempt": "2026-10-24T05:49:56+00:00",
+   "state": {
+    "http": {
+     "https://www.spamhaus.org/drop/drop_v4.json": {
+      "last_modified": "Fri, 23 Oct 2026 10:17:59 GMT"
+     }
+    }
+   },
+   "fingerprint": "c66ae3d486d6d6b6",
+   "status": "updated",
+   "duration_s": 0.1,
+   "last_success": "2026-10-24T05:49:56+00:00",
+   "last_change": "2026-10-24T05:49:56+00:00",
+   "files": {
+    "threat_intel/spamhaus_drop_ipv4.jsonl": {
+     "bytes": 103147,
+     "sha256": "ebc58a46bcb90856ecd9fb9b63d1cf8779d6350909ed8824f18ab6b788525201",
+     "records": 1689,
+     "updated": "2026-10-24T05:49:57+00:00"
+    }
+   }
+  },
+  "spamhaus_drop_ipv6": {
+   "last_attempt": "2026-10-24T05:49:56+00:00",
+   "state": {
+    "http": {
+     "https://www.spamhaus.org/drop/drop_v6.json": {
+      "last_modified": "Mon, 19 Oct 2026 09:03:05 GMT"
+     }
+    }
+   },
+   "fingerprint": "7cc01fe094a1eb56",
+   "status": "not_modified",
+   "duration_s": 0.1,
+   "last_success": "2026-10-24T05:49:56+00:00",
+   "last_change": "2026-10-20T06:00:02+00:00",
+   "files": {
+    "threat_intel/spamhaus_drop_ipv6.jsonl": {
+     "bytes": 5922,
+     "sha256": "728dea3c26135b31da5b3b1110922bd498b2a0aea6a1cb9c299e6840b6ad5ae2",
+     "records": 92,
+     "updated": "2026-10-20T06:00:02+00:00"
+    }
+   }
+  },
+  "stamparm_ipsum": {
+   "last_attempt": "2026-10-24T05:49:57+00:00",
+   "state": {
+    "http": {
+     "https://raw.githubusercontent.com/stamparm/ipsum/master/ipsum.txt": {
+      "etag": "W/\"49e20c4d719c7951dddd6ac4f0dfa6caca6ce6587ccc887e8a44fb09e9eede81\""
+     }
+    }
+   },
+   "fingerprint": "a43a698de2b2b462",
+   "status": "updated",
+   "duration_s": 0.1,
+   "last_success": "2026-10-24T05:49:57+00:00",
+   "last_change": "2026-10-24T05:49:57+00:00",
+   "files": {
+    "threat_intel/stamparm_ipsum.txt": {
+     "bytes": 2074049,
+     "sha256": "340cd0391cc03f1bac446f7325a8b36866e02db9f4cdf11de2d937c1a8b2de3d",
+     "records": 128244,
+     "updated": "2026-10-24T05:49:57+00:00"
+    }
+   }
+  },
+  "teamcymru_fullbogons_ipv4": {
+   "last_attempt": "2026-10-18T08:09:19+00:00",
+   "state": {
+    "http": {
+     "https://www.team-cymru.org/Services/Bogons/fullbogons-ipv4.txt": {
+      "etag": "\"6ad45127-bab5\"",
+      "last_modified": "Sun, 18 Oct 2026 04:55:03 GMT"
+     }
+    }
+   },
+   "fingerprint": "cce7d0ffc1012118",
+   "status": "updated",
+   "duration_s": 0.5,
+   "last_success": "2026-10-18T08:09:19+00:00",
+   "last_change": "2026-10-18T08:09:19+00:00",
+   "files": {
+    "network/teamcymru_fullbogons_ipv4.txt": {
+     "bytes": 47797,
+     "sha256": "3ef16417d359ddafd2435649ff79f5f534ddd09311603ec5b214d04cab849253",
+     "records": 3029,
+     "updated": "2026-10-18T08:09:20+00:00"
+    }
+   }
+  },
+  "teamcymru_fullbogons_ipv6": {
+   "last_attempt": "2026-10-18T08:09:19+00:00",
+   "state": {
+    "http": {
+     "https://www.team-cymru.org/Services/Bogons/fullbogons-ipv6.txt": {
+      "etag": "\"6ad45127-2811c0\"",
+      "last_modified": "Sun, 18 Oct 2026 04:55:03 GMT"
+     }
+    }
+   },
+   "fingerprint": "f4a3e51285891ff2",
+   "status": "updated",
+   "duration_s": 1.0,
+   "last_success": "2026-10-18T08:09:19+00:00",
+   "last_change": "2026-10-18T08:09:19+00:00",
+   "files": {
+    "network/teamcymru_fullbogons_ipv6.txt": {
+     "bytes": 2625984,
+     "sha256": "c4067f5de92ee9762155116a28f2da67196354b10ff55de82c755facdc8365c8",
+     "records": 158025,
+     "updated": "2026-10-18T08:09:20+00:00"
+    }
+   }
+  },
+  "tor_exit_ips": {
+   "last_attempt": "2026-10-24T05:49:57+00:00",
+   "state": {
+    "http": {
+     "https://check.torproject.org/torbulkexitlist": {
+      "etag": "\"434e-65e8faa653664-gzip\"",
+      "last_modified": "Sat, 24 Oct 2026 05:49:52 GMT"
+     }
+    }
+   },
+   "fingerprint": "2d830738ff948ff3",
+   "status": "updated",
+   "duration_s": 0.7,
+   "last_success": "2026-10-24T05:49:57+00:00",
+   "last_change": "2026-10-24T05:49:57+00:00",
+   "files": {
+    "network/tor_exit_ips.txt": {
+     "bytes": 17230,
+     "sha256": "214d9c2a2e29ec285c5b6501f3098698a2d574e92d1547504758193ad9105674",
+     "records": 1217,
+     "updated": "2026-10-24T05:49:58+00:00"
+    }
+   }
+  },
+  "tor_exit_relays": {
+   "last_attempt": "2026-10-24T05:49:57+00:00",
+   "state": {
+    "http": {
+     "https://onionoo.torproject.org/details?search=flag:Exit": {
+      "last_modified": "Sat, 24 Oct 2026 05:07:02 GMT"
+     }
+    }
+   },
+   "fingerprint": "ecca8c2b46bdf57c",
+   "status": "updated",
+   "duration_s": 2.7,
+   "last_success": "2026-10-24T05:49:57+00:00",
+   "last_change": "2026-10-24T05:49:57+00:00",
+   "files": {
+    "network/tor_exit_relays.json": {
+     "bytes": 18018019,
+     "sha256": "c059377e1f2a62f940c61d3f87f33ec4746c83a5b9d8805e8c5e79472aed6bc2",
+     "records": 2894,
+     "updated": "2026-10-24T05:50:00+00:00"
+    }
+   }
+  },
+  "tor_relays": {
+   "last_attempt": "2026-10-24T05:49:57+00:00",
+   "state": {
+    "http": {
+     "https://onionoo.torproject.org/details": {
+      "last_modified": "Sat, 24 Oct 2026 05:07:02 GMT"
+     }
+    }
+   },
+   "fingerprint": "ad4f200733deea90",
+   "status": "updated",
+   "duration_s": 3.7,
+   "last_success": "2026-10-24T05:49:57+00:00",
+   "last_change": "2026-10-24T05:49:57+00:00",
+   "files": {
+    "network/tor_relays.json": {
+     "bytes": 75557751,
+     "sha256": "c4bb8b573aa2d00537900ccf13144dd43a9479577d25678085a665524750aea6",
+     "records": 9972,
+     "updated": "2026-10-24T05:50:01+00:00"
+    }
+   }
+  },
+  "tranco_top1m": {
+   "last_attempt": "2026-10-18T08:09:20+00:00",
+   "state": {
+    "http": {
+     "https://tranco-list.eu/top-1m.csv.zip": {
+      "etag": "\"18df72b226d36c90-93fbab\"",
+      "last_modified": "Sat, 17 Oct 2026 22:48:07 GMT"
+     }
+    }
+   },
+   "fingerprint": "6d2ffe662cd60cc7",
+   "status": "updated",
+   "duration_s": 1.2,
+   "last_success": "2026-10-18T08:09:20+00:00",
+   "last_change": "2026-10-18T08:09:20+00:00",
+   "files": {
+    "domains/tranco_top1m.csv": {
+     "bytes": 22627587,
+     "sha256": "22d326c41f01aed7cab2867b6dc33c4c91a48e6f1d6c289a0646ba9b635203d5",
+     "records": 999999,
+     "updated": "2026-10-18T08:09:21+00:00"
+    }
+   }
+  },
+  "url_shorteners": {
+   "last_attempt": "2026-10-18T08:09:20+00:00",
+   "state": {
+    "http": {
+     "https://raw.githubusercontent.com/PeterDaveHello/url-shorteners/master/list": {
+      "etag": "W/\"b585adc6bc03267b68910a6ac995f20a5794f85a170a4d439e225020def571c1\""
+     }
+    }
+   },
+   "fingerprint": "49ac04b1b4f688f3",
+   "status": "not_modified",
+   "duration_s": 0.1,
+   "last_success": "2026-10-18T08:09:20+00:00",
+   "last_change": "2026-10-04T21:03:26+00:00",
+   "files": {
+    "domains/url_shorteners.txt": {
+     "bytes": 13105,
+     "sha256": "60db5c2034b8fff20b0ca49054beae17488bac6348ce51922621f2d97cd12215",
+     "records": 1454,
+     "updated": "2026-10-04T21:03:26+00:00"
+    }
+   }
+  },
+  "usb_ids": {
+   "last_attempt": "2026-10-18T08:09:23+00:00",
+   "state": {
+    "http": {
+     "https://raw.githubusercontent.com/usbids/usbids/master/usb.ids": {
+      "etag": "W/\"7c212fd338efc73913a58d67c3c4e506391c462dde2fd543d703a9dab3f2582b\""
+     }
+    }
+   },
+   "fingerprint": "bdbec069ba4905a5",
+   "status": "not_modified",
+   "duration_s": 0.2,
+   "last_success": "2026-10-18T08:09:23+00:00",
+   "last_change": "2026-10-04T21:03:28+00:00",
+   "files": {
+    "registries/usb_ids.json": {
+     "bytes": 1063021,
+     "sha256": "164cd9b889dad7e39934e58787d71fa97631aaf25f0e647bef866cdc887346c1",
+     "records": 3427,
+     "updated": "2026-10-04T21:03:29+00:00"
+    }
+   }
+  },
+  "wireshark_manuf": {
+   "last_attempt": "2026-10-18T08:09:23+00:00",
+   "state": {
+    "http": {
+     "https://www.wireshark.org/download/automated/data/manuf": {
+      "etag": "\"306805-65e06d5779a65\"",
+      "last_modified": "Sat, 17 Oct 2026 10:35:04 GMT"
+     }
+    }
+   },
+   "fingerprint": "fece03e832b56471",
+   "status": "updated",
+   "duration_s": 0.3,
+   "last_success": "2026-10-18T08:09:23+00:00",
+   "last_change": "2026-10-18T08:09:23+00:00",
+   "files": {
+    "registries/wireshark_manuf.txt": {
+     "bytes": 3172357,
+     "sha256": "36f55b11ff108215e6f21ee85f5af3e2c66b28e1d7fdca745dac5ba516efda4d",
+     "records": 58526,
+     "updated": "2026-10-18T08:09:23+00:00"
+    }
+   }
+  },
+  "x4bnet_datacenter_ipv4": {
+   "last_attempt": "2026-10-18T08:09:17+00:00",
+   "state": {
+    "http": {
+     "https://raw.githubusercontent.com/X4BNet/lists_vpn/main/output/datacenter/ipv4.txt": {
+      "etag": "W/\"5fd271f9edc936ee1688f57bff875e9f02dcac1634c40faa78c734b71af6665c\""
+     }
+    }
+   },
+   "fingerprint": "9f7c99f739c6e99c",
+   "status": "updated",
+   "duration_s": 0.1,
+   "last_success": "2026-10-18T08:09:17+00:00",
+   "last_change": "2026-10-18T08:09:17+00:00",
+   "files": {
+    "network/x4bnet_datacenter_ipv4.txt": {
+     "bytes": 697652,
+     "sha256": "140ad372c2b1bbc981934bed95d18c1e8fefe6fd6afa2ffbcb98e4f9486e8140",
+     "records": 44592,
+     "updated": "2026-10-18T08:09:17+00:00"
+    }
+   }
+  },
+  "x4bnet_vpn_ipv4": {
+   "last_attempt": "2026-10-18T08:09:17+00:00",
+   "state": {
+    "http": {
+     "https://raw.githubusercontent.com/X4BNet/lists_vpn/main/output/vpn/ipv4.txt": {
+      "etag": "W/\"2fc0495fe206b2002c4015f45ee799f0da2245771679d7d666fcb5d259e8c29e\""
+     }
+    }
+   },
+   "fingerprint": "5efa003dbe8b7e00",
+   "status": "updated",
+   "duration_s": 0.2,
+   "last_success": "2026-10-18T08:09:17+00:00",
+   "last_change": "2026-10-18T08:09:17+00:00",
+   "files": {
+    "network/x4bnet_vpn_ipv4.txt": {
+     "bytes": 182119,
+     "sha256": "c38604cbced9956720b341747e775412fe6932d41f08fa9f7c90521f8de056a8",
+     "records": 11102,
+     "updated": "2026-10-18T08:09:17+00:00"
+    }
+   }
+  }
+ },
+ "generated_at": "2026-10-24T05:51:06+00:00"
+}

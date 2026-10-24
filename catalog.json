@@ -1,0 +1,5026 @@
+{
+  "generated_at": "2026-10-24T05:51:06+00:00",
+  "repository": "https://github.com/emeryn/CybrefV2",
+  "raw_base": "https://raw.githubusercontent.com/emeryn/CybrefV2/main",
+  "summary": {
+    "datasets": 127,
+    "files": 197,
+    "bytes": 874761787,
+    "health": {
+      "degraded": 3,
+      "ok": 124
+    },
+    "degraded": [
+      "abusech_malwarebazaar_recent",
+      "abusech_threatfox_recent",
+      "abusech_urlhaus_online"
+    ]
+  },
+  "datasets": [
+    {
+      "id": "abusech_threatfox_recent",
+      "name": "ThreatFox",
+      "category": "threat_intel",
+      "category_title": "Threat Intelligence & IOCs",
+      "frequency": "daily",
+      "description": "IOCs of the last 48h (IP:port, domains, URLs, hashes) tagged by malware family.",
+      "homepage": "https://threatfox.abuse.ch/",
+      "origin": [
+        "https://threatfox.abuse.ch/export/json/recent/"
+      ],
+      "health": "degraded",
+      "last_run": {
+        "status": "failed",
+        "at": "2026-10-24T05:51:06+00:00",
+        "duration_s": 0.1,
+        "error": "HTTP 410 on https://threatfox.abuse.ch/export/json/recent/"
+      },
+      "last_success": "2026-10-21T06:01:40+00:00",
+      "last_change": "2026-10-21T06:01:40+00:00",
+      "bytes": 4548847,
+      "files": [
+        {
+          "path": "threat_intel/abusech_threatfox_recent.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/threat_intel/abusech_threatfox_recent.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 4548847,
+          "records": 7242,
+          "sha256": "b5dfe1d080626a368dfde98c9d59e71a09b806a26f0be63b2960bbb6df7305e1",
+          "updated": "2026-10-21T06:01:41+00:00"
+        }
+      ]
+    },
+    {
+      "id": "abusech_feodotracker_c2_ips",
+      "name": "Feodo Tracker",
+      "category": "threat_intel",
+      "category_title": "Threat Intelligence & IOCs",
+      "frequency": "daily",
+      "description": "Botnet C2 servers (Dridex, Emotet, QakBot, Pikabot...).",
+      "homepage": "https://feodotracker.abuse.ch/",
+      "origin": [
+        "https://feodotracker.abuse.ch/downloads/ipblocklist.json"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-24T05:49:56+00:00",
+        "duration_s": 0.1,
+        "error": null
+      },
+      "last_success": "2026-10-24T05:49:56+00:00",
+      "last_change": "2026-10-04T21:03:06+00:00",
+      "bytes": 1763,
+      "files": [
+        {
+          "path": "threat_intel/abusech_feodotracker_c2_ips.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/threat_intel/abusech_feodotracker_c2_ips.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 1763,
+          "records": 5,
+          "sha256": "ef1c98c807014247b232483e542b5deadb1b8738d30a072f2e2b154b05ebda52",
+          "updated": "2026-10-04T21:03:06+00:00"
+        }
+      ]
+    },
+    {
+      "id": "abusech_urlhaus_online",
+      "name": "URLhaus",
+      "category": "threat_intel",
+      "category_title": "Threat Intelligence & IOCs",
+      "frequency": "daily",
+      "description": "Malware distribution URLs currently online.",
+      "homepage": "https://urlhaus.abuse.ch/",
+      "origin": [
+        "https://urlhaus.abuse.ch/downloads/csv_online/"
+      ],
+      "health": "degraded",
+      "last_run": {
+        "status": "failed",
+        "at": "2026-10-24T05:51:06+00:00",
+        "duration_s": 0.1,
+        "error": "HTTP 410 on https://urlhaus.abuse.ch/downloads/csv_online/"
+      },
+      "last_success": "2026-10-21T06:01:40+00:00",
+      "last_change": "2026-10-21T06:01:40+00:00",
+      "bytes": 7525884,
+      "files": [
+        {
+          "path": "threat_intel/abusech_urlhaus_online.csv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/threat_intel/abusech_urlhaus_online.csv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 7525884,
+          "records": 27974,
+          "sha256": "7abc0a27c286b26b7453a05da8cd03dbc711a8fb298d2f79875194273d5e1d56",
+          "updated": "2026-10-21T06:01:41+00:00"
+        }
+      ]
+    },
+    {
+      "id": "abusech_malwarebazaar_recent",
+      "name": "MalwareBazaar",
+      "category": "threat_intel",
+      "category_title": "Threat Intelligence & IOCs",
+      "frequency": "daily",
+      "description": "Malware samples of the last 48h (hashes, signature, file type, tags).",
+      "homepage": "https://bazaar.abuse.ch/",
+      "origin": [
+        "https://bazaar.abuse.ch/export/csv/recent/"
+      ],
+      "health": "degraded",
+      "last_run": {
+        "status": "failed",
+        "at": "2026-10-24T05:51:06+00:00",
+        "duration_s": 0.1,
+        "error": "HTTP 410 on https://bazaar.abuse.ch/export/csv/recent/"
+      },
+      "last_success": "2026-10-21T06:01:40+00:00",
+      "last_change": "2026-10-21T06:01:40+00:00",
+      "bytes": 777267,
+      "files": [
+        {
+          "path": "threat_intel/abusech_malwarebazaar_recent.csv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/threat_intel/abusech_malwarebazaar_recent.csv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 777267,
+          "records": 1684,
+          "sha256": "9a34feb59713e332d65202cb442c564f93267355d17faebf44d67cf9ee9ed6a6",
+          "updated": "2026-10-21T06:01:40+00:00"
+        }
+      ]
+    },
+    {
+      "id": "abusech_sslbl_certificates",
+      "name": "SSL Blacklist",
+      "category": "threat_intel",
+      "category_title": "Threat Intelligence & IOCs",
+      "frequency": "daily",
+      "description": "SHA1 fingerprints of TLS certificates used by botnet C2 servers.",
+      "homepage": "https://sslbl.abuse.ch/",
+      "origin": [
+        "https://sslbl.abuse.ch/blacklist/sslblacklist.csv"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-24T05:49:56+00:00",
+        "duration_s": 0.1,
+        "error": null
+      },
+      "last_success": "2026-10-24T05:49:56+00:00",
+      "last_change": "2026-10-24T05:49:56+00:00",
+      "bytes": 831566,
+      "files": [
+        {
+          "path": "threat_intel/abusech_sslbl_certificates.csv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/threat_intel/abusech_sslbl_certificates.csv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 831566,
+          "records": 11034,
+          "sha256": "9debf025d684ed47ec33492e5c8c3d13c6c8284d7933d8140bab595df2568eae",
+          "updated": "2026-10-24T05:49:56+00:00"
+        }
+      ]
+    },
+    {
+      "id": "openphish_urls",
+      "name": "OpenPhish",
+      "category": "threat_intel",
+      "category_title": "Threat Intelligence & IOCs",
+      "frequency": "daily",
+      "description": "Community feed of currently active phishing URLs.",
+      "homepage": "https://openphish.com/",
+      "origin": [
+        "https://openphish.com/feed.txt"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-24T05:49:56+00:00",
+        "duration_s": 0.5,
+        "error": null
+      },
+      "last_success": "2026-10-24T05:49:56+00:00",
+      "last_change": "2026-10-24T05:49:56+00:00",
+      "bytes": 16157,
+      "files": [
+        {
+          "path": "threat_intel/openphish_urls.txt",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/threat_intel/openphish_urls.txt",
+          "format": "text",
+          "compressed": false,
+          "bytes": 16157,
+          "records": 300,
+          "sha256": "377052f845922a85bc62eace4b5d5f271c74fea1f2d9a9644523171c8d139cdb",
+          "updated": "2026-10-24T05:49:57+00:00"
+        }
+      ]
+    },
+    {
+      "id": "malwarefilter_phishing_domains",
+      "name": "Phishing Filter",
+      "category": "threat_intel",
+      "category_title": "Threat Intelligence & IOCs",
+      "frequency": "daily",
+      "description": "Phishing domains aggregated from OpenPhish, PhishTank and others, with false positives (top sites) removed.",
+      "homepage": "https://gitlab.com/malware-filter/phishing-filter",
+      "origin": [
+        "https://malware-filter.gitlab.io/malware-filter/phishing-filter-domains.txt"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-24T05:49:56+00:00",
+        "duration_s": 0.5,
+        "error": null
+      },
+      "last_success": "2026-10-24T05:49:56+00:00",
+      "last_change": "2026-10-24T05:49:56+00:00",
+      "bytes": 776408,
+      "files": [
+        {
+          "path": "threat_intel/malwarefilter_phishing_domains.txt",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/threat_intel/malwarefilter_phishing_domains.txt",
+          "format": "text",
+          "compressed": false,
+          "bytes": 776408,
+          "records": 27552,
+          "sha256": "6d6bb41327ed9bad17b0b5182f0c61916945458e82ad7bb31aaec9646774ea50",
+          "updated": "2026-10-24T05:49:57+00:00"
+        }
+      ]
+    },
+    {
+      "id": "proofpoint_et_compromised_ips",
+      "name": "ET Compromised IPs",
+      "category": "threat_intel",
+      "category_title": "Threat Intelligence & IOCs",
+      "frequency": "daily",
+      "description": "Proofpoint Emerging Threats list of known compromised hosts.",
+      "homepage": "https://rules.emergingthreats.net/",
+      "origin": [
+        "https://rules.emergingthreats.net/blockrules/compromised-ips.txt"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-24T05:49:56+00:00",
+        "duration_s": 0.2,
+        "error": null
+      },
+      "last_success": "2026-10-24T05:49:56+00:00",
+      "last_change": "2026-10-24T05:49:56+00:00",
+      "bytes": 6807,
+      "files": [
+        {
+          "path": "threat_intel/proofpoint_et_compromised_ips.txt",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/threat_intel/proofpoint_et_compromised_ips.txt",
+          "format": "text",
+          "compressed": false,
+          "bytes": 6807,
+          "records": 482,
+          "sha256": "38e2fccb3db3857f23860cdde099a0dff526e80fce04afb006823d5ca22bd0ed",
+          "updated": "2026-10-24T05:49:57+00:00"
+        }
+      ]
+    },
+    {
+      "id": "spamhaus_drop_ipv4",
+      "name": "Spamhaus DROP (IPv4)",
+      "category": "threat_intel",
+      "category_title": "Threat Intelligence & IOCs",
+      "frequency": "daily",
+      "description": "Do Not Route Or Peer - hijacked or criminal netblocks.",
+      "homepage": "https://www.spamhaus.org/blocklists/do-not-route-or-peer/",
+      "origin": [
+        "https://www.spamhaus.org/drop/drop_v4.json"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-24T05:49:56+00:00",
+        "duration_s": 0.1,
+        "error": null
+      },
+      "last_success": "2026-10-24T05:49:56+00:00",
+      "last_change": "2026-10-24T05:49:56+00:00",
+      "bytes": 103147,
+      "files": [
+        {
+          "path": "threat_intel/spamhaus_drop_ipv4.jsonl",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/threat_intel/spamhaus_drop_ipv4.jsonl",
+          "format": "jsonl",
+          "compressed": false,
+          "bytes": 103147,
+          "records": 1689,
+          "sha256": "ebc58a46bcb90856ecd9fb9b63d1cf8779d6350909ed8824f18ab6b788525201",
+          "updated": "2026-10-24T05:49:57+00:00"
+        }
+      ]
+    },
+    {
+      "id": "spamhaus_drop_ipv6",
+      "name": "Spamhaus DROP (IPv6)",
+      "category": "threat_intel",
+      "category_title": "Threat Intelligence & IOCs",
+      "frequency": "daily",
+      "description": "IPv6 counterpart of the DROP list.",
+      "homepage": "https://www.spamhaus.org/blocklists/do-not-route-or-peer/",
+      "origin": [
+        "https://www.spamhaus.org/drop/drop_v6.json"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-24T05:49:56+00:00",
+        "duration_s": 0.1,
+        "error": null
+      },
+      "last_success": "2026-10-24T05:49:56+00:00",
+      "last_change": "2026-10-20T06:00:02+00:00",
+      "bytes": 5922,
+      "files": [
+        {
+          "path": "threat_intel/spamhaus_drop_ipv6.jsonl",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/threat_intel/spamhaus_drop_ipv6.jsonl",
+          "format": "jsonl",
+          "compressed": false,
+          "bytes": 5922,
+          "records": 92,
+          "sha256": "728dea3c26135b31da5b3b1110922bd498b2a0aea6a1cb9c299e6840b6ad5ae2",
+          "updated": "2026-10-20T06:00:02+00:00"
+        }
+      ]
+    },
+    {
+      "id": "spamhaus_asndrop",
+      "name": "Spamhaus ASN-DROP",
+      "category": "threat_intel",
+      "category_title": "Threat Intelligence & IOCs",
+      "frequency": "daily",
+      "description": "Autonomous systems operated by cybercriminals.",
+      "homepage": "https://www.spamhaus.org/blocklists/do-not-route-or-peer/",
+      "origin": [
+        "https://www.spamhaus.org/drop/asndrop.json"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-24T05:49:56+00:00",
+        "duration_s": 0.2,
+        "error": null
+      },
+      "last_success": "2026-10-24T05:49:56+00:00",
+      "last_change": "2026-10-24T05:49:56+00:00",
+      "bytes": 39470,
+      "files": [
+        {
+          "path": "threat_intel/spamhaus_asndrop.jsonl",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/threat_intel/spamhaus_asndrop.jsonl",
+          "format": "jsonl",
+          "compressed": false,
+          "bytes": 39470,
+          "records": 443,
+          "sha256": "725fcabfe2fafabb371ff5df2c39dcab0e1e14a03e03e24bfc1ce784b9103e76",
+          "updated": "2026-10-24T05:49:57+00:00"
+        }
+      ]
+    },
+    {
+      "id": "firehol_level1",
+      "name": "FireHOL Level 1",
+      "category": "threat_intel",
+      "category_title": "Threat Intelligence & IOCs",
+      "frequency": "daily",
+      "description": "Aggregated \"safe to block\" networks (fullbogons, DROP, Feodo, DShield...).",
+      "homepage": "https://iplists.firehol.org/",
+      "origin": [
+        "https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/firehol_level1.netset"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-24T05:49:56+00:00",
+        "duration_s": 0.1,
+        "error": null
+      },
+      "last_success": "2026-10-24T05:49:56+00:00",
+      "last_change": "2026-10-24T05:49:56+00:00",
+      "bytes": 73911,
+      "files": [
+        {
+          "path": "threat_intel/firehol_level1.txt",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/threat_intel/firehol_level1.txt",
+          "format": "text",
+          "compressed": false,
+          "bytes": 73911,
+          "records": 4638,
+          "sha256": "f19cc344c8d488c66841bb230a46fae9e0fcd03fa4bf8309731ab86b552459e2",
+          "updated": "2026-10-24T05:49:57+00:00"
+        }
+      ]
+    },
+    {
+      "id": "stamparm_ipsum",
+      "name": "IPsum",
+      "category": "threat_intel",
+      "category_title": "Threat Intelligence & IOCs",
+      "frequency": "daily",
+      "description": "Malicious IPs aggregated from 30+ blocklists, with the number of lists each IP appears on (filter on >= 3 for a reliable set).",
+      "homepage": "https://github.com/stamparm/ipsum",
+      "origin": [
+        "https://raw.githubusercontent.com/stamparm/ipsum/master/ipsum.txt"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-24T05:49:57+00:00",
+        "duration_s": 0.1,
+        "error": null
+      },
+      "last_success": "2026-10-24T05:49:57+00:00",
+      "last_change": "2026-10-24T05:49:57+00:00",
+      "bytes": 2074049,
+      "files": [
+        {
+          "path": "threat_intel/stamparm_ipsum.txt",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/threat_intel/stamparm_ipsum.txt",
+          "format": "text",
+          "compressed": false,
+          "bytes": 2074049,
+          "records": 128244,
+          "sha256": "340cd0391cc03f1bac446f7325a8b36866e02db9f4cdf11de2d937c1a8b2de3d",
+          "updated": "2026-10-24T05:49:57+00:00"
+        }
+      ]
+    },
+    {
+      "id": "dshield_block",
+      "name": "DShield block list",
+      "category": "threat_intel",
+      "category_title": "Threat Intelligence & IOCs",
+      "frequency": "daily",
+      "description": "SANS ISC top 20 attacking /24 subnets of the last 3 days.",
+      "homepage": "https://isc.sans.edu/block.html",
+      "origin": [
+        "https://feeds.dshield.org/block.txt"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-24T05:49:57+00:00",
+        "duration_s": 0.1,
+        "error": null
+      },
+      "last_success": "2026-10-24T05:49:57+00:00",
+      "last_change": "2026-10-24T05:49:57+00:00",
+      "bytes": 2097,
+      "files": [
+        {
+          "path": "threat_intel/dshield_block.txt",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/threat_intel/dshield_block.txt",
+          "format": "text",
+          "compressed": false,
+          "bytes": 2097,
+          "records": 20,
+          "sha256": "bf641551148d3d55493bc58bef1eec51ddb13a861aa15ccef90d2d27c301a6bc",
+          "updated": "2026-10-24T05:49:57+00:00"
+        }
+      ]
+    },
+    {
+      "id": "cinsscore_badguys",
+      "name": "CINS Army",
+      "category": "threat_intel",
+      "category_title": "Threat Intelligence & IOCs",
+      "frequency": "daily",
+      "description": "IPs with poor reputation seen by the Sentinel IPS network.",
+      "homepage": "https://cinsscore.com/",
+      "origin": [
+        "https://cinsscore.com/list/ci-badguys.txt"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-24T05:49:57+00:00",
+        "duration_s": 0.2,
+        "error": null
+      },
+      "last_success": "2026-10-24T05:49:57+00:00",
+      "last_change": "2026-10-24T05:49:57+00:00",
+      "bytes": 211617,
+      "files": [
+        {
+          "path": "threat_intel/cinsscore_badguys.txt",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/threat_intel/cinsscore_badguys.txt",
+          "format": "text",
+          "compressed": false,
+          "bytes": 211617,
+          "records": 15000,
+          "sha256": "9f542690226d82f797881accc9000eba9d417cd38156ddf0852959d2449fa956",
+          "updated": "2026-10-24T05:49:57+00:00"
+        }
+      ]
+    },
+    {
+      "id": "blocklistde_all",
+      "name": "blocklist.de",
+      "category": "threat_intel",
+      "category_title": "Threat Intelligence & IOCs",
+      "frequency": "daily",
+      "description": "IPs reported for attacks (SSH, mail, web, FTP brute force) in the last 48h.",
+      "homepage": "https://www.blocklist.de/",
+      "origin": [
+        "https://lists.blocklist.de/lists/all.txt"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-24T05:49:57+00:00",
+        "duration_s": 0.1,
+        "error": null
+      },
+      "last_success": "2026-10-24T05:49:57+00:00",
+      "last_change": "2026-10-24T05:49:57+00:00",
+      "bytes": 403711,
+      "files": [
+        {
+          "path": "threat_intel/blocklistde_all.txt",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/threat_intel/blocklistde_all.txt",
+          "format": "text",
+          "compressed": false,
+          "bytes": 403711,
+          "records": 27625,
+          "sha256": "3aa20bb04cf4e4602192aa8a83e7f8be7b4d5d8c40dd9b14dc44dc6ac92ebaac",
+          "updated": "2026-10-24T05:49:57+00:00"
+        }
+      ]
+    },
+    {
+      "id": "ransomwarelive_groups",
+      "name": "Ransomware.live groups",
+      "category": "threat_intel",
+      "category_title": "Threat Intelligence & IOCs",
+      "frequency": "daily",
+      "description": "Ransomware groups with their leak sites, aliases and activity.",
+      "homepage": "https://www.ransomware.live/",
+      "origin": [
+        "https://api.ransomware.live/v2/groups"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-24T05:49:57+00:00",
+        "duration_s": 1.1,
+        "error": null
+      },
+      "last_success": "2026-10-24T05:49:57+00:00",
+      "last_change": "2026-10-24T05:49:57+00:00",
+      "bytes": 796985,
+      "files": [
+        {
+          "path": "threat_intel/ransomwarelive_groups.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/threat_intel/ransomwarelive_groups.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 796985,
+          "records": 412,
+          "sha256": "ea021d597d449815a208dbde7051fe294f2a9784a74432dac4745f9b4b9b9f0e",
+          "updated": "2026-10-24T05:49:58+00:00"
+        }
+      ]
+    },
+    {
+      "id": "ransomwarelive_victims_recent",
+      "name": "Ransomware.live victims",
+      "category": "threat_intel",
+      "category_title": "Threat Intelligence & IOCs",
+      "frequency": "daily",
+      "description": "Latest victims claimed on ransomware leak sites (group, sector, country, dates).",
+      "homepage": "https://www.ransomware.live/",
+      "origin": [
+        "https://api.ransomware.live/v2/recentvictims"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-24T05:49:57+00:00",
+        "duration_s": 0.7,
+        "error": null
+      },
+      "last_success": "2026-10-24T05:49:57+00:00",
+      "last_change": "2026-10-24T05:49:57+00:00",
+      "bytes": 85163,
+      "files": [
+        {
+          "path": "threat_intel/ransomwarelive_victims_recent.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/threat_intel/ransomwarelive_victims_recent.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 85163,
+          "records": 100,
+          "sha256": "359bc90e612509367255c5f8c7212e60b3a5a8589939238aaff51c464e269788",
+          "updated": "2026-10-24T05:49:57+00:00"
+        }
+      ]
+    },
+    {
+      "id": "lolbas",
+      "name": "LOLBAS",
+      "category": "lol",
+      "category_title": "Living Off The Land",
+      "frequency": "weekly",
+      "description": "Windows Living Off The Land binaries, scripts and libraries.",
+      "homepage": "https://lolbas-project.github.io/",
+      "origin": [
+        "https://lolbas-project.github.io/api/lolbas.json"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:10+00:00",
+        "duration_s": 0.2,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:10+00:00",
+      "last_change": "2026-10-04T21:03:16+00:00",
+      "bytes": 441173,
+      "files": [
+        {
+          "path": "lol/lolbas.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/lol/lolbas.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 441173,
+          "records": 245,
+          "sha256": "4d7f07b19c2960656bb7610a30ebb57d84d3d92c9ea837dfc33d1a0ca569c34e",
+          "updated": "2026-10-04T21:03:16+00:00"
+        }
+      ]
+    },
+    {
+      "id": "gtfobins",
+      "name": "GTFOBins",
+      "category": "lol",
+      "category_title": "Living Off The Land",
+      "frequency": "weekly",
+      "description": "Unix binaries usable to bypass local security restrictions.",
+      "homepage": "https://gtfobins.github.io/",
+      "origin": [
+        "https://gtfobins.org/api.json"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "unchanged",
+        "at": "2026-10-18T08:09:10+00:00",
+        "duration_s": 0.4,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:10+00:00",
+      "last_change": "2026-10-04T21:03:16+00:00",
+      "bytes": 192589,
+      "files": [
+        {
+          "path": "lol/gtfobins.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/lol/gtfobins.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 192589,
+          "records": 3,
+          "sha256": "ab877916bc74a58967cd7215287172faeb5b81972732c574262192957da24d76",
+          "updated": "2026-10-04T21:03:16+00:00"
+        }
+      ]
+    },
+    {
+      "id": "loobins",
+      "name": "LOOBins",
+      "category": "lol",
+      "category_title": "Living Off The Land",
+      "frequency": "weekly",
+      "description": "macOS Living Off the Orchard binaries.",
+      "homepage": "https://www.loobins.io/",
+      "origin": [
+        "https://www.loobins.io/loobins.json"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-18T08:09:10+00:00",
+        "duration_s": 0.6,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:10+00:00",
+      "last_change": "2026-10-18T08:09:10+00:00",
+      "bytes": 250140,
+      "files": [
+        {
+          "path": "lol/loobins.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/lol/loobins.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 250140,
+          "records": 76,
+          "sha256": "05d7db660c6c0ca682850b3bca3ffb9972a159297f232ba2918098200871c44a",
+          "updated": "2026-10-18T08:09:11+00:00"
+        }
+      ]
+    },
+    {
+      "id": "loldrivers",
+      "name": "LOLDrivers",
+      "category": "lol",
+      "category_title": "Living Off The Land",
+      "frequency": "weekly",
+      "description": "Vulnerable and malicious Windows drivers (hashes, metadata).",
+      "homepage": "https://www.loldrivers.io/",
+      "origin": [
+        "https://www.loldrivers.io/api/drivers.json"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-18T08:09:10+00:00",
+        "duration_s": 1.3,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:10+00:00",
+      "last_change": "2026-10-18T08:09:10+00:00",
+      "bytes": 33300964,
+      "files": [
+        {
+          "path": "lol/loldrivers.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/lol/loldrivers.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 33300964,
+          "records": 702,
+          "sha256": "9dd50a8c03e9ae477460b53bb23bc375b8abdbb1df8152b18504ed5789837fa7",
+          "updated": "2026-10-18T08:09:12+00:00"
+        }
+      ]
+    },
+    {
+      "id": "lolrmm",
+      "name": "LOLRMM",
+      "category": "lol",
+      "category_title": "Living Off The Land",
+      "frequency": "weekly",
+      "description": "Remote Monitoring & Management tools abused by attackers (artifacts, domains).",
+      "homepage": "https://lolrmm.io/",
+      "origin": [
+        "https://lolrmm.io/api/rmm_tools.json"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-18T08:09:10+00:00",
+        "duration_s": 0.4,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:10+00:00",
+      "last_change": "2026-10-18T08:09:10+00:00",
+      "bytes": 2262056,
+      "files": [
+        {
+          "path": "lol/lolrmm.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/lol/lolrmm.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 2262056,
+          "records": 358,
+          "sha256": "e37d826d32a0dde3e18eb25107531fec6fd6bfef62bde47dd362a5484237d142",
+          "updated": "2026-10-18T08:09:11+00:00"
+        }
+      ]
+    },
+    {
+      "id": "lolesxi",
+      "name": "LOLESXi",
+      "category": "lol",
+      "category_title": "Living Off The Land",
+      "frequency": "weekly",
+      "description": "VMware ESXi native binaries used by adversaries.",
+      "homepage": "https://lolesxi-project.github.io/LOLESXi/",
+      "origin": [
+        "https://lolesxi-project.github.io/LOLESXi/api/lolesxi.json"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:10+00:00",
+        "duration_s": 0.2,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:10+00:00",
+      "last_change": "2026-10-04T21:03:16+00:00",
+      "bytes": 43230,
+      "files": [
+        {
+          "path": "lol/lolesxi.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/lol/lolesxi.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 43230,
+          "records": 19,
+          "sha256": "c9e756b7562be8ff4bdd788c350760ebc4bc1ea200b06cf0640c3401881f5963",
+          "updated": "2026-10-04T21:03:16+00:00"
+        }
+      ]
+    },
+    {
+      "id": "lofl",
+      "name": "LOFL",
+      "category": "lol",
+      "category_title": "Living Off The Land",
+      "frequency": "weekly",
+      "description": "Living Off the Foreign Land cmdlets and binaries.",
+      "homepage": "https://lofl-project.github.io/",
+      "origin": [
+        "https://lofl-project.github.io/api/loflcab.json"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:11+00:00",
+        "duration_s": 0.1,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:11+00:00",
+      "last_change": "2026-10-04T21:03:16+00:00",
+      "bytes": 280319,
+      "files": [
+        {
+          "path": "lol/lofl.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/lol/lofl.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 280319,
+          "records": 394,
+          "sha256": "8d1788fd6072ecc1a881dd83dc8b5526362bd0fce6815765308861f8ad0e8c75",
+          "updated": "2026-10-04T21:03:16+00:00"
+        }
+      ]
+    },
+    {
+      "id": "lolapps",
+      "name": "LOLApps",
+      "category": "lol",
+      "category_title": "Living Off The Land",
+      "frequency": "weekly",
+      "description": "Legitimate applications (Greenshot, Notepad++, Teams...) abusable for persistence or execution.",
+      "homepage": "https://lolapps-project.github.io/",
+      "origin": [
+        "https://lolapps-project.github.io/api/lolapps.json"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:11+00:00",
+        "duration_s": 0.1,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:11+00:00",
+      "last_change": "2026-10-04T21:03:16+00:00",
+      "bytes": 7479,
+      "files": [
+        {
+          "path": "lol/lolapps.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/lol/lolapps.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 7479,
+          "records": 15,
+          "sha256": "347af7d93d302d318ab4cea45666bb94122b02ff43bcac1b3e610ce2bc50724f",
+          "updated": "2026-10-04T21:03:16+00:00"
+        }
+      ]
+    },
+    {
+      "id": "lolc2",
+      "name": "LOLC2",
+      "category": "lol",
+      "category_title": "Living Off The Land",
+      "frequency": "weekly",
+      "description": "C2 frameworks hiding in legitimate services.",
+      "homepage": "https://lolc2.github.io/",
+      "origin": [
+        "https://raw.githubusercontent.com/lolc2/lolc2.github.io/main/c2_data.json"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:11+00:00",
+        "duration_s": 0.1,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:11+00:00",
+      "last_change": "2026-10-04T21:03:16+00:00",
+      "bytes": 89510,
+      "files": [
+        {
+          "path": "lol/lolc2.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/lol/lolc2.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 89510,
+          "records": 56,
+          "sha256": "c392b09ab1ca458962648817af63ea5465cd3e74bc208a0b21aa52016d931f89",
+          "updated": "2026-10-04T21:03:16+00:00"
+        }
+      ]
+    },
+    {
+      "id": "bootloaders",
+      "name": "Bootloaders.io",
+      "category": "lol",
+      "category_title": "Living Off The Land",
+      "frequency": "weekly",
+      "description": "Known vulnerable or malicious bootloaders.",
+      "homepage": "https://www.bootloaders.io/",
+      "origin": [
+        "https://www.bootloaders.io/api/bootloaders.json"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:11+00:00",
+        "duration_s": 0.4,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:11+00:00",
+      "last_change": "2026-10-04T21:03:16+00:00",
+      "bytes": 2069592,
+      "files": [
+        {
+          "path": "lol/bootloaders.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/lol/bootloaders.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 2069592,
+          "records": 520,
+          "sha256": "54ee991d6f5c6fdb233a15ab0db84952238e1b06937bc57f84d8f95b6edc8d3b",
+          "updated": "2026-10-04T21:03:16+00:00"
+        }
+      ]
+    },
+    {
+      "id": "hijacklibs",
+      "name": "HijackLibs",
+      "category": "lol",
+      "category_title": "Living Off The Land",
+      "frequency": "weekly",
+      "description": "DLL hijacking candidates (DLL, vulnerable executables, expected paths).",
+      "homepage": "https://hijacklibs.net/",
+      "origin": [
+        "https://hijacklibs.net/api/hijacklibs.json"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:11+00:00",
+        "duration_s": 0.2,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:11+00:00",
+      "last_change": "2026-10-11T10:08:04+00:00",
+      "bytes": 971053,
+      "files": [
+        {
+          "path": "lol/hijacklibs.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/lol/hijacklibs.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 971053,
+          "records": 618,
+          "sha256": "8d389bb372d9a6b0f63b2e615b2ce016fab37460dc3a423a8cba8bc2d9abd530",
+          "updated": "2026-10-11T10:08:04+00:00"
+        }
+      ]
+    },
+    {
+      "id": "lottunnels_binaries",
+      "name": "LoTtunnels",
+      "category": "lol",
+      "category_title": "Living Off The Land",
+      "frequency": "weekly",
+      "description": "Tunneling binaries usable for proxying or exfiltration.",
+      "homepage": "https://lottunnels.github.io/",
+      "origin": null,
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:11+00:00",
+        "duration_s": 0.1,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:11+00:00",
+      "last_change": "2026-10-11T10:08:04+00:00",
+      "bytes": 143587,
+      "files": [
+        {
+          "path": "lol/lottunnels_binaries.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/lol/lottunnels_binaries.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 143587,
+          "records": 55,
+          "sha256": "8f999846f404f0a309e7de312dc5e57800a4113e3ef42faee88d5cfd3fcd3972",
+          "updated": "2026-10-11T10:08:05+00:00"
+        }
+      ]
+    },
+    {
+      "id": "lottunnels_domains",
+      "name": "LoTtunnels domains",
+      "category": "lol",
+      "category_title": "Living Off The Land",
+      "frequency": "weekly",
+      "description": "Domains used by tunneling services.",
+      "homepage": "https://lottunnels.github.io/",
+      "origin": [
+        "https://raw.githubusercontent.com/LoTtunnels/LoTtunnels.github.io/main/_lottunnels/CSVs/domains.csv"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:11+00:00",
+        "duration_s": 0.1,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:11+00:00",
+      "last_change": "2026-10-04T21:03:16+00:00",
+      "bytes": 2525,
+      "files": [
+        {
+          "path": "lol/lottunnels_domains.csv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/lol/lottunnels_domains.csv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 2525,
+          "records": 91,
+          "sha256": "87883c03227878f53743f61f04330339eda36d51083e88ea760039bccfbe3fb6",
+          "updated": "2026-10-04T21:03:16+00:00"
+        }
+      ]
+    },
+    {
+      "id": "lots",
+      "name": "LOTS Project",
+      "category": "lol",
+      "category_title": "Living Off The Land",
+      "frequency": "weekly",
+      "description": "Legitimate trusted sites abused for C2, phishing or exfiltration.",
+      "homepage": "https://lots-project.com/",
+      "origin": [
+        "https://lots-project.com/"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "unchanged",
+        "at": "2026-10-18T08:09:11+00:00",
+        "duration_s": 2.6,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:11+00:00",
+      "last_change": "2026-10-04T21:03:16+00:00",
+      "bytes": 7479,
+      "files": [
+        {
+          "path": "lol/lots.csv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/lol/lots.csv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 7479,
+          "records": 175,
+          "sha256": "6c0c88efebf7aff6f16d6c9b3d7c498d26a296fcb65d77d54104935c5deb5199",
+          "updated": "2026-10-04T21:03:17+00:00"
+        }
+      ]
+    },
+    {
+      "id": "filesec_extensions",
+      "name": "FileSec",
+      "category": "lol",
+      "category_title": "Living Off The Land",
+      "frequency": "weekly",
+      "description": "File extensions abused by attackers.",
+      "homepage": "https://filesec.io/",
+      "origin": [
+        "https://filesec.io/"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "unchanged",
+        "at": "2026-10-18T08:09:11+00:00",
+        "duration_s": 2.7,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:11+00:00",
+      "last_change": "2026-10-04T21:03:16+00:00",
+      "bytes": 4960,
+      "files": [
+        {
+          "path": "lol/filesec_extensions.csv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/lol/filesec_extensions.csv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 4960,
+          "records": 121,
+          "sha256": "5fbea1095dbaf3e78f03bc3f4348791d354e72908e62a447eec53e3f5121d15c",
+          "updated": "2026-10-04T21:03:19+00:00"
+        }
+      ]
+    },
+    {
+      "id": "malapi_winapi",
+      "name": "MalAPI.io",
+      "category": "lol",
+      "category_title": "Living Off The Land",
+      "frequency": "weekly",
+      "description": "Windows APIs abused by malware, by technique.",
+      "homepage": "https://malapi.io/",
+      "origin": [
+        "https://malapi.io/"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "unchanged",
+        "at": "2026-10-18T08:09:11+00:00",
+        "duration_s": 4.9,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:11+00:00",
+      "last_change": "2026-10-04T21:03:16+00:00",
+      "bytes": 29139,
+      "files": [
+        {
+          "path": "lol/malapi_winapi.csv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/lol/malapi_winapi.csv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 29139,
+          "records": 432,
+          "sha256": "201b24438b059b512c79c86fa03d98f2649e9119563ac886dac3a7630119f746",
+          "updated": "2026-10-04T21:03:19+00:00"
+        }
+      ]
+    },
+    {
+      "id": "lothardware",
+      "name": "LOTHardware",
+      "category": "lol",
+      "category_title": "Living Off The Land",
+      "frequency": "weekly",
+      "description": "Hardware implants and malicious devices (USB, network, RF...).",
+      "homepage": "https://github.com/enesilhaydin/lothardware",
+      "origin": [
+        "https://raw.githubusercontent.com/enesilhaydin/lothardware/main/hardwares.json"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:11+00:00",
+        "duration_s": 0.2,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:11+00:00",
+      "last_change": "2026-10-04T21:03:16+00:00",
+      "bytes": 4492,
+      "files": [
+        {
+          "path": "lol/lothardware.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/lol/lothardware.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 4492,
+          "records": 29,
+          "sha256": "79440db77d2341f0c184f529d28a1b371fc8db5d53c12b40bec29386446945f5",
+          "updated": "2026-10-04T21:03:17+00:00"
+        }
+      ]
+    },
+    {
+      "id": "cisa_kev",
+      "name": "CISA KEV",
+      "category": "vulnerabilities",
+      "category_title": "Vulnerabilities & Exploits",
+      "frequency": "daily",
+      "description": "Known Exploited Vulnerabilities catalog (US).",
+      "homepage": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+      "origin": [
+        "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-24T05:49:57+00:00",
+        "duration_s": 0.3,
+        "error": null
+      },
+      "last_success": "2026-10-24T05:49:57+00:00",
+      "last_change": "2026-10-24T05:49:57+00:00",
+      "bytes": 1807090,
+      "files": [
+        {
+          "path": "vulnerabilities/cisa_kev.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/cisa_kev.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 1807090,
+          "records": 1756,
+          "sha256": "97a6e54bc74c651ab3c55657191db9adec6c63b05ca54e4205327cfd97a8fb70",
+          "updated": "2026-10-24T05:49:57+00:00"
+        }
+      ]
+    },
+    {
+      "id": "enisa_euvd_exploited",
+      "name": "EUVD exploited",
+      "category": "vulnerabilities",
+      "category_title": "Vulnerabilities & Exploits",
+      "frequency": "daily",
+      "description": "European Vulnerability Database entries flagged as exploited (ENISA) - the EU counterpart of KEV.",
+      "homepage": "https://euvd.enisa.europa.eu/",
+      "origin": null,
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-24T05:49:57+00:00",
+        "duration_s": 8.9,
+        "error": null
+      },
+      "last_success": "2026-10-24T05:49:57+00:00",
+      "last_change": "2026-10-24T05:49:57+00:00",
+      "bytes": 7075497,
+      "files": [
+        {
+          "path": "vulnerabilities/enisa_euvd_exploited.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/enisa_euvd_exploited.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 7075497,
+          "records": 1772,
+          "sha256": "72a5cd968dbe41f345fa73ecb0d71212817e6a42130cccb6edc6fbdfe7ccd540",
+          "updated": "2026-10-24T05:50:06+00:00"
+        }
+      ]
+    },
+    {
+      "id": "first_epss",
+      "name": "EPSS",
+      "category": "vulnerabilities",
+      "category_title": "Vulnerabilities & Exploits",
+      "frequency": "daily",
+      "description": "Exploit Prediction Scoring System - daily probability of exploitation for every CVE.",
+      "homepage": "https://www.first.org/epss/",
+      "origin": [
+        "https://epss.empiricalsecurity.com/epss_scores-current.csv.gz",
+        "https://epss.cyentia.com/epss_scores-current.csv.gz"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-24T05:49:57+00:00",
+        "duration_s": 0.3,
+        "error": null
+      },
+      "last_success": "2026-10-24T05:49:57+00:00",
+      "last_change": "2026-10-24T05:49:57+00:00",
+      "bytes": 12002809,
+      "files": [
+        {
+          "path": "vulnerabilities/first_epss.csv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/first_epss.csv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 12002809,
+          "records": 394803,
+          "sha256": "590ce61772610c2b351b58bb2f27f08c48fffa5db3d6ab4e0b68182cbfebd284",
+          "updated": "2026-10-24T05:49:57+00:00"
+        }
+      ]
+    },
+    {
+      "id": "certfr_alertes",
+      "name": "CERT-FR alertes",
+      "category": "vulnerabilities",
+      "category_title": "Vulnerabilities & Exploits",
+      "frequency": "daily",
+      "description": "ANSSI CERT-FR security alerts (RSS, latest entries).",
+      "homepage": "https://www.cert.ssi.gouv.fr/alerte/",
+      "origin": [
+        "https://www.cert.ssi.gouv.fr/alerte/feed/"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-24T05:49:57+00:00",
+        "duration_s": 0.2,
+        "error": null
+      },
+      "last_success": "2026-10-24T05:49:57+00:00",
+      "last_change": "2026-10-24T05:49:57+00:00",
+      "bytes": 25949,
+      "files": [
+        {
+          "path": "vulnerabilities/certfr_alertes.xml",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/certfr_alertes.xml",
+          "format": "xml",
+          "compressed": false,
+          "bytes": 25949,
+          "records": null,
+          "sha256": "2245ab489a88e992697ba81dfea6aaf2ade12663bbe231fdc9a7e2c64f1a7e48",
+          "updated": "2026-10-24T05:49:57+00:00"
+        }
+      ]
+    },
+    {
+      "id": "certfr_avis",
+      "name": "CERT-FR avis",
+      "category": "vulnerabilities",
+      "category_title": "Vulnerabilities & Exploits",
+      "frequency": "daily",
+      "description": "ANSSI CERT-FR security advisories (RSS, latest entries).",
+      "homepage": "https://www.cert.ssi.gouv.fr/avis/",
+      "origin": [
+        "https://www.cert.ssi.gouv.fr/avis/feed/"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-24T05:49:57+00:00",
+        "duration_s": 0.1,
+        "error": null
+      },
+      "last_success": "2026-10-24T05:49:57+00:00",
+      "last_change": "2026-10-24T05:49:57+00:00",
+      "bytes": 23218,
+      "files": [
+        {
+          "path": "vulnerabilities/certfr_avis.xml",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/certfr_avis.xml",
+          "format": "xml",
+          "compressed": false,
+          "bytes": 23218,
+          "records": null,
+          "sha256": "69121f1b543053fd2fd0922299684edba0b4ab8c1143313879ddf6e90286caa7",
+          "updated": "2026-10-24T05:49:57+00:00"
+        }
+      ]
+    },
+    {
+      "id": "exploitdb_exploits",
+      "name": "Exploit-DB",
+      "category": "vulnerabilities",
+      "category_title": "Vulnerabilities & Exploits",
+      "frequency": "weekly",
+      "description": "Exploit index with CVE mapping.",
+      "homepage": "https://www.exploit-db.com/",
+      "origin": [
+        "https://gitlab.com/exploit-database/exploitdb/-/raw/main/files_exploits.csv"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:11+00:00",
+        "duration_s": 0.1,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:11+00:00",
+      "last_change": "2026-10-04T21:03:17+00:00",
+      "bytes": 10182721,
+      "files": [
+        {
+          "path": "vulnerabilities/exploitdb_exploits.csv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/exploitdb_exploits.csv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 10182721,
+          "records": 47170,
+          "sha256": "49ed79cb1bf0878931793318485d21cdc947f1d91ef8accbd09d5d4bf99991b8",
+          "updated": "2026-10-04T21:03:17+00:00"
+        }
+      ]
+    },
+    {
+      "id": "metasploit_modules",
+      "name": "Metasploit modules",
+      "category": "vulnerabilities",
+      "category_title": "Vulnerabilities & Exploits",
+      "frequency": "weekly",
+      "description": "Metadata of every Metasploit module (CVE / references, targets, rank) - \"is there a weaponized exploit?\".",
+      "homepage": "https://github.com/rapid7/metasploit-framework",
+      "origin": [
+        "https://raw.githubusercontent.com/rapid7/metasploit-framework/master/db/modules_metadata_base.json"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-18T08:09:11+00:00",
+        "duration_s": 0.2,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:11+00:00",
+      "last_change": "2026-10-18T08:09:11+00:00",
+      "bytes": 11334709,
+      "files": [
+        {
+          "path": "vulnerabilities/metasploit_modules.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/metasploit_modules.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 11334709,
+          "records": 7213,
+          "sha256": "5f09d8e37678e9c2ec4f2bd93da7c1b56a22defff09b1c8838c72458a869f65b",
+          "updated": "2026-10-18T08:09:11+00:00"
+        }
+      ]
+    },
+    {
+      "id": "nuclei_cve_templates",
+      "name": "Nuclei CVE templates",
+      "category": "vulnerabilities",
+      "category_title": "Vulnerabilities & Exploits",
+      "frequency": "weekly",
+      "description": "CVEs with a Nuclei detection template (severity, CVSS, EPSS, template path).",
+      "homepage": "https://github.com/projectdiscovery/nuclei-templates",
+      "origin": [
+        "https://raw.githubusercontent.com/projectdiscovery/nuclei-templates/main/cves.json"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-18T08:09:11+00:00",
+        "duration_s": 0.3,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:11+00:00",
+      "last_change": "2026-10-18T08:09:11+00:00",
+      "bytes": 2236347,
+      "files": [
+        {
+          "path": "vulnerabilities/nuclei_cve_templates.jsonl",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nuclei_cve_templates.jsonl",
+          "format": "jsonl",
+          "compressed": false,
+          "bytes": 2236347,
+          "records": 4481,
+          "sha256": "ff748ba49015e019a5d672882e5476f81e6a0d515e24bc1acf15413bc4825a47",
+          "updated": "2026-10-18T08:09:12+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github_advisories",
+      "name": "GitHub Advisories",
+      "category": "vulnerabilities",
+      "category_title": "Vulnerabilities & Exploits",
+      "frequency": "weekly",
+      "description": "All GitHub-reviewed security advisories (OSV format) in one JSON array.",
+      "homepage": "https://github.com/advisories",
+      "origin": null,
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-18T08:09:11+00:00",
+        "duration_s": 96.6,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:11+00:00",
+      "last_change": "2026-10-18T08:09:11+00:00",
+      "bytes": 26658909,
+      "files": [
+        {
+          "path": "vulnerabilities/github_advisories.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/github_advisories.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 26658909,
+          "records": 36899,
+          "sha256": "37fc6859cd04b936f3853b1f8f3e8f606680f8eb43816a319ca945fc2119cfa4",
+          "updated": "2026-10-18T08:10:50+00:00"
+        }
+      ]
+    },
+    {
+      "id": "nvd_cve",
+      "name": "NVD CVE",
+      "category": "vulnerabilities",
+      "category_title": "Vulnerabilities & Exploits",
+      "frequency": "weekly",
+      "description": "Full NVD CVE JSON 2.0 feeds per year + recent + modified (original gzip, re-downloaded only when NVD's sha256 changes).",
+      "homepage": "https://nvd.nist.gov/vuln/data-feeds",
+      "origin": null,
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-18T08:09:12+00:00",
+        "duration_s": 59.2,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:12+00:00",
+      "last_change": "2026-10-18T08:09:12+00:00",
+      "bytes": 252861242,
+      "files": [
+        {
+          "path": "vulnerabilities/nvd/nvdcve-2.0-2002.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/nvdcve-2.0-2002.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 2190506,
+          "records": 6771,
+          "sha256": "34603385bbc01047686ca878b80b5d964538d11aedd368393f928ad84821bba0",
+          "updated": "2026-10-18T08:10:11+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/nvdcve-2.0-2003.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/nvdcve-2.0-2003.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 728838,
+          "records": 1555,
+          "sha256": "f18905201a0ff16827309156b2c986627c38a9d94cbe7796a24cd63379c449a3",
+          "updated": "2026-10-04T21:04:07+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/nvdcve-2.0-2004.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/nvdcve-2.0-2004.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 1490098,
+          "records": 2707,
+          "sha256": "31acd82654b0240c8cc6a3f0e4c4a85f9099215c82b681af4837b2d151b6b6b8",
+          "updated": "2026-10-11T10:08:50+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/nvdcve-2.0-2005.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/nvdcve-2.0-2005.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 2172836,
+          "records": 4770,
+          "sha256": "c28818b772deab89dd93ad47694f374dd844b81ef7393938832f583b1249003c",
+          "updated": "2026-10-18T08:10:11+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/nvdcve-2.0-2006.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/nvdcve-2.0-2006.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 3499544,
+          "records": 7145,
+          "sha256": "f8a3c24bd0fd28208e6a7213f5808b20223fa67b03de760fea88f112a4ba19c5",
+          "updated": "2026-10-18T08:10:12+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/nvdcve-2.0-2007.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/nvdcve-2.0-2007.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 3605891,
+          "records": 6580,
+          "sha256": "cee97e53521d9838530a0c6a83592f49930a882a111f7f908c52d1d588b0800c",
+          "updated": "2026-10-04T21:04:09+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/nvdcve-2.0-2008.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/nvdcve-2.0-2008.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 4185659,
+          "records": 7179,
+          "sha256": "bc6b2f7baad7588f0c5b8304dc6f8bcef4333733057889d85c4eb61c1f20abf1",
+          "updated": "2026-10-04T21:04:10+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/nvdcve-2.0-2009.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/nvdcve-2.0-2009.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 4529444,
+          "records": 5054,
+          "sha256": "5ee6a6a70efad2bada5cfb168d5b66cfb1b61b71be1e6b9008e5223f27033f45",
+          "updated": "2026-10-04T21:04:10+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/nvdcve-2.0-2010.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/nvdcve-2.0-2010.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 4359898,
+          "records": 5249,
+          "sha256": "04e96709e807ba8145462555539ada1dfd646bdec09636063d7fb97e47086422",
+          "updated": "2026-10-04T21:04:11+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/nvdcve-2.0-2011.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/nvdcve-2.0-2011.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 4275222,
+          "records": 4899,
+          "sha256": "8a73698cc66c4975a32e1724a8638fe76fb40c3463f0174db2bcac9d133391cb",
+          "updated": "2026-10-11T10:08:51+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/nvdcve-2.0-2012.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/nvdcve-2.0-2012.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 4865078,
+          "records": 5939,
+          "sha256": "f9b23685b5efc5c4a22133c558e9c6ee95198313a3d4311d4df6e48aba414d07",
+          "updated": "2026-10-11T10:08:51+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/nvdcve-2.0-2013.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/nvdcve-2.0-2013.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 5800676,
+          "records": 6832,
+          "sha256": "18a584144ccf2daa9f664c787fa8af636fca955cb5955d71dcf0c48e8475d5a1",
+          "updated": "2026-10-18T08:10:13+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/nvdcve-2.0-2014.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/nvdcve-2.0-2014.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 4548818,
+          "records": 9003,
+          "sha256": "2df5c4ed5339f91eb167df0d242d45d8c66e4b0e24484f4bfbf06ac24a74327a",
+          "updated": "2026-10-18T08:10:14+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/nvdcve-2.0-2015.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/nvdcve-2.0-2015.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 4211362,
+          "records": 8780,
+          "sha256": "9da9d504f9a4dcd75efeb0a552099cf42afc4f464bac3fd36a4aef87f344fe38",
+          "updated": "2026-10-18T08:10:14+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/nvdcve-2.0-2016.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/nvdcve-2.0-2016.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 5169180,
+          "records": 10651,
+          "sha256": "0e8f29c5c32e44cbaa2a24fbc0334b3a979a91b7fb4b9a69879e67a508b5fc82",
+          "updated": "2026-10-18T08:10:15+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/nvdcve-2.0-2017.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/nvdcve-2.0-2017.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 7708205,
+          "records": 17109,
+          "sha256": "a45fdcfefea9eae4f0e9dced05ccc9c7a81e0984341d96671812bc82f6ce9968",
+          "updated": "2026-10-18T08:10:16+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/nvdcve-2.0-2018.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/nvdcve-2.0-2018.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 8274041,
+          "records": 17817,
+          "sha256": "5c9da37b2cf25967d7301dad045d866a230ecd124e4ac36b2a3b6693517a1a6a",
+          "updated": "2026-10-18T08:10:17+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/nvdcve-2.0-2019.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/nvdcve-2.0-2019.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 10197385,
+          "records": 17625,
+          "sha256": "cdf3ce6041ccacb36f86ab0e999b9428975f89082f2dffb4050449c7c752403b",
+          "updated": "2026-10-18T08:10:19+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/nvdcve-2.0-2020.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/nvdcve-2.0-2020.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 14012646,
+          "records": 21081,
+          "sha256": "ad7950e696dcfc11ed1017dfd40ce4a811ab88666c9778ef866db150396eac00",
+          "updated": "2026-10-18T08:10:21+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/nvdcve-2.0-2021.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/nvdcve-2.0-2021.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 16863771,
+          "records": 23473,
+          "sha256": "4d8a3b2c3a2e27c61170ea2925c9e9f4204cf1da9a964528f9c37311d1dff263",
+          "updated": "2026-10-18T08:10:24+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/nvdcve-2.0-2022.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/nvdcve-2.0-2022.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 18388247,
+          "records": 27557,
+          "sha256": "dc2a902d21bde11e22925f90716c4f7007114d63b4f0241ba92308a80a0c5a55",
+          "updated": "2026-10-18T08:10:27+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/nvdcve-2.0-2023.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/nvdcve-2.0-2023.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 20226366,
+          "records": 31460,
+          "sha256": "eb995b1687e4b0c1d0b57fded1f6d0af79af41cf19946a24984ac8de2bb397cb",
+          "updated": "2026-10-18T08:10:30+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/nvdcve-2.0-2024.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/nvdcve-2.0-2024.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 25050976,
+          "records": 39269,
+          "sha256": "db5f87087b74b5a39107d9cec51e8ced28de74882b9972470a6d9d77aebaa543",
+          "updated": "2026-10-18T08:10:34+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/nvdcve-2.0-2025.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/nvdcve-2.0-2025.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 24977798,
+          "records": 45373,
+          "sha256": "a7353de02d85e30b116e772aec9287efd35ac8eef55356ec9fddca9473993372",
+          "updated": "2026-10-18T08:10:37+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/nvdcve-2.0-2026.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/nvdcve-2.0-2026.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 36949962,
+          "records": null,
+          "sha256": "90e879346442d8d90b4e947fa5b4f9aae8408a999620b4905e62d26e8756ed5c",
+          "updated": "2026-10-18T08:10:37+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/nvdcve-2.0-modified.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/nvdcve-2.0-modified.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 12475853,
+          "records": 22272,
+          "sha256": "5959ebd654156c5521b9eddecc1f7177378be92b4e47733cfbe1220684785c11",
+          "updated": "2026-10-18T08:10:39+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/nvdcve-2.0-recent.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/nvdcve-2.0-recent.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 2102942,
+          "records": 6271,
+          "sha256": "04dd49a0577769c081fe76afe6e2f8c8d03c69ed2075052e348bda18d087e29b",
+          "updated": "2026-10-18T08:10:40+00:00"
+        }
+      ]
+    },
+    {
+      "id": "nvd_cpe",
+      "name": "NVD CPE dictionary",
+      "category": "vulnerabilities",
+      "category_title": "Vulnerabilities & Exploits",
+      "frequency": "weekly",
+      "description": "CPE 2.0 dictionary split by vendor initial (a.json.gz ... z, 0-9, other) - a single file would exceed GitHub's 100 MB limit.",
+      "homepage": "https://nvd.nist.gov/products/cpe",
+      "origin": null,
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-18T08:09:12+00:00",
+        "duration_s": 107.5,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:12+00:00",
+      "last_change": "2026-10-18T08:09:12+00:00",
+      "bytes": 83876829,
+      "files": [
+        {
+          "path": "vulnerabilities/nvd/cpe/0-9.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/cpe/0-9.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 419875,
+          "records": 9030,
+          "sha256": "714f1b367c07e58318ed0ec2cc27f46f5fbf24f3a2354b7e0befd81288f898e4",
+          "updated": "2026-10-04T21:05:05+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/cpe/a.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/cpe/a.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 7380807,
+          "records": 164623,
+          "sha256": "bc260b37065b1901f9db38ee69558632ff41f9d6d4759425f3cc25104b3746b5",
+          "updated": "2026-10-18T08:11:00+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/cpe/b.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/cpe/b.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 2895611,
+          "records": 65045,
+          "sha256": "9b49ac3fb8f98c66db7ca5f00c6c7aa690732a7ce940828cddd8652ad93210f1",
+          "updated": "2026-10-18T08:11:01+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/cpe/c.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/cpe/c.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 6916545,
+          "records": 149544,
+          "sha256": "f3341975395ceec25f4a98442827467a0bd16eb87603df593b319e946f93e116",
+          "updated": "2026-10-18T08:11:01+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/cpe/d.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/cpe/d.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 3158007,
+          "records": 66912,
+          "sha256": "81f47dc1ac1cc8c1afb9ed4d89f93a1775d4ed387acadde07b85c582033a51e3",
+          "updated": "2026-10-18T08:11:02+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/cpe/e.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/cpe/e.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 2646926,
+          "records": 59607,
+          "sha256": "26a496a39e334c58060ccf2a3f1e4c454c138cce0e8af1c1d2456d558f655696",
+          "updated": "2026-10-11T10:09:38+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/cpe/f.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/cpe/f.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 3077866,
+          "records": 66962,
+          "sha256": "a0e0115c5d52106c25bf3585ff59a7fee12eb3242dc6cd8421632e4040e017ce",
+          "updated": "2026-10-18T08:11:02+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/cpe/g.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/cpe/g.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 4131817,
+          "records": 99002,
+          "sha256": "ad759ac00cda371a1aa9dfd01a05a95e5815ddd142626f80dd3531aa595e04e0",
+          "updated": "2026-10-18T08:11:03+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/cpe/h.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/cpe/h.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 3253616,
+          "records": 74025,
+          "sha256": "e42fa9f193b527ef8f3f143fffa194564dc0023d82de77f8ea3a55dc879945b4",
+          "updated": "2026-10-18T08:11:03+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/cpe/i.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/cpe/i.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 3731697,
+          "records": 75590,
+          "sha256": "3d314b22c4d3437fe191ed5da779251683661918c18321afc9d145d0f0550fe1",
+          "updated": "2026-10-18T08:11:03+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/cpe/j.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/cpe/j.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 2239685,
+          "records": 48442,
+          "sha256": "89705e67811b9d940a8a1ab61e72bc663cc6b06845c9e6b53325f9e24b4f4bd8",
+          "updated": "2026-10-18T08:11:04+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/cpe/k.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/cpe/k.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 1276634,
+          "records": 28980,
+          "sha256": "f15499036bb462b520f106fb8700cd06ff744aacd76d48f3da6587d6f3d4cfa4",
+          "updated": "2026-10-04T21:05:09+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/cpe/l.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/cpe/l.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 3576903,
+          "records": 84576,
+          "sha256": "9e2af2c31baa4e69c101959da296b5ee2f97f77452a06497310967e3384ba970",
+          "updated": "2026-10-18T08:11:04+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/cpe/m.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/cpe/m.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 5391424,
+          "records": 116918,
+          "sha256": "190ea83da39cdd14794f7ad412c7bf411bf1825db952b4a5e471098313912252",
+          "updated": "2026-10-18T08:11:05+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/cpe/n.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/cpe/n.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 3044114,
+          "records": 66296,
+          "sha256": "c6b54cda756258a58870ac273dcb911e04693c06ec804088fa18779555a0a1c6",
+          "updated": "2026-10-18T08:11:05+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/cpe/o.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/cpe/o.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 3424569,
+          "records": 74445,
+          "sha256": "bddd75a3062f876652b93e7b985b0786e8b85424d54e351798932af82afbb58b",
+          "updated": "2026-10-18T08:11:05+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/cpe/other.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/cpe/other.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 1767,
+          "records": 29,
+          "sha256": "0dfd314bffecb807496413491a6b7029a1a27af784b4c42c3226bd07081adf18",
+          "updated": "2026-10-04T21:05:11+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/cpe/p.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/cpe/p.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 4475423,
+          "records": 98024,
+          "sha256": "7758f818e3de8dbcfea21a8567cf7bed8d20bedf1af87edbbd2d3adacb47818e",
+          "updated": "2026-10-18T08:11:06+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/cpe/q.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/cpe/q.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 731228,
+          "records": 15912,
+          "sha256": "cdd267d2e787bb13f6492cf77e1c254efea96a54c5a79ae8aa578ee04b22b220",
+          "updated": "2026-10-18T08:11:06+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/cpe/r.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/cpe/r.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 2831495,
+          "records": 62494,
+          "sha256": "93c30eb0d8a50959ea868da1d91e880d6edaefcfc118be068e1c5c4eed669849",
+          "updated": "2026-10-18T08:11:06+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/cpe/s.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/cpe/s.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 7325846,
+          "records": 161533,
+          "sha256": "6b41afcd07f7103e9c10e125ee309cff61b94418b32b6b90b6bef46b93e3e224",
+          "updated": "2026-10-18T08:11:07+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/cpe/t.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/cpe/t.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 3266912,
+          "records": 72120,
+          "sha256": "8438d349e799378283e47c41777b7943da2ee67b7719bf7021a5900e2b2d6b0b",
+          "updated": "2026-10-18T08:11:07+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/cpe/u.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/cpe/u.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 795131,
+          "records": 16990,
+          "sha256": "3f17be4abd39181b2881dd42567bb969c60c29f6df2ef22a84d5fd47f58eb9d9",
+          "updated": "2026-10-04T21:05:13+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/cpe/v.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/cpe/v.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 2207175,
+          "records": 53096,
+          "sha256": "b44b578ee4d22d77f33507eef7e2b81606b2b05f8e957f050f17fac813909aed",
+          "updated": "2026-10-18T08:11:08+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/cpe/w.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/cpe/w.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 3242511,
+          "records": 73379,
+          "sha256": "8d16f4671ca6ce5a4a77b23b91bc94956434bbc015e77f342ce2faf0513b268b",
+          "updated": "2026-10-11T10:09:43+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/cpe/x.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/cpe/x.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 546023,
+          "records": 11664,
+          "sha256": "0715e0241a8e9462032d243734511b0a7f0571039a870b4b51074bc3b2d9832b",
+          "updated": "2026-10-04T21:05:13+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/cpe/y.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/cpe/y.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 619431,
+          "records": 13577,
+          "sha256": "2bec23fbf2091ba964f69ec908e4b539fa3f46c4b842ffb823ebb3df3366df35",
+          "updated": "2026-10-04T21:05:13+00:00"
+        },
+        {
+          "path": "vulnerabilities/nvd/cpe/z.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/nvd/cpe/z.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 1267791,
+          "records": 27497,
+          "sha256": "99a8a480bc161b62d52e9fcb526e914107dd63e0558baf1633c0b54a20cb7860",
+          "updated": "2026-10-18T08:11:08+00:00"
+        }
+      ]
+    },
+    {
+      "id": "mobile_cve",
+      "name": "Mobile CVE",
+      "category": "vulnerabilities",
+      "category_title": "Vulnerabilities & Exploits",
+      "frequency": "weekly",
+      "description": "Samsung / Pixel / iPhone devices with their patch level, and the CVEs of every mobile bulletin (NVD-enriched). Index + per-year CVE details.",
+      "homepage": "https://github.com/emeryn/CybrefV2/tree/download/src/mcb",
+      "origin": null,
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-18T08:11:08+00:00",
+        "duration_s": 426.7,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:11:08+00:00",
+      "last_change": "2026-10-18T08:11:08+00:00",
+      "bytes": 18986341,
+      "files": [
+        {
+          "path": "vulnerabilities/mobile/cves/2010.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/mobile/cves/2010.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 6959,
+          "records": 4,
+          "sha256": "adf48f48f83d19504c514124d3c17ed1859d2e0cef5cb27f200bdfdda37f36be",
+          "updated": "2026-10-04T21:27:13+00:00"
+        },
+        {
+          "path": "vulnerabilities/mobile/cves/2011.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/mobile/cves/2011.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 278115,
+          "records": 245,
+          "sha256": "ad2294c2143f9465f54b4538dbd458902c2efd217d5729b13677a0c0d0322ae0",
+          "updated": "2026-10-11T10:22:03+00:00"
+        },
+        {
+          "path": "vulnerabilities/mobile/cves/2012.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/mobile/cves/2012.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 225246,
+          "records": 225,
+          "sha256": "40e03dbb2222c2fd1e159fbe717e023ef9d782bcac324964cd690c035b2ee692",
+          "updated": "2026-10-04T21:27:13+00:00"
+        },
+        {
+          "path": "vulnerabilities/mobile/cves/2013.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/mobile/cves/2013.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 117967,
+          "records": 126,
+          "sha256": "9bd0453185a3a09c27aef370bc9ffa1d10df3849b8eed228f6010f86b073f52c",
+          "updated": "2026-10-11T10:22:03+00:00"
+        },
+        {
+          "path": "vulnerabilities/mobile/cves/2014.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/mobile/cves/2014.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 379428,
+          "records": 370,
+          "sha256": "f898c7b8ac636201993c90911f6ebc45509dff71f656d07d0cfa4a8f3f454ad4",
+          "updated": "2026-10-04T21:27:13+00:00"
+        },
+        {
+          "path": "vulnerabilities/mobile/cves/2015.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/mobile/cves/2015.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 618877,
+          "records": 638,
+          "sha256": "ef4a476e02458d32f0a0af864b414510b083f8ee0b2dcbd71ca4f0c4d0fd480f",
+          "updated": "2026-10-04T21:27:13+00:00"
+        },
+        {
+          "path": "vulnerabilities/mobile/cves/2016.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/mobile/cves/2016.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 1364292,
+          "records": 1094,
+          "sha256": "c395073bf5277b89df9e403a25b20392b739619de7ced2f048330f411758b056",
+          "updated": "2026-10-04T21:27:13+00:00"
+        },
+        {
+          "path": "vulnerabilities/mobile/cves/2017.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/mobile/cves/2017.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 1519633,
+          "records": 1522,
+          "sha256": "49194544c3b63e56800f7fe6f9f5d20421222ee8b32638a05d6f65a72b75d491",
+          "updated": "2026-10-04T21:27:13+00:00"
+        },
+        {
+          "path": "vulnerabilities/mobile/cves/2018.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/mobile/cves/2018.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 882173,
+          "records": 877,
+          "sha256": "f3ebd00fe90dc1e5882d0afe115f1a0a7f3bcc0657b7cb18c7339b70121c52a2",
+          "updated": "2026-10-04T21:27:13+00:00"
+        },
+        {
+          "path": "vulnerabilities/mobile/cves/2019.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/mobile/cves/2019.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 1020828,
+          "records": 929,
+          "sha256": "6f2ddc996173a8aeb6c844e86fe7c3880800411e69729890cd7e64563ad92249",
+          "updated": "2026-10-11T10:22:03+00:00"
+        },
+        {
+          "path": "vulnerabilities/mobile/cves/2020.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/mobile/cves/2020.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 969962,
+          "records": 1004,
+          "sha256": "6583f5a486e8d45f9d03d9b52a615ec304c5aaf910a1b733789aae733466ee0c",
+          "updated": "2026-10-11T10:22:03+00:00"
+        },
+        {
+          "path": "vulnerabilities/mobile/cves/2021.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/mobile/cves/2021.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 1069345,
+          "records": 1252,
+          "sha256": "722a81cc9150cbf9ff25e11eecd744b646469d68a38f6ccd0c0da0437d9d28cf",
+          "updated": "2026-10-11T10:22:03+00:00"
+        },
+        {
+          "path": "vulnerabilities/mobile/cves/2022.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/mobile/cves/2022.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 1033562,
+          "records": 1280,
+          "sha256": "ebfc96035d3e8bb2aaff6ecfa9c43867a0db5811a0e3b4b96d2bf5c5fc98ca81",
+          "updated": "2026-10-11T10:22:03+00:00"
+        },
+        {
+          "path": "vulnerabilities/mobile/cves/2023.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/mobile/cves/2023.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 1176592,
+          "records": 1379,
+          "sha256": "2c8f66b2b5be0f9e09081b15568923192d88feefb4448313ca5775d2e6753cad",
+          "updated": "2026-10-11T10:22:03+00:00"
+        },
+        {
+          "path": "vulnerabilities/mobile/cves/2024.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/mobile/cves/2024.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 864251,
+          "records": 1077,
+          "sha256": "a6ac938656272de85b727d64b54c6819b3bdff0faba2a68fedebf5a931b67093",
+          "updated": "2026-10-11T10:22:03+00:00"
+        },
+        {
+          "path": "vulnerabilities/mobile/cves/2025.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/mobile/cves/2025.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 768134,
+          "records": 994,
+          "sha256": "f06fb21a927fa72f87f894dd6340b05436f4347aa7f01523f9e3131efb849b71",
+          "updated": "2026-10-11T10:22:04+00:00"
+        },
+        {
+          "path": "vulnerabilities/mobile/cves/2026.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/mobile/cves/2026.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 799332,
+          "records": 1117,
+          "sha256": "cd09b504c3b9e84c4d67ae16fe8325a62be83a87e9f93fafa24dff82945d5ef5",
+          "updated": "2026-10-11T10:22:04+00:00"
+        },
+        {
+          "path": "vulnerabilities/mobile/index.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/vulnerabilities/mobile/index.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 5891645,
+          "records": 19301,
+          "sha256": "9ee571f5c3875610926c496dc1efa34877fce3a9cfbf14eb0281f2d5a0e2e1b6",
+          "updated": "2026-10-18T08:18:15+00:00"
+        }
+      ]
+    },
+    {
+      "id": "mitre_attack_enterprise",
+      "name": "MITRE ATT&CK Enterprise",
+      "category": "frameworks",
+      "category_title": "Frameworks & Knowledge Bases",
+      "frequency": "weekly",
+      "description": "ATT&CK Enterprise matrix (STIX 2.1).",
+      "homepage": "https://attack.mitre.org/",
+      "origin": [
+        "https://raw.githubusercontent.com/mitre/cti/master/enterprise-attack/enterprise-attack.json"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-18T08:09:13+00:00",
+        "duration_s": 0.6,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:13+00:00",
+      "last_change": "2026-10-18T08:09:13+00:00",
+      "bytes": 49253343,
+      "files": [
+        {
+          "path": "frameworks/mitre_attack_enterprise.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/frameworks/mitre_attack_enterprise.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 49253343,
+          "records": 26689,
+          "sha256": "66f3fe3f07ef1a2de0bd2fe4b3e8a9ea06c1d0bb2c46171bdbb57c7f7b666524",
+          "updated": "2026-10-18T08:09:14+00:00"
+        }
+      ]
+    },
+    {
+      "id": "mitre_attack_mobile",
+      "name": "MITRE ATT&CK Mobile",
+      "category": "frameworks",
+      "category_title": "Frameworks & Knowledge Bases",
+      "frequency": "weekly",
+      "description": "ATT&CK Mobile matrix (STIX 2.1).",
+      "homepage": "https://attack.mitre.org/matrices/mobile/",
+      "origin": [
+        "https://raw.githubusercontent.com/mitre/cti/master/mobile-attack/mobile-attack.json"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-18T08:09:14+00:00",
+        "duration_s": 0.4,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:14+00:00",
+      "last_change": "2026-10-18T08:09:14+00:00",
+      "bytes": 5489646,
+      "files": [
+        {
+          "path": "frameworks/mitre_attack_mobile.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/frameworks/mitre_attack_mobile.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 5489646,
+          "records": 2683,
+          "sha256": "592d4ee8cb2958de20eef65ebd5829753a8dd686f098b237ddeb867558c81faa",
+          "updated": "2026-10-18T08:09:14+00:00"
+        }
+      ]
+    },
+    {
+      "id": "mitre_attack_ics",
+      "name": "MITRE ATT&CK ICS",
+      "category": "frameworks",
+      "category_title": "Frameworks & Knowledge Bases",
+      "frequency": "weekly",
+      "description": "ATT&CK for Industrial Control Systems (STIX 2.1).",
+      "homepage": "https://attack.mitre.org/matrices/ics/",
+      "origin": [
+        "https://raw.githubusercontent.com/mitre/cti/master/ics-attack/ics-attack.json"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-18T08:09:14+00:00",
+        "duration_s": 0.3,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:14+00:00",
+      "last_change": "2026-10-18T08:09:14+00:00",
+      "bytes": 4683721,
+      "files": [
+        {
+          "path": "frameworks/mitre_attack_ics.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/frameworks/mitre_attack_ics.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 4683721,
+          "records": 2565,
+          "sha256": "202328ce7193aa1c1803cbfbf712e81c37a7e9de6c5adc14dd8c11ceb302573e",
+          "updated": "2026-10-18T08:09:15+00:00"
+        }
+      ]
+    },
+    {
+      "id": "mitre_d3fend",
+      "name": "MITRE D3FEND",
+      "category": "frameworks",
+      "category_title": "Frameworks & Knowledge Bases",
+      "frequency": "weekly",
+      "description": "Defensive countermeasures knowledge graph, mapped to ATT&CK (JSON-LD).",
+      "homepage": "https://d3fend.mitre.org/",
+      "origin": [
+        "https://d3fend.mitre.org/ontologies/d3fend.json"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:14+00:00",
+        "duration_s": 1.0,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:14+00:00",
+      "last_change": "2026-10-04T21:03:20+00:00",
+      "bytes": 4833645,
+      "files": [
+        {
+          "path": "frameworks/mitre_d3fend.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/frameworks/mitre_d3fend.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 4833645,
+          "records": 7688,
+          "sha256": "e1546d432c6aa64d45b62dd9e9484b0774ae84de7ff3605ff9dd4e20278957bf",
+          "updated": "2026-10-04T21:03:21+00:00"
+        }
+      ]
+    },
+    {
+      "id": "mitre_atlas",
+      "name": "MITRE ATLAS",
+      "category": "frameworks",
+      "category_title": "Frameworks & Knowledge Bases",
+      "frequency": "weekly",
+      "description": "Adversarial Threat Landscape for AI Systems - tactics, techniques and case studies against ML/AI.",
+      "homepage": "https://atlas.mitre.org/",
+      "origin": null,
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:15+00:00",
+        "duration_s": 0.3,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:15+00:00",
+      "last_change": "2026-10-04T21:03:20+00:00",
+      "bytes": 841482,
+      "files": [
+        {
+          "path": "frameworks/mitre_atlas.yaml",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/frameworks/mitre_atlas.yaml",
+          "format": "text",
+          "compressed": false,
+          "bytes": 841482,
+          "records": 19314,
+          "sha256": "935efa93e28294432d3e2f537eb94991ef8d1f8c58341cd360ea3321ddb66688",
+          "updated": "2026-10-04T21:03:20+00:00"
+        }
+      ]
+    },
+    {
+      "id": "mitre_cwe",
+      "name": "MITRE CWE",
+      "category": "frameworks",
+      "category_title": "Frameworks & Knowledge Bases",
+      "frequency": "weekly",
+      "description": "Common Weakness Enumeration catalog.",
+      "homepage": "https://cwe.mitre.org/",
+      "origin": [
+        "https://cwe.mitre.org/data/xml/cwec_latest.xml.zip"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:15+00:00",
+        "duration_s": 0.3,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:15+00:00",
+      "last_change": "2026-10-04T21:03:20+00:00",
+      "bytes": 18192305,
+      "files": [
+        {
+          "path": "frameworks/mitre_cwe.xml",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/frameworks/mitre_cwe.xml",
+          "format": "xml",
+          "compressed": false,
+          "bytes": 18192305,
+          "records": null,
+          "sha256": "1f5a78bd62e00f86436b4fe32d5034a57e8f0da88e4063b2072b664ae510912e",
+          "updated": "2026-10-04T21:03:21+00:00"
+        }
+      ]
+    },
+    {
+      "id": "mitre_capec",
+      "name": "MITRE CAPEC",
+      "category": "frameworks",
+      "category_title": "Frameworks & Knowledge Bases",
+      "frequency": "weekly",
+      "description": "Common Attack Pattern Enumeration and Classification.",
+      "homepage": "https://capec.mitre.org/",
+      "origin": [
+        "https://capec.mitre.org/data/xml/capec_latest.xml"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:15+00:00",
+        "duration_s": 1.1,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:15+00:00",
+      "last_change": "2026-10-04T21:03:20+00:00",
+      "bytes": 3849998,
+      "files": [
+        {
+          "path": "frameworks/mitre_capec.xml",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/frameworks/mitre_capec.xml",
+          "format": "xml",
+          "compressed": false,
+          "bytes": 3849998,
+          "records": null,
+          "sha256": "70279a2dff0cb0ad79e546adb07828335a704ad5210e047e09e986172fc9e34d",
+          "updated": "2026-10-04T21:03:21+00:00"
+        }
+      ]
+    },
+    {
+      "id": "redcanary_atomic_tests",
+      "name": "Atomic Red Team",
+      "category": "frameworks",
+      "category_title": "Frameworks & Knowledge Bases",
+      "frequency": "weekly",
+      "description": "Index of Atomic Red Team tests (ATT&CK technique, test name, GUID, platform) to validate detections.",
+      "homepage": "https://atomicredteam.io/",
+      "origin": [
+        "https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/Indexes/Indexes-CSV/index.csv"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:15+00:00",
+        "duration_s": 0.1,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:15+00:00",
+      "last_change": "2026-10-04T21:03:21+00:00",
+      "bytes": 353998,
+      "files": [
+        {
+          "path": "frameworks/redcanary_atomic_tests.csv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/frameworks/redcanary_atomic_tests.csv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 353998,
+          "records": 2371,
+          "sha256": "09c597fd4b9fe86b67177dae4505d8b76765926b9cc6c6c0fd1110bee1628089",
+          "updated": "2026-10-04T21:03:21+00:00"
+        }
+      ]
+    },
+    {
+      "id": "aws_ip_ranges",
+      "name": "AWS IP ranges",
+      "category": "network",
+      "category_title": "Network: Cloud, ASN, Geo, Anonymizers, Crawlers",
+      "frequency": "weekly",
+      "description": "Amazon Web Services public IP ranges by service and region.",
+      "homepage": "https://docs.aws.amazon.com/vpc/latest/userguide/aws-ip-ranges.html",
+      "origin": [
+        "https://ip-ranges.amazonaws.com/ip-ranges.json"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-18T08:09:16+00:00",
+        "duration_s": 0.4,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:16+00:00",
+      "last_change": "2026-10-18T08:09:16+00:00",
+      "bytes": 2724906,
+      "files": [
+        {
+          "path": "network/aws_ip_ranges.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/network/aws_ip_ranges.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 2724906,
+          "records": 10653,
+          "sha256": "4820d20396a6539219dbf829607747930acf8308826ec227f649610b48ca022a",
+          "updated": "2026-10-18T08:09:16+00:00"
+        }
+      ]
+    },
+    {
+      "id": "azure_ip_ranges",
+      "name": "Azure IP ranges",
+      "category": "network",
+      "category_title": "Network: Cloud, ASN, Geo, Anonymizers, Crawlers",
+      "frequency": "weekly",
+      "description": "Microsoft Azure service tags and IP ranges (stable URL mirror).",
+      "homepage": "https://github.com/enzo-g/azureIPranges",
+      "origin": [
+        "https://enzo-g.github.io/azureIPranges/json-history/ServiceTags_Public.json"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "unchanged",
+        "at": "2026-10-18T08:09:16+00:00",
+        "duration_s": 0.3,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:16+00:00",
+      "last_change": "2026-10-11T10:08:13+00:00",
+      "bytes": 4330497,
+      "files": [
+        {
+          "path": "network/azure_ip_ranges.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/network/azure_ip_ranges.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 4330497,
+          "records": 3321,
+          "sha256": "fed834a26c3847f6c66715c924259d9d6f437078b32decf0b5337e6414f96c98",
+          "updated": "2026-10-11T10:08:13+00:00"
+        }
+      ]
+    },
+    {
+      "id": "gcp_ip_ranges",
+      "name": "Google Cloud IP ranges",
+      "category": "network",
+      "category_title": "Network: Cloud, ASN, Geo, Anonymizers, Crawlers",
+      "frequency": "weekly",
+      "description": "Google Cloud customer IP ranges.",
+      "homepage": "https://cloud.google.com/compute/docs/faq#find_ip_range",
+      "origin": [
+        "https://www.gstatic.com/ipranges/cloud.json"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-18T08:09:16+00:00",
+        "duration_s": 0.1,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:16+00:00",
+      "last_change": "2026-10-18T08:09:16+00:00",
+      "bytes": 115362,
+      "files": [
+        {
+          "path": "network/gcp_ip_ranges.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/network/gcp_ip_ranges.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 115362,
+          "records": 1128,
+          "sha256": "7a7ef690f1039a99d5b0207ab7e54e07a673f2364a98f2c7dbdfcac22a378566",
+          "updated": "2026-10-18T08:09:16+00:00"
+        }
+      ]
+    },
+    {
+      "id": "google_ip_ranges",
+      "name": "Google IP ranges",
+      "category": "network",
+      "category_title": "Network: Cloud, ASN, Geo, Anonymizers, Crawlers",
+      "frequency": "weekly",
+      "description": "IP ranges of Google services (Gmail, APIs...) outside Google Cloud.",
+      "homepage": "https://support.google.com/a/answer/10026322",
+      "origin": [
+        "https://www.gstatic.com/ipranges/goog.json"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-18T08:09:16+00:00",
+        "duration_s": 0.0,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:16+00:00",
+      "last_change": "2026-10-18T08:09:16+00:00",
+      "bytes": 6186,
+      "files": [
+        {
+          "path": "network/google_ip_ranges.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/network/google_ip_ranges.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 6186,
+          "records": 145,
+          "sha256": "1135df096a3d859dd1f77b7a552841802fae14cf330278ace47d5d7b0be834df",
+          "updated": "2026-10-18T08:09:16+00:00"
+        }
+      ]
+    },
+    {
+      "id": "oracle_ip_ranges",
+      "name": "Oracle Cloud IP ranges",
+      "category": "network",
+      "category_title": "Network: Cloud, ASN, Geo, Anonymizers, Crawlers",
+      "frequency": "weekly",
+      "description": "Oracle Cloud Infrastructure public IP ranges.",
+      "homepage": "https://docs.oracle.com/en-us/iaas/Content/General/Concepts/addressranges.htm",
+      "origin": [
+        "https://docs.oracle.com/en-us/iaas/tools/public_ip_ranges.json"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:16+00:00",
+        "duration_s": 0.1,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:16+00:00",
+      "last_change": "2026-10-04T21:03:21+00:00",
+      "bytes": 234112,
+      "files": [
+        {
+          "path": "network/oracle_ip_ranges.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/network/oracle_ip_ranges.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 234112,
+          "records": 56,
+          "sha256": "59e5ba5e92e38f911ce377f1d71c6eaa89ffcf53f9eb4ccd667d9ffca81ead7d",
+          "updated": "2026-10-04T21:03:22+00:00"
+        }
+      ]
+    },
+    {
+      "id": "digitalocean_ip_ranges",
+      "name": "DigitalOcean IP ranges",
+      "category": "network",
+      "category_title": "Network: Cloud, ASN, Geo, Anonymizers, Crawlers",
+      "frequency": "weekly",
+      "description": "DigitalOcean IP ranges with location (geofeed CSV).",
+      "homepage": "https://docs.digitalocean.com/platform/",
+      "origin": [
+        "https://digitalocean.com/geo/google.csv"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-18T08:09:16+00:00",
+        "duration_s": 0.6,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:16+00:00",
+      "last_change": "2026-10-18T08:09:16+00:00",
+      "bytes": 53123,
+      "files": [
+        {
+          "path": "network/digitalocean_ip_ranges.csv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/network/digitalocean_ip_ranges.csv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 53123,
+          "records": 1233,
+          "sha256": "259d82de286d2af92abb8bcb50d473b5f5b193659d58b27289aa85f1c5a3086e",
+          "updated": "2026-10-18T08:09:17+00:00"
+        }
+      ]
+    },
+    {
+      "id": "cloudflare_ip_ranges",
+      "name": "Cloudflare IP ranges",
+      "category": "network",
+      "category_title": "Network: Cloud, ASN, Geo, Anonymizers, Crawlers",
+      "frequency": "weekly",
+      "description": "Cloudflare edge IPv4/IPv6 ranges.",
+      "homepage": "https://www.cloudflare.com/ips/",
+      "origin": [
+        "https://api.cloudflare.com/client/v4/ips"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "unchanged",
+        "at": "2026-10-18T08:09:16+00:00",
+        "duration_s": 0.1,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:16+00:00",
+      "last_change": "2026-10-04T21:03:21+00:00",
+      "bytes": 505,
+      "files": [
+        {
+          "path": "network/cloudflare_ip_ranges.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/network/cloudflare_ip_ranges.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 505,
+          "records": 4,
+          "sha256": "f3d0a35768afd4a9a8307aa1033d50b9fa011b73836c9235c170aa31acac5efd",
+          "updated": "2026-10-04T21:03:22+00:00"
+        }
+      ]
+    },
+    {
+      "id": "fastly_ip_ranges",
+      "name": "Fastly IP ranges",
+      "category": "network",
+      "category_title": "Network: Cloud, ASN, Geo, Anonymizers, Crawlers",
+      "frequency": "weekly",
+      "description": "Fastly CDN public IP ranges.",
+      "homepage": "https://www.fastly.com/documentation/reference/api/utils/public-ip-list/",
+      "origin": [
+        "https://api.fastly.com/public-ip-list"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-18T08:09:16+00:00",
+        "duration_s": 0.1,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:16+00:00",
+      "last_change": "2026-10-18T08:09:16+00:00",
+      "bytes": 451,
+      "files": [
+        {
+          "path": "network/fastly_ip_ranges.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/network/fastly_ip_ranges.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 451,
+          "records": 21,
+          "sha256": "b5e8800ff76c2a8fdcedb7d9b27f23b6cb3158034b157540e594651d42b60bc6",
+          "updated": "2026-10-18T08:09:16+00:00"
+        }
+      ]
+    },
+    {
+      "id": "github_ip_ranges",
+      "name": "GitHub IP ranges",
+      "category": "network",
+      "category_title": "Network: Cloud, ASN, Geo, Anonymizers, Crawlers",
+      "frequency": "weekly",
+      "description": "GitHub service IP ranges (actions, hooks, git, pages...).",
+      "homepage": "https://docs.github.com/en/rest/meta/meta",
+      "origin": [
+        "https://api.github.com/meta"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-18T08:09:16+00:00",
+        "duration_s": 0.0,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:16+00:00",
+      "last_change": "2026-10-18T08:09:16+00:00",
+      "bytes": 165200,
+      "files": [
+        {
+          "path": "network/github_ip_ranges.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/network/github_ip_ranges.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 165200,
+          "records": 7038,
+          "sha256": "f9c5746c8249dfd9737f8dfcb969772bcf1c3675973fc2da161648c02811f14f",
+          "updated": "2026-10-18T08:09:16+00:00"
+        }
+      ]
+    },
+    {
+      "id": "microsoft365_endpoints",
+      "name": "Microsoft 365 endpoints",
+      "category": "network",
+      "category_title": "Network: Cloud, ASN, Geo, Anonymizers, Crawlers",
+      "frequency": "weekly",
+      "description": "URLs and IP ranges used by Microsoft 365 (worldwide instance).",
+      "homepage": "https://learn.microsoft.com/en-us/microsoft-365/enterprise/microsoft-365-ip-web-service",
+      "origin": [
+        "https://endpoints.office.com/endpoints/worldwide?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "unchanged",
+        "at": "2026-10-18T08:09:16+00:00",
+        "duration_s": 0.1,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:16+00:00",
+      "last_change": "2026-10-04T21:03:22+00:00",
+      "bytes": 27805,
+      "files": [
+        {
+          "path": "network/microsoft365_endpoints.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/network/microsoft365_endpoints.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 27805,
+          "records": 63,
+          "sha256": "3d72dd4c9d82f8d4b71dcd8c108c89d36e2c3e963d36a2c95c4903c35614d5b4",
+          "updated": "2026-10-04T21:03:22+00:00"
+        }
+      ]
+    },
+    {
+      "id": "tor_relays",
+      "name": "Tor relays",
+      "category": "network",
+      "category_title": "Network: Cloud, ASN, Geo, Anonymizers, Crawlers",
+      "frequency": "daily",
+      "description": "Details of every running Tor relay (Onionoo).",
+      "homepage": "https://metrics.torproject.org/onionoo.html",
+      "origin": [
+        "https://onionoo.torproject.org/details"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-24T05:49:57+00:00",
+        "duration_s": 3.7,
+        "error": null
+      },
+      "last_success": "2026-10-24T05:49:57+00:00",
+      "last_change": "2026-10-24T05:49:57+00:00",
+      "bytes": 75557751,
+      "files": [
+        {
+          "path": "network/tor_relays.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/network/tor_relays.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 75557751,
+          "records": 9972,
+          "sha256": "c4bb8b573aa2d00537900ccf13144dd43a9479577d25678085a665524750aea6",
+          "updated": "2026-10-24T05:50:01+00:00"
+        }
+      ]
+    },
+    {
+      "id": "tor_exit_relays",
+      "name": "Tor exit relays",
+      "category": "network",
+      "category_title": "Network: Cloud, ASN, Geo, Anonymizers, Crawlers",
+      "frequency": "daily",
+      "description": "Details of Tor exit relays (Onionoo).",
+      "homepage": "https://metrics.torproject.org/onionoo.html",
+      "origin": [
+        "https://onionoo.torproject.org/details?search=flag:Exit"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-24T05:49:57+00:00",
+        "duration_s": 2.7,
+        "error": null
+      },
+      "last_success": "2026-10-24T05:49:57+00:00",
+      "last_change": "2026-10-24T05:49:57+00:00",
+      "bytes": 18018019,
+      "files": [
+        {
+          "path": "network/tor_exit_relays.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/network/tor_exit_relays.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 18018019,
+          "records": 2894,
+          "sha256": "c059377e1f2a62f940c61d3f87f33ec4746c83a5b9d8805e8c5e79472aed6bc2",
+          "updated": "2026-10-24T05:50:00+00:00"
+        }
+      ]
+    },
+    {
+      "id": "tor_exit_ips",
+      "name": "Tor exit IPs",
+      "category": "network",
+      "category_title": "Network: Cloud, ASN, Geo, Anonymizers, Crawlers",
+      "frequency": "daily",
+      "description": "Plain list of Tor exit IPs (TorDNSEL), ideal for quick matching.",
+      "homepage": "https://check.torproject.org/",
+      "origin": [
+        "https://check.torproject.org/torbulkexitlist"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-24T05:49:57+00:00",
+        "duration_s": 0.7,
+        "error": null
+      },
+      "last_success": "2026-10-24T05:49:57+00:00",
+      "last_change": "2026-10-24T05:49:57+00:00",
+      "bytes": 17230,
+      "files": [
+        {
+          "path": "network/tor_exit_ips.txt",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/network/tor_exit_ips.txt",
+          "format": "text",
+          "compressed": false,
+          "bytes": 17230,
+          "records": 1217,
+          "sha256": "214d9c2a2e29ec285c5b6501f3098698a2d574e92d1547504758193ad9105674",
+          "updated": "2026-10-24T05:49:58+00:00"
+        }
+      ]
+    },
+    {
+      "id": "apple_private_relay_ranges",
+      "name": "iCloud Private Relay",
+      "category": "network",
+      "category_title": "Network: Cloud, ASN, Geo, Anonymizers, Crawlers",
+      "frequency": "weekly",
+      "description": "Egress IP ranges of iCloud Private Relay with their geolocation.",
+      "homepage": "https://developer.apple.com/support/prepare-your-network-for-icloud-private-relay/",
+      "origin": [
+        "https://mask-api.icloud.com/egress-ip-ranges.csv"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-18T08:09:16+00:00",
+        "duration_s": 0.5,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:16+00:00",
+      "last_change": "2026-10-18T08:09:16+00:00",
+      "bytes": 12047231,
+      "files": [
+        {
+          "path": "network/apple_private_relay_ranges.csv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/network/apple_private_relay_ranges.csv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 12047231,
+          "records": 285090,
+          "sha256": "c9bb2ecfab4f8308054ea7697754b30dd64d2324466dab808c42b5448c6c9231",
+          "updated": "2026-10-18T08:09:17+00:00"
+        }
+      ]
+    },
+    {
+      "id": "mullvad_relays",
+      "name": "Mullvad relays",
+      "category": "network",
+      "category_title": "Network: Cloud, ASN, Geo, Anonymizers, Crawlers",
+      "frequency": "weekly",
+      "description": "Mullvad VPN servers with their IPv4/IPv6 addresses.",
+      "homepage": "https://mullvad.net/en/servers",
+      "origin": [
+        "https://api.mullvad.net/www/relays/all/"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-18T08:09:16+00:00",
+        "duration_s": 0.8,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:16+00:00",
+      "last_change": "2026-10-18T08:09:16+00:00",
+      "bytes": 294012,
+      "files": [
+        {
+          "path": "network/mullvad_relays.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/network/mullvad_relays.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 294012,
+          "records": 566,
+          "sha256": "1cd2b470882d6e7c6ec5d9831c011648a0a8de5105ba1ed342bc2df4bd7a1f5e",
+          "updated": "2026-10-18T08:09:17+00:00"
+        }
+      ]
+    },
+    {
+      "id": "x4bnet_vpn_ipv4",
+      "name": "X4BNet VPN ranges",
+      "category": "network",
+      "category_title": "Network: Cloud, ASN, Geo, Anonymizers, Crawlers",
+      "frequency": "weekly",
+      "description": "Commercial VPN provider IPv4 ranges.",
+      "homepage": "https://github.com/X4BNet/lists_vpn",
+      "origin": [
+        "https://raw.githubusercontent.com/X4BNet/lists_vpn/main/output/vpn/ipv4.txt"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-18T08:09:17+00:00",
+        "duration_s": 0.2,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:17+00:00",
+      "last_change": "2026-10-18T08:09:17+00:00",
+      "bytes": 182119,
+      "files": [
+        {
+          "path": "network/x4bnet_vpn_ipv4.txt",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/network/x4bnet_vpn_ipv4.txt",
+          "format": "text",
+          "compressed": false,
+          "bytes": 182119,
+          "records": 11102,
+          "sha256": "c38604cbced9956720b341747e775412fe6932d41f08fa9f7c90521f8de056a8",
+          "updated": "2026-10-18T08:09:17+00:00"
+        }
+      ]
+    },
+    {
+      "id": "x4bnet_datacenter_ipv4",
+      "name": "X4BNet datacenter ranges",
+      "category": "network",
+      "category_title": "Network: Cloud, ASN, Geo, Anonymizers, Crawlers",
+      "frequency": "weekly",
+      "description": "Datacenter and hosting IPv4 ranges.",
+      "homepage": "https://github.com/X4BNet/lists_vpn",
+      "origin": [
+        "https://raw.githubusercontent.com/X4BNet/lists_vpn/main/output/datacenter/ipv4.txt"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-18T08:09:17+00:00",
+        "duration_s": 0.1,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:17+00:00",
+      "last_change": "2026-10-18T08:09:17+00:00",
+      "bytes": 697652,
+      "files": [
+        {
+          "path": "network/x4bnet_datacenter_ipv4.txt",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/network/x4bnet_datacenter_ipv4.txt",
+          "format": "text",
+          "compressed": false,
+          "bytes": 697652,
+          "records": 44592,
+          "sha256": "140ad372c2b1bbc981934bed95d18c1e8fefe6fd6afa2ffbcb98e4f9486e8140",
+          "updated": "2026-10-18T08:09:17+00:00"
+        }
+      ]
+    },
+    {
+      "id": "google_googlebot_ips",
+      "name": "Googlebot IPs",
+      "category": "network",
+      "category_title": "Network: Cloud, ASN, Geo, Anonymizers, Crawlers",
+      "frequency": "weekly",
+      "description": "IP ranges of Googlebot (verify that a \"Googlebot\" user agent is genuine).",
+      "homepage": "https://developers.google.com/search/docs/crawling-indexing/verifying-googlebot",
+      "origin": [
+        "https://developers.google.com/static/search/apis/ipranges/googlebot.json"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-18T08:09:17+00:00",
+        "duration_s": 1.2,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:17+00:00",
+      "last_change": "2026-10-18T08:09:17+00:00",
+      "bytes": 21768,
+      "files": [
+        {
+          "path": "network/google_googlebot_ips.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/network/google_googlebot_ips.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 21768,
+          "records": 317,
+          "sha256": "847a1335fdc5b351626e9e14cffe7c6304d4ab3093b9d8775866097942876223",
+          "updated": "2026-10-18T08:09:18+00:00"
+        }
+      ]
+    },
+    {
+      "id": "google_special_crawlers_ips",
+      "name": "Google special crawlers IPs",
+      "category": "network",
+      "category_title": "Network: Cloud, ASN, Geo, Anonymizers, Crawlers",
+      "frequency": "weekly",
+      "description": "IP ranges of Google special-case crawlers (AdsBot...).",
+      "homepage": "https://developers.google.com/search/docs/crawling-indexing/verifying-googlebot",
+      "origin": [
+        "https://developers.google.com/static/search/apis/ipranges/special-crawlers.json"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-18T08:09:17+00:00",
+        "duration_s": 1.1,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:17+00:00",
+      "last_change": "2026-10-18T08:09:17+00:00",
+      "bytes": 19109,
+      "files": [
+        {
+          "path": "network/google_special_crawlers_ips.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/network/google_special_crawlers_ips.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 19109,
+          "records": 272,
+          "sha256": "53e9d7e05cff7b01f2033796d11afde148894013490aa676d8c940896750da90",
+          "updated": "2026-10-18T08:09:18+00:00"
+        }
+      ]
+    },
+    {
+      "id": "bing_bingbot_ips",
+      "name": "Bingbot IPs",
+      "category": "network",
+      "category_title": "Network: Cloud, ASN, Geo, Anonymizers, Crawlers",
+      "frequency": "weekly",
+      "description": "IP ranges of Bingbot.",
+      "homepage": "https://www.bing.com/webmasters/help/how-to-verify-bingbot-3905dc26",
+      "origin": [
+        "https://www.bing.com/toolbox/bingbot.json"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "unchanged",
+        "at": "2026-10-18T08:09:17+00:00",
+        "duration_s": 0.1,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:17+00:00",
+      "last_change": "2026-10-04T21:03:23+00:00",
+      "bytes": 1580,
+      "files": [
+        {
+          "path": "network/bing_bingbot_ips.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/network/bing_bingbot_ips.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 1580,
+          "records": 28,
+          "sha256": "a2d1cf229544205a24c61fb7c459408b1afe18f9fd5b172fe181f0eb73c1594d",
+          "updated": "2026-10-04T21:03:23+00:00"
+        }
+      ]
+    },
+    {
+      "id": "apple_applebot_ips",
+      "name": "Applebot IPs",
+      "category": "network",
+      "category_title": "Network: Cloud, ASN, Geo, Anonymizers, Crawlers",
+      "frequency": "weekly",
+      "description": "IP ranges of Applebot.",
+      "homepage": "https://support.apple.com/en-us/119829",
+      "origin": [
+        "https://search.developer.apple.com/applebot.json"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:17+00:00",
+        "duration_s": 0.1,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:17+00:00",
+      "last_change": "2026-10-04T21:03:23+00:00",
+      "bytes": 1640,
+      "files": [
+        {
+          "path": "network/apple_applebot_ips.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/network/apple_applebot_ips.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 1640,
+          "records": 24,
+          "sha256": "5a5e12188891d998341f4fb50d2b31c80aba5002f5cff9d0fa110c13e4e2edd0",
+          "updated": "2026-10-04T21:03:23+00:00"
+        }
+      ]
+    },
+    {
+      "id": "openai_gptbot_ips",
+      "name": "OpenAI GPTBot IPs",
+      "category": "network",
+      "category_title": "Network: Cloud, ASN, Geo, Anonymizers, Crawlers",
+      "frequency": "weekly",
+      "description": "IP ranges of OpenAI's training crawler.",
+      "homepage": "https://platform.openai.com/docs/bots",
+      "origin": [
+        "https://openai.com/gptbot.json"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:17+00:00",
+        "duration_s": 0.1,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:17+00:00",
+      "last_change": "2026-10-04T21:03:23+00:00",
+      "bytes": 977,
+      "files": [
+        {
+          "path": "network/openai_gptbot_ips.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/network/openai_gptbot_ips.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 977,
+          "records": 18,
+          "sha256": "a24d1fa34f094d303400bdf13c45c5e9726e0b553780d16a52f9ba1b790acc72",
+          "updated": "2026-10-04T21:03:23+00:00"
+        }
+      ]
+    },
+    {
+      "id": "openai_chatgpt_user_ips",
+      "name": "OpenAI ChatGPT-User IPs",
+      "category": "network",
+      "category_title": "Network: Cloud, ASN, Geo, Anonymizers, Crawlers",
+      "frequency": "weekly",
+      "description": "IP ranges used when ChatGPT browses on behalf of a user.",
+      "homepage": "https://platform.openai.com/docs/bots",
+      "origin": [
+        "https://openai.com/chatgpt-user.json"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:17+00:00",
+        "duration_s": 0.1,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:17+00:00",
+      "last_change": "2026-10-11T10:08:15+00:00",
+      "bytes": 8467,
+      "files": [
+        {
+          "path": "network/openai_chatgpt_user_ips.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/network/openai_chatgpt_user_ips.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 8467,
+          "records": 234,
+          "sha256": "2cd3f361d575deabcc2d4303d7eaf91bf1d0fbc70404601a7b6cd8231b60ac11",
+          "updated": "2026-10-11T10:08:15+00:00"
+        }
+      ]
+    },
+    {
+      "id": "iptoasn_ipv4",
+      "name": "IPtoASN (IPv4)",
+      "category": "network",
+      "category_title": "Network: Cloud, ASN, Geo, Anonymizers, Crawlers",
+      "frequency": "weekly",
+      "description": "IPv4 range -> ASN, country, AS name.",
+      "homepage": "https://iptoasn.com/",
+      "origin": [
+        "https://iptoasn.com/data/ip2asn-v4.tsv.gz"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-18T08:09:18+00:00",
+        "duration_s": 1.3,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:18+00:00",
+      "last_change": "2026-10-18T08:09:18+00:00",
+      "bytes": 30548541,
+      "files": [
+        {
+          "path": "network/iptoasn_ipv4.tsv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/network/iptoasn_ipv4.tsv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 30548541,
+          "records": 539258,
+          "sha256": "181193951aaff1558ae0efdc6f843cac098d917580d6f13b9c1fe8fb55ca5314",
+          "updated": "2026-10-18T08:09:19+00:00"
+        }
+      ]
+    },
+    {
+      "id": "iptoasn_ipv6",
+      "name": "IPtoASN (IPv6)",
+      "category": "network",
+      "category_title": "Network: Cloud, ASN, Geo, Anonymizers, Crawlers",
+      "frequency": "weekly",
+      "description": "IPv6 range -> ASN, country, AS name.",
+      "homepage": "https://iptoasn.com/",
+      "origin": [
+        "https://iptoasn.com/data/ip2asn-v6.tsv.gz"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-18T08:09:18+00:00",
+        "duration_s": 0.3,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:18+00:00",
+      "last_change": "2026-10-18T08:09:18+00:00",
+      "bytes": 15268355,
+      "files": [
+        {
+          "path": "network/iptoasn_ipv6.tsv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/network/iptoasn_ipv6.tsv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 15268355,
+          "records": 183982,
+          "sha256": "d3d1d3e30a201031ac1864680e0308ebe2de7aae2fba4bfa2536308522a619c3",
+          "updated": "2026-10-18T08:09:19+00:00"
+        }
+      ]
+    },
+    {
+      "id": "dbip_country_lite",
+      "name": "DB-IP Country Lite",
+      "category": "network",
+      "category_title": "Network: Cloud, ASN, Geo, Anonymizers, Crawlers",
+      "frequency": "weekly",
+      "description": "IP range -> country (IPv4 + IPv6). CC BY 4.0, attribution to DB-IP.com required.",
+      "homepage": "https://db-ip.com/db/download/ip-to-country-lite",
+      "origin": [
+        "https://download.db-ip.com/free/dbip-country-lite-2026-10.csv.gz",
+        "https://download.db-ip.com/free/dbip-country-lite-2026-09.csv.gz"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "unchanged",
+        "at": "2026-10-18T08:09:18+00:00",
+        "duration_s": 0.9,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:18+00:00",
+      "last_change": "2026-10-04T21:03:23+00:00",
+      "bytes": 31210433,
+      "files": [
+        {
+          "path": "network/dbip_country_lite.csv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/network/dbip_country_lite.csv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 31210433,
+          "records": 710833,
+          "sha256": "53864a68fbfef02c27c717d08d431a6d453e9e00e77d9e8da841d382267fca88",
+          "updated": "2026-10-04T21:03:25+00:00"
+        }
+      ]
+    },
+    {
+      "id": "dbip_asn_lite",
+      "name": "DB-IP ASN Lite",
+      "category": "network",
+      "category_title": "Network: Cloud, ASN, Geo, Anonymizers, Crawlers",
+      "frequency": "weekly",
+      "description": "IP range -> ASN and organisation (IPv4 + IPv6). CC BY 4.0, attribution to DB-IP.com required.",
+      "homepage": "https://db-ip.com/db/download/ip-to-asn-lite",
+      "origin": [
+        "https://download.db-ip.com/free/dbip-asn-lite-2026-10.csv.gz",
+        "https://download.db-ip.com/free/dbip-asn-lite-2026-09.csv.gz"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "unchanged",
+        "at": "2026-10-18T08:09:19+00:00",
+        "duration_s": 0.9,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:19+00:00",
+      "last_change": "2026-10-04T21:03:24+00:00",
+      "bytes": 30360919,
+      "files": [
+        {
+          "path": "network/dbip_asn_lite.csv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/network/dbip_asn_lite.csv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 30360919,
+          "records": 477361,
+          "sha256": "f581cd401338239a05f08490bce3da57c9261b96367df4ec10439260f02da4b4",
+          "updated": "2026-10-04T21:03:25+00:00"
+        }
+      ]
+    },
+    {
+      "id": "teamcymru_fullbogons_ipv4",
+      "name": "Team Cymru fullbogons (IPv4)",
+      "category": "network",
+      "category_title": "Network: Cloud, ASN, Geo, Anonymizers, Crawlers",
+      "frequency": "weekly",
+      "description": "Unallocated and reserved IPv4 space - traffic from there is spoofed or hijacked.",
+      "homepage": "https://www.team-cymru.com/bogon-networks",
+      "origin": [
+        "https://www.team-cymru.org/Services/Bogons/fullbogons-ipv4.txt"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-18T08:09:19+00:00",
+        "duration_s": 0.5,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:19+00:00",
+      "last_change": "2026-10-18T08:09:19+00:00",
+      "bytes": 47797,
+      "files": [
+        {
+          "path": "network/teamcymru_fullbogons_ipv4.txt",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/network/teamcymru_fullbogons_ipv4.txt",
+          "format": "text",
+          "compressed": false,
+          "bytes": 47797,
+          "records": 3029,
+          "sha256": "3ef16417d359ddafd2435649ff79f5f534ddd09311603ec5b214d04cab849253",
+          "updated": "2026-10-18T08:09:20+00:00"
+        }
+      ]
+    },
+    {
+      "id": "teamcymru_fullbogons_ipv6",
+      "name": "Team Cymru fullbogons (IPv6)",
+      "category": "network",
+      "category_title": "Network: Cloud, ASN, Geo, Anonymizers, Crawlers",
+      "frequency": "weekly",
+      "description": "Unallocated and reserved IPv6 space.",
+      "homepage": "https://www.team-cymru.com/bogon-networks",
+      "origin": [
+        "https://www.team-cymru.org/Services/Bogons/fullbogons-ipv6.txt"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-18T08:09:19+00:00",
+        "duration_s": 1.0,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:19+00:00",
+      "last_change": "2026-10-18T08:09:19+00:00",
+      "bytes": 2625984,
+      "files": [
+        {
+          "path": "network/teamcymru_fullbogons_ipv6.txt",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/network/teamcymru_fullbogons_ipv6.txt",
+          "format": "text",
+          "compressed": false,
+          "bytes": 2625984,
+          "records": 158025,
+          "sha256": "c4067f5de92ee9762155116a28f2da67196354b10ff55de82c755facdc8365c8",
+          "updated": "2026-10-18T08:09:20+00:00"
+        }
+      ]
+    },
+    {
+      "id": "tranco_top1m",
+      "name": "Tranco Top 1M",
+      "category": "domains",
+      "category_title": "Domains & Email",
+      "frequency": "weekly",
+      "description": "Research-grade ranking of the top 1M domains (rank,domain).",
+      "homepage": "https://tranco-list.eu/",
+      "origin": [
+        "https://tranco-list.eu/top-1m.csv.zip"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-18T08:09:20+00:00",
+        "duration_s": 1.2,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:20+00:00",
+      "last_change": "2026-10-18T08:09:20+00:00",
+      "bytes": 22627587,
+      "files": [
+        {
+          "path": "domains/tranco_top1m.csv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/domains/tranco_top1m.csv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 22627587,
+          "records": 999999,
+          "sha256": "22d326c41f01aed7cab2867b6dc33c4c91a48e6f1d6c289a0646ba9b635203d5",
+          "updated": "2026-10-18T08:09:21+00:00"
+        }
+      ]
+    },
+    {
+      "id": "publicsuffix_list",
+      "name": "Public Suffix List",
+      "category": "domains",
+      "category_title": "Domains & Email",
+      "frequency": "weekly",
+      "description": "Effective TLDs, needed to compute registrable domains.",
+      "homepage": "https://publicsuffix.org/",
+      "origin": [
+        "https://publicsuffix.org/list/public_suffix_list.dat"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-18T08:09:20+00:00",
+        "duration_s": 0.3,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:20+00:00",
+      "last_change": "2026-10-18T08:09:20+00:00",
+      "bytes": 338217,
+      "files": [
+        {
+          "path": "domains/publicsuffix_list.txt",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/domains/publicsuffix_list.txt",
+          "format": "text",
+          "compressed": false,
+          "bytes": 338217,
+          "records": 14499,
+          "sha256": "d805bffa0e2e203a8e27ca75c596e5b24ac096d11632904492115248e9ab9bd9",
+          "updated": "2026-10-18T08:09:20+00:00"
+        }
+      ]
+    },
+    {
+      "id": "iana_tlds",
+      "name": "IANA TLDs",
+      "category": "domains",
+      "category_title": "Domains & Email",
+      "frequency": "weekly",
+      "description": "Official list of top-level domains in the root zone.",
+      "homepage": "https://www.iana.org/domains/root/db",
+      "origin": [
+        "https://data.iana.org/TLD/tlds-alpha-by-domain.txt"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-18T08:09:20+00:00",
+        "duration_s": 0.1,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:20+00:00",
+      "last_change": "2026-10-18T08:09:20+00:00",
+      "bytes": 9528,
+      "files": [
+        {
+          "path": "domains/iana_tlds.txt",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/domains/iana_tlds.txt",
+          "format": "text",
+          "compressed": false,
+          "bytes": 9528,
+          "records": 1437,
+          "sha256": "d692781e5b03b4bba965fa99b647eb12f2b8af5108a19d5e3b977165393c3b1c",
+          "updated": "2026-10-18T08:09:20+00:00"
+        }
+      ]
+    },
+    {
+      "id": "disposable_email_domains",
+      "name": "Disposable email domains",
+      "category": "domains",
+      "category_title": "Domains & Email",
+      "frequency": "weekly",
+      "description": "Throw-away email providers.",
+      "homepage": "https://github.com/disposable-email-domains/disposable-email-domains",
+      "origin": [
+        "https://raw.githubusercontent.com/disposable-email-domains/disposable-email-domains/main/disposable_email_blocklist.conf"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-18T08:09:20+00:00",
+        "duration_s": 0.0,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:20+00:00",
+      "last_change": "2026-10-18T08:09:20+00:00",
+      "bytes": 143266,
+      "files": [
+        {
+          "path": "domains/disposable_email_domains.txt",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/domains/disposable_email_domains.txt",
+          "format": "text",
+          "compressed": false,
+          "bytes": 143266,
+          "records": 9901,
+          "sha256": "2a8f3d0ae32228c081d5ff90e8021a9ccb0a4348f96872c511f4b83762d87dde",
+          "updated": "2026-10-18T08:09:20+00:00"
+        }
+      ]
+    },
+    {
+      "id": "free_email_domains",
+      "name": "Free email domains",
+      "category": "domains",
+      "category_title": "Domains & Email",
+      "frequency": "weekly",
+      "description": "Free webmail providers (gmail.com, gmx.fr...) - not corporate addresses.",
+      "homepage": "https://github.com/Kikobeats/free-email-domains",
+      "origin": [
+        "https://raw.githubusercontent.com/Kikobeats/free-email-domains/master/domains.json"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-18T08:09:20+00:00",
+        "duration_s": 0.1,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:20+00:00",
+      "last_change": "2026-10-18T08:09:20+00:00",
+      "bytes": 657978,
+      "files": [
+        {
+          "path": "domains/free_email_domains.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/domains/free_email_domains.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 657978,
+          "records": 32563,
+          "sha256": "d59893ffe8af6489428067710f29b9363951a573255653094a3f4e3f19446f80",
+          "updated": "2026-10-18T08:09:20+00:00"
+        }
+      ]
+    },
+    {
+      "id": "url_shorteners",
+      "name": "URL shorteners",
+      "category": "domains",
+      "category_title": "Domains & Email",
+      "frequency": "weekly",
+      "description": "URL shortener domains (often used to hide phishing or malware links).",
+      "homepage": "https://github.com/PeterDaveHello/url-shorteners",
+      "origin": [
+        "https://raw.githubusercontent.com/PeterDaveHello/url-shorteners/master/list"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:20+00:00",
+        "duration_s": 0.1,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:20+00:00",
+      "last_change": "2026-10-04T21:03:26+00:00",
+      "bytes": 13105,
+      "files": [
+        {
+          "path": "domains/url_shorteners.txt",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/domains/url_shorteners.txt",
+          "format": "text",
+          "compressed": false,
+          "bytes": 13105,
+          "records": 1454,
+          "sha256": "60db5c2034b8fff20b0ca49054beae17488bac6348ce51922621f2d97cd12215",
+          "updated": "2026-10-04T21:03:26+00:00"
+        }
+      ]
+    },
+    {
+      "id": "ieee_oui",
+      "name": "IEEE MA-L (OUI)",
+      "category": "registries",
+      "category_title": "Standards & Hardware Registries",
+      "frequency": "weekly",
+      "description": "MAC address large-block assignments.",
+      "homepage": "https://standards.ieee.org/products-programs/regauth/",
+      "origin": [
+        "https://standards-oui.ieee.org/oui/oui.csv"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-18T08:09:20+00:00",
+        "duration_s": 8.5,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:20+00:00",
+      "last_change": "2026-10-18T08:09:20+00:00",
+      "bytes": 3859348,
+      "files": [
+        {
+          "path": "registries/ieee_oui.csv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/registries/ieee_oui.csv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 3859348,
+          "records": 40347,
+          "sha256": "bdd0377ed4a4b3fa5e1b7445a29a64c39d5179d40dd8a50038789abb2aff5c8d",
+          "updated": "2026-10-18T08:09:29+00:00"
+        }
+      ]
+    },
+    {
+      "id": "ieee_oui36",
+      "name": "IEEE MA-S (OUI-36)",
+      "category": "registries",
+      "category_title": "Standards & Hardware Registries",
+      "frequency": "weekly",
+      "description": "MAC address small-block assignments.",
+      "homepage": "https://standards.ieee.org/products-programs/regauth/",
+      "origin": [
+        "https://standards-oui.ieee.org/oui36/oui36.csv"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-18T08:09:20+00:00",
+        "duration_s": 2.2,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:20+00:00",
+      "last_change": "2026-10-18T08:09:20+00:00",
+      "bytes": 672264,
+      "files": [
+        {
+          "path": "registries/ieee_oui36.csv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/registries/ieee_oui36.csv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 672264,
+          "records": 7235,
+          "sha256": "99f517da5126ca6f8d67fe5cac90bb86f1a4d404bd38450d81cc86f58b043536",
+          "updated": "2026-10-18T08:09:23+00:00"
+        }
+      ]
+    },
+    {
+      "id": "ieee_iab",
+      "name": "IEEE IAB",
+      "category": "registries",
+      "category_title": "Standards & Hardware Registries",
+      "frequency": "weekly",
+      "description": "Individual Address Blocks (legacy).",
+      "homepage": "https://standards.ieee.org/products-programs/regauth/",
+      "origin": [
+        "https://standards-oui.ieee.org/iab/iab.csv"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "unchanged",
+        "at": "2026-10-18T08:09:21+00:00",
+        "duration_s": 1.7,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:21+00:00",
+      "last_change": "2026-10-04T21:03:27+00:00",
+      "bytes": 381117,
+      "files": [
+        {
+          "path": "registries/ieee_iab.csv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/registries/ieee_iab.csv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 381117,
+          "records": 4575,
+          "sha256": "6e71aa3d47f00f19d09cb3b31ce1038de1834703420f0ce4ce111da586f1a533",
+          "updated": "2026-10-04T21:03:28+00:00"
+        }
+      ]
+    },
+    {
+      "id": "ieee_cid",
+      "name": "IEEE CID",
+      "category": "registries",
+      "category_title": "Standards & Hardware Registries",
+      "frequency": "weekly",
+      "description": "Company IDs.",
+      "homepage": "https://standards.ieee.org/products-programs/regauth/",
+      "origin": [
+        "https://standards-oui.ieee.org/cid/cid.csv"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-18T08:09:23+00:00",
+        "duration_s": 0.4,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:23+00:00",
+      "last_change": "2026-10-18T08:09:23+00:00",
+      "bytes": 20443,
+      "files": [
+        {
+          "path": "registries/ieee_cid.csv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/registries/ieee_cid.csv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 20443,
+          "records": 221,
+          "sha256": "a07cf5e89d11195c645c60e3e153fe1b4603532eb4c2d793dbc1f50fe98415f8",
+          "updated": "2026-10-18T08:09:23+00:00"
+        }
+      ]
+    },
+    {
+      "id": "ieee_manid",
+      "name": "IEEE MANID",
+      "category": "registries",
+      "category_title": "Standards & Hardware Registries",
+      "frequency": "weekly",
+      "description": "Manufacturer IDs.",
+      "homepage": "https://standards.ieee.org/products-programs/regauth/",
+      "origin": [
+        "https://standards-oui.ieee.org/manid/manid.csv"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "unchanged",
+        "at": "2026-10-18T08:09:23+00:00",
+        "duration_s": 0.2,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:23+00:00",
+      "last_change": "2026-10-04T21:03:28+00:00",
+      "bytes": 12984,
+      "files": [
+        {
+          "path": "registries/ieee_manid.csv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/registries/ieee_manid.csv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 12984,
+          "records": 174,
+          "sha256": "25342318fe35245b8bba5050bb26a373e16cea95f7eb8ca4678045457a81a00c",
+          "updated": "2026-10-04T21:03:28+00:00"
+        }
+      ]
+    },
+    {
+      "id": "wireshark_manuf",
+      "name": "Wireshark manuf",
+      "category": "registries",
+      "category_title": "Standards & Hardware Registries",
+      "frequency": "weekly",
+      "description": "All IEEE MAC registries merged with short vendor names - the easiest MAC vendor lookup.",
+      "homepage": "https://www.wireshark.org/tools/oui-lookup.html",
+      "origin": [
+        "https://www.wireshark.org/download/automated/data/manuf"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-18T08:09:23+00:00",
+        "duration_s": 0.3,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:23+00:00",
+      "last_change": "2026-10-18T08:09:23+00:00",
+      "bytes": 3172357,
+      "files": [
+        {
+          "path": "registries/wireshark_manuf.txt",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/registries/wireshark_manuf.txt",
+          "format": "text",
+          "compressed": false,
+          "bytes": 3172357,
+          "records": 58526,
+          "sha256": "36f55b11ff108215e6f21ee85f5af3e2c66b28e1d7fdca745dac5ba516efda4d",
+          "updated": "2026-10-18T08:09:23+00:00"
+        }
+      ]
+    },
+    {
+      "id": "usb_ids",
+      "name": "USB IDs",
+      "category": "registries",
+      "category_title": "Standards & Hardware Registries",
+      "frequency": "weekly",
+      "description": "USB vendors and products as JSON ({vendor_id - name, products}).",
+      "homepage": "http://www.linux-usb.org/usb-ids.html",
+      "origin": [
+        "https://raw.githubusercontent.com/usbids/usbids/master/usb.ids"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:23+00:00",
+        "duration_s": 0.2,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:23+00:00",
+      "last_change": "2026-10-04T21:03:28+00:00",
+      "bytes": 1063021,
+      "files": [
+        {
+          "path": "registries/usb_ids.json",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/registries/usb_ids.json",
+          "format": "json",
+          "compressed": false,
+          "bytes": 1063021,
+          "records": 3427,
+          "sha256": "164cd9b889dad7e39934e58787d71fa97631aaf25f0e647bef866cdc887346c1",
+          "updated": "2026-10-04T21:03:29+00:00"
+        }
+      ]
+    },
+    {
+      "id": "pci_ids",
+      "name": "PCI IDs",
+      "category": "registries",
+      "category_title": "Standards & Hardware Registries",
+      "frequency": "weekly",
+      "description": "PCI vendors and devices (raw pci.ids format).",
+      "homepage": "https://pci-ids.ucw.cz/",
+      "origin": [
+        "https://pci-ids.ucw.cz/v2.2/pci.ids"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-18T08:09:23+00:00",
+        "duration_s": 2.0,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:23+00:00",
+      "last_change": "2026-10-18T08:09:23+00:00",
+      "bytes": 1673604,
+      "files": [
+        {
+          "path": "registries/pci_ids.txt",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/registries/pci_ids.txt",
+          "format": "text",
+          "compressed": false,
+          "bytes": 1673604,
+          "records": 42512,
+          "sha256": "09212c8b854a9571e3d3c8e00f6707a17c289c65e1e25b3f218dd3f42791bc22",
+          "updated": "2026-10-18T08:09:25+00:00"
+        }
+      ]
+    },
+    {
+      "id": "bluetooth_company_ids",
+      "name": "Bluetooth company IDs",
+      "category": "registries",
+      "category_title": "Standards & Hardware Registries",
+      "frequency": "weekly",
+      "description": "Bluetooth SIG company identifiers (BLE manufacturer data -> vendor).",
+      "homepage": "https://www.bluetooth.com/specifications/assigned-numbers/",
+      "origin": [
+        "https://bitbucket.org/bluetooth-SIG/public/raw/main/assigned_numbers/company_identifiers/company_identifiers.yaml"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-18T08:09:23+00:00",
+        "duration_s": 1.1,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:23+00:00",
+      "last_change": "2026-10-18T08:09:23+00:00",
+      "bytes": 210487,
+      "files": [
+        {
+          "path": "registries/bluetooth_company_ids.yaml",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/registries/bluetooth_company_ids.yaml",
+          "format": "text",
+          "compressed": false,
+          "bytes": 210487,
+          "records": 8099,
+          "sha256": "7931f9110ef9b817961b3e4bc93518dd409539e6486f3b14339fddec5b47c7a2",
+          "updated": "2026-10-18T08:09:24+00:00"
+        }
+      ]
+    },
+    {
+      "id": "google_play_devices",
+      "name": "Android devices (Google Play)",
+      "category": "registries",
+      "category_title": "Standards & Hardware Registries",
+      "frequency": "weekly",
+      "description": "Every Google Play certified Android device - brand, marketing name, device and model codes (re-encoded to UTF-8).",
+      "homepage": "https://support.google.com/googleplay/answer/1727131",
+      "origin": [
+        "https://storage.googleapis.com/play_public/supported_devices.csv"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-18T08:09:24+00:00",
+        "duration_s": 0.3,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:24+00:00",
+      "last_change": "2026-10-18T08:09:24+00:00",
+      "bytes": 2401040,
+      "files": [
+        {
+          "path": "registries/google_play_devices.csv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/registries/google_play_devices.csv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 2401040,
+          "records": 54192,
+          "sha256": "3527f4756b1179ea7a024a58dd69f45ab6548a4db70df55d82b6a3f48e32890e",
+          "updated": "2026-10-18T08:09:25+00:00"
+        }
+      ]
+    },
+    {
+      "id": "iana_service_ports",
+      "name": "IANA ports",
+      "category": "registries",
+      "category_title": "Standards & Hardware Registries",
+      "frequency": "weekly",
+      "description": "Service name and transport protocol port number registry.",
+      "homepage": "https://www.iana.org/assignments/service-names-port-numbers/",
+      "origin": [
+        "https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.csv"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-18T08:09:25+00:00",
+        "duration_s": 0.4,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:25+00:00",
+      "last_change": "2026-10-18T08:09:25+00:00",
+      "bytes": 1158271,
+      "files": [
+        {
+          "path": "registries/iana_service_ports.csv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/registries/iana_service_ports.csv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 1158271,
+          "records": 15407,
+          "sha256": "b6afeefdc6b2c616f9a515d57819a558ebe33250b59b2700b3afc4a4ba1923f2",
+          "updated": "2026-10-18T08:09:25+00:00"
+        }
+      ]
+    },
+    {
+      "id": "curl_ca_bundle",
+      "name": "CA certificates (Mozilla)",
+      "category": "registries",
+      "category_title": "Standards & Hardware Registries",
+      "frequency": "weekly",
+      "description": "Root CAs trusted by Mozilla, as a PEM bundle (extracted by curl).",
+      "homepage": "https://curl.se/docs/caextract.html",
+      "origin": [
+        "https://curl.se/ca/cacert.pem"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:25+00:00",
+        "duration_s": 0.1,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:25+00:00",
+      "last_change": "2026-10-04T21:03:30+00:00",
+      "bytes": 188900,
+      "files": [
+        {
+          "path": "registries/curl_ca_bundle.pem",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/registries/curl_ca_bundle.pem",
+          "format": "text",
+          "compressed": false,
+          "bytes": 188900,
+          "records": 2808,
+          "sha256": "a41b5d356aea97a529fe27e0f7316d2f9d946d75927476cf9cf1b90637d00505",
+          "updated": "2026-10-04T21:03:31+00:00"
+        }
+      ]
+    },
+    {
+      "id": "mthcht_suspicious_user_agents",
+      "name": "Suspicious User-Agents",
+      "category": "detection",
+      "category_title": "Detection Lists & Allowlists",
+      "frequency": "weekly",
+      "description": "HTTP User-Agents of offensive tools, scanners and malware.",
+      "homepage": "https://github.com/mthcht/awesome-lists",
+      "origin": [
+        "https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/suspicious_http_user_agents_list.csv"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:25+00:00",
+        "duration_s": 0.4,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:25+00:00",
+      "last_change": "2026-10-04T21:03:31+00:00",
+      "bytes": 431488,
+      "files": [
+        {
+          "path": "detection/mthcht_suspicious_user_agents.csv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/detection/mthcht_suspicious_user_agents.csv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 431488,
+          "records": 1565,
+          "sha256": "835c4b39711b2969ec6f729d324d29e095ec60661a8c6bdd2a87b956852d9f58",
+          "updated": "2026-10-04T21:03:32+00:00"
+        }
+      ]
+    },
+    {
+      "id": "mthcht_suspicious_named_pipes",
+      "name": "Suspicious named pipes",
+      "category": "detection",
+      "category_title": "Detection Lists & Allowlists",
+      "frequency": "weekly",
+      "description": "Named pipes used by C2 frameworks and offensive tools.",
+      "homepage": "https://github.com/mthcht/awesome-lists",
+      "origin": [
+        "https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/suspicious_named_pipe_list.csv"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:25+00:00",
+        "duration_s": 0.3,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:25+00:00",
+      "last_change": "2026-10-04T21:03:31+00:00",
+      "bytes": 107424,
+      "files": [
+        {
+          "path": "detection/mthcht_suspicious_named_pipes.csv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/detection/mthcht_suspicious_named_pipes.csv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 107424,
+          "records": 327,
+          "sha256": "1590ff099fd3843be028ec9caf9e811ca7da8a98da72230bd754abb783df1cbf",
+          "updated": "2026-10-04T21:03:32+00:00"
+        }
+      ]
+    },
+    {
+      "id": "mthcht_suspicious_mutexes",
+      "name": "Suspicious mutexes",
+      "category": "detection",
+      "category_title": "Detection Lists & Allowlists",
+      "frequency": "weekly",
+      "description": "Mutex names created by malware families.",
+      "homepage": "https://github.com/mthcht/awesome-lists",
+      "origin": [
+        "https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/suspicious_mutex_names_list.csv"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:26+00:00",
+        "duration_s": 0.2,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:26+00:00",
+      "last_change": "2026-10-04T21:03:32+00:00",
+      "bytes": 61640,
+      "files": [
+        {
+          "path": "detection/mthcht_suspicious_mutexes.csv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/detection/mthcht_suspicious_mutexes.csv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 61640,
+          "records": 320,
+          "sha256": "20e64ce3103010ae51e4ed58dd0927387604a4fe27a3a87155a32db9453f0e08",
+          "updated": "2026-10-04T21:03:32+00:00"
+        }
+      ]
+    },
+    {
+      "id": "mthcht_suspicious_services",
+      "name": "Suspicious Windows services",
+      "category": "detection",
+      "category_title": "Detection Lists & Allowlists",
+      "frequency": "weekly",
+      "description": "Windows service names created by malware and offensive tools.",
+      "homepage": "https://github.com/mthcht/awesome-lists",
+      "origin": [
+        "https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/suspicious_windows_services_names_list.csv"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:26+00:00",
+        "duration_s": 0.3,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:26+00:00",
+      "last_change": "2026-10-04T21:03:32+00:00",
+      "bytes": 41479,
+      "files": [
+        {
+          "path": "detection/mthcht_suspicious_services.csv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/detection/mthcht_suspicious_services.csv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 41479,
+          "records": 216,
+          "sha256": "c2f3b44b29ea3d058a6164f4d1090b1bf70c9f99afe313e40c361afbdeeccf33",
+          "updated": "2026-10-04T21:03:32+00:00"
+        }
+      ]
+    },
+    {
+      "id": "mthcht_suspicious_scheduled_tasks",
+      "name": "Suspicious scheduled tasks",
+      "category": "detection",
+      "category_title": "Detection Lists & Allowlists",
+      "frequency": "weekly",
+      "description": "Scheduled task names used by malware for persistence.",
+      "homepage": "https://github.com/mthcht/awesome-lists",
+      "origin": [
+        "https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/suspicious_windows_tasks_list.csv"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:26+00:00",
+        "duration_s": 0.6,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:26+00:00",
+      "last_change": "2026-10-04T21:03:32+00:00",
+      "bytes": 27152,
+      "files": [
+        {
+          "path": "detection/mthcht_suspicious_scheduled_tasks.csv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/detection/mthcht_suspicious_scheduled_tasks.csv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 27152,
+          "records": 128,
+          "sha256": "d51399acb1b77eb2651c4065156316c88f305b8cef0334f549b8307ff908df75",
+          "updated": "2026-10-04T21:03:32+00:00"
+        }
+      ]
+    },
+    {
+      "id": "mthcht_suspicious_firewall_rules",
+      "name": "Suspicious firewall rules",
+      "category": "detection",
+      "category_title": "Detection Lists & Allowlists",
+      "frequency": "weekly",
+      "description": "Windows firewall rule names added by malware and offensive tools.",
+      "homepage": "https://github.com/mthcht/awesome-lists",
+      "origin": [
+        "https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/suspicious_windows_firewall_rules_list.csv"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:26+00:00",
+        "duration_s": 0.2,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:26+00:00",
+      "last_change": "2026-10-04T21:03:32+00:00",
+      "bytes": 9267,
+      "files": [
+        {
+          "path": "detection/mthcht_suspicious_firewall_rules.csv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/detection/mthcht_suspicious_firewall_rules.csv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 9267,
+          "records": 49,
+          "sha256": "f0833a556326bce4de02ab8451f3aaed44139ae5998f6a4ab6c1f97ca9365f39",
+          "updated": "2026-10-04T21:03:32+00:00"
+        }
+      ]
+    },
+    {
+      "id": "mthcht_suspicious_hostnames",
+      "name": "Suspicious hostnames",
+      "category": "detection",
+      "category_title": "Detection Lists & Allowlists",
+      "frequency": "weekly",
+      "description": "Default hostnames of attacker machines (Kali, VPS images...).",
+      "homepage": "https://github.com/mthcht/awesome-lists",
+      "origin": [
+        "https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/suspicious_hostnames_list.csv"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:26+00:00",
+        "duration_s": 0.1,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:26+00:00",
+      "last_change": "2026-10-04T21:03:32+00:00",
+      "bytes": 4467,
+      "files": [
+        {
+          "path": "detection/mthcht_suspicious_hostnames.csv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/detection/mthcht_suspicious_hostnames.csv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 4467,
+          "records": 27,
+          "sha256": "5a0dd93efb202f7cfc7a7e8a892f78e03ee3c7a316878ca3bd0614b088d90dc7",
+          "updated": "2026-10-04T21:03:32+00:00"
+        }
+      ]
+    },
+    {
+      "id": "mthcht_suspicious_ports",
+      "name": "Suspicious ports",
+      "category": "detection",
+      "category_title": "Detection Lists & Allowlists",
+      "frequency": "weekly",
+      "description": "Network ports associated with malware and offensive tooling.",
+      "homepage": "https://github.com/mthcht/awesome-lists",
+      "origin": [
+        "https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/suspicious_ports_list.csv"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:26+00:00",
+        "duration_s": 0.1,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:26+00:00",
+      "last_change": "2026-10-04T21:03:32+00:00",
+      "bytes": 30493,
+      "files": [
+        {
+          "path": "detection/mthcht_suspicious_ports.csv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/detection/mthcht_suspicious_ports.csv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 30493,
+          "records": 229,
+          "sha256": "a368c9693477836c941eb6ae170b4228778d64a752b455a238ea735426b9aa4a",
+          "updated": "2026-10-04T21:03:32+00:00"
+        }
+      ]
+    },
+    {
+      "id": "mthcht_suspicious_tlds",
+      "name": "Suspicious TLDs",
+      "category": "detection",
+      "category_title": "Detection Lists & Allowlists",
+      "frequency": "weekly",
+      "description": "Top-level domains over-represented in malicious activity.",
+      "homepage": "https://github.com/mthcht/awesome-lists",
+      "origin": [
+        "https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/suspicious_tlds_list.csv"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:26+00:00",
+        "duration_s": 0.1,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:26+00:00",
+      "last_change": "2026-10-04T21:03:32+00:00",
+      "bytes": 15790,
+      "files": [
+        {
+          "path": "detection/mthcht_suspicious_tlds.csv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/detection/mthcht_suspicious_tlds.csv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 15790,
+          "records": 147,
+          "sha256": "0aac32f2c09bec03bf8c9ac946dc5fd973e9509406adbc28fa970e85c7b1662b",
+          "updated": "2026-10-04T21:03:32+00:00"
+        }
+      ]
+    },
+    {
+      "id": "mthcht_suspicious_double_extensions",
+      "name": "Suspicious double extensions",
+      "category": "detection",
+      "category_title": "Detection Lists & Allowlists",
+      "frequency": "weekly",
+      "description": "Deceptive double file extensions (invoice.pdf.exe...).",
+      "homepage": "https://github.com/mthcht/awesome-lists",
+      "origin": [
+        "https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/suspicious_file_double_extension.csv"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:26+00:00",
+        "duration_s": 0.2,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:26+00:00",
+      "last_change": "2026-10-04T21:03:32+00:00",
+      "bytes": 27670,
+      "files": [
+        {
+          "path": "detection/mthcht_suspicious_double_extensions.csv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/detection/mthcht_suspicious_double_extensions.csv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 27670,
+          "records": 204,
+          "sha256": "14a1e8b3801814cad1f2df619bf6036e259708a685e3f3f1d368ef5327b6526a",
+          "updated": "2026-10-04T21:03:33+00:00"
+        }
+      ]
+    },
+    {
+      "id": "mthcht_suspicious_mac_addresses",
+      "name": "Suspicious MAC addresses",
+      "category": "detection",
+      "category_title": "Detection Lists & Allowlists",
+      "frequency": "weekly",
+      "description": "MAC prefixes of attack hardware, VMs and spoofed devices.",
+      "homepage": "https://github.com/mthcht/awesome-lists",
+      "origin": [
+        "https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/suspicious_mac_address_list.csv"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:26+00:00",
+        "duration_s": 0.1,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:26+00:00",
+      "last_change": "2026-10-04T21:03:32+00:00",
+      "bytes": 4041,
+      "files": [
+        {
+          "path": "detection/mthcht_suspicious_mac_addresses.csv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/detection/mthcht_suspicious_mac_addresses.csv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 4041,
+          "records": 54,
+          "sha256": "0b30cdf0d2efce10e1016a949344f049d1f417bb54dbc384edfe04377a4b54da",
+          "updated": "2026-10-04T21:03:33+00:00"
+        }
+      ]
+    },
+    {
+      "id": "mthcht_suspicious_usb_ids",
+      "name": "Suspicious USB IDs",
+      "category": "detection",
+      "category_title": "Detection Lists & Allowlists",
+      "frequency": "weekly",
+      "description": "USB IDs of attack devices (Rubber Ducky, O.MG, Flipper...).",
+      "homepage": "https://github.com/mthcht/awesome-lists",
+      "origin": [
+        "https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/suspicious_usb_ids_list.csv"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:27+00:00",
+        "duration_s": 0.2,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:27+00:00",
+      "last_change": "2026-10-04T21:03:32+00:00",
+      "bytes": 5650,
+      "files": [
+        {
+          "path": "detection/mthcht_suspicious_usb_ids.csv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/detection/mthcht_suspicious_usb_ids.csv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 5650,
+          "records": 26,
+          "sha256": "3e3663898d3c64110f663953a60766e846178a8a4149a165ed411c7bd16f86cd",
+          "updated": "2026-10-04T21:03:33+00:00"
+        }
+      ]
+    },
+    {
+      "id": "mthcht_ransomware_extensions",
+      "name": "Ransomware extensions",
+      "category": "detection",
+      "category_title": "Detection Lists & Allowlists",
+      "frequency": "weekly",
+      "description": "File extensions appended by ransomware families.",
+      "homepage": "https://github.com/mthcht/awesome-lists",
+      "origin": [
+        "https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/ransomware_extensions_list.csv"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:27+00:00",
+        "duration_s": 0.3,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:27+00:00",
+      "last_change": "2026-10-04T21:03:33+00:00",
+      "bytes": 19834,
+      "files": [
+        {
+          "path": "detection/mthcht_ransomware_extensions.csv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/detection/mthcht_ransomware_extensions.csv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 19834,
+          "records": 738,
+          "sha256": "95ac5d1f16f7f764261a47acfe3323b265d035041f3a0a19b80cd3b67f664082",
+          "updated": "2026-10-04T21:03:33+00:00"
+        }
+      ]
+    },
+    {
+      "id": "mthcht_ransomware_notes",
+      "name": "Ransomware notes",
+      "category": "detection",
+      "category_title": "Detection Lists & Allowlists",
+      "frequency": "weekly",
+      "description": "Ransom note file names by ransomware family.",
+      "homepage": "https://github.com/mthcht/awesome-lists",
+      "origin": [
+        "https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/ransomware_notes_list.csv"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:27+00:00",
+        "duration_s": 0.2,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:27+00:00",
+      "last_change": "2026-10-04T21:03:33+00:00",
+      "bytes": 27430,
+      "files": [
+        {
+          "path": "detection/mthcht_ransomware_notes.csv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/detection/mthcht_ransomware_notes.csv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 27430,
+          "records": 222,
+          "sha256": "b1f065b041d31ce81565a9ddb17deb9c4371e624043e91ff9ef9a99d422e8ec4",
+          "updated": "2026-10-04T21:03:33+00:00"
+        }
+      ]
+    },
+    {
+      "id": "mthcht_doh_servers",
+      "name": "DNS-over-HTTPS servers",
+      "category": "detection",
+      "category_title": "Detection Lists & Allowlists",
+      "frequency": "weekly",
+      "description": "Public DoH resolvers (DNS bypass and covert channel detection).",
+      "homepage": "https://github.com/mthcht/awesome-lists",
+      "origin": [
+        "https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/dns_over_https_servers_list.csv"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:27+00:00",
+        "duration_s": 0.2,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:27+00:00",
+      "last_change": "2026-10-04T21:03:33+00:00",
+      "bytes": 243224,
+      "files": [
+        {
+          "path": "detection/mthcht_doh_servers.csv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/detection/mthcht_doh_servers.csv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 243224,
+          "records": 1969,
+          "sha256": "caa66d30b84ff12e58fca93858bb6b4c555d8f91746ff50c8ed4dddb45cf2f88",
+          "updated": "2026-10-04T21:03:33+00:00"
+        }
+      ]
+    },
+    {
+      "id": "mthcht_blockchain_rpc",
+      "name": "Blockchain RPC endpoints",
+      "category": "detection",
+      "category_title": "Detection Lists & Allowlists",
+      "frequency": "weekly",
+      "description": "Public blockchain RPC endpoints (abused for C2 resolution, e.g. EtherHiding).",
+      "homepage": "https://github.com/mthcht/awesome-lists",
+      "origin": [
+        "https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/blockchain_rpc_list.csv"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:27+00:00",
+        "duration_s": 0.2,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:27+00:00",
+      "last_change": "2026-10-04T21:03:33+00:00",
+      "bytes": 29497,
+      "files": [
+        {
+          "path": "detection/mthcht_blockchain_rpc.csv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/detection/mthcht_blockchain_rpc.csv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 29497,
+          "records": 207,
+          "sha256": "fa06db7b5aa113b279bdcb0280d96de0e0d6d8ef110d983c9aa64edbd0b34e5c",
+          "updated": "2026-10-04T21:03:34+00:00"
+        }
+      ]
+    },
+    {
+      "id": "mthcht_windows_asr_rules",
+      "name": "Windows ASR rules",
+      "category": "detection",
+      "category_title": "Detection Lists & Allowlists",
+      "frequency": "weekly",
+      "description": "Microsoft Defender Attack Surface Reduction rule names and GUIDs.",
+      "homepage": "https://github.com/mthcht/awesome-lists",
+      "origin": [
+        "https://raw.githubusercontent.com/mthcht/awesome-lists/main/Lists/windows_asr_rules.csv"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:28+00:00",
+        "duration_s": 0.1,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:28+00:00",
+      "last_change": "2026-10-04T21:03:33+00:00",
+      "bytes": 3972,
+      "files": [
+        {
+          "path": "detection/mthcht_windows_asr_rules.csv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/detection/mthcht_windows_asr_rules.csv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 3972,
+          "records": 19,
+          "sha256": "772131693e94c3f82246124296f4c62097483e3880fe0c8cfb7a27b6b8713b2b",
+          "updated": "2026-10-04T21:03:34+00:00"
+        }
+      ]
+    },
+    {
+      "id": "ihebski_default_credentials",
+      "name": "Default credentials cheat sheet",
+      "category": "detection",
+      "category_title": "Detection Lists & Allowlists",
+      "frequency": "weekly",
+      "description": "3,500+ vendor default credentials (product, username, password).",
+      "homepage": "https://github.com/ihebski/DefaultCreds-cheat-sheet",
+      "origin": [
+        "https://raw.githubusercontent.com/ihebski/DefaultCreds-cheat-sheet/main/DefaultCreds-Cheat-Sheet.csv"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:28+00:00",
+        "duration_s": 0.1,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:28+00:00",
+      "last_change": "2026-10-04T21:03:33+00:00",
+      "bytes": 97300,
+      "files": [
+        {
+          "path": "detection/ihebski_default_credentials.csv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/detection/ihebski_default_credentials.csv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 97300,
+          "records": 3767,
+          "sha256": "698895f16a1c2a99fff8f3063d1e77e1cb120b4df6113f83334e3bb5d3f3c932",
+          "updated": "2026-10-04T21:03:34+00:00"
+        }
+      ]
+    },
+    {
+      "id": "seclists_default_passwords",
+      "name": "SecLists default credentials",
+      "category": "detection",
+      "category_title": "Detection Lists & Allowlists",
+      "frequency": "weekly",
+      "description": "Vendor default usernames and passwords.",
+      "homepage": "https://github.com/danielmiessler/SecLists",
+      "origin": [
+        "https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Default-Credentials/default-passwords.csv"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:28+00:00",
+        "duration_s": 0.1,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:28+00:00",
+      "last_change": "2026-10-04T21:03:34+00:00",
+      "bytes": 90856,
+      "files": [
+        {
+          "path": "detection/seclists_default_passwords.csv",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/detection/seclists_default_passwords.csv",
+          "format": "table",
+          "compressed": false,
+          "bytes": 90856,
+          "records": 2875,
+          "sha256": "af5fb62a1458e053e17630c043306be6c7327738c3f93d1768a2bf1cc4ece45f",
+          "updated": "2026-10-04T21:03:34+00:00"
+        }
+      ]
+    },
+    {
+      "id": "seclists_secret_keywords",
+      "name": "SecLists secret keywords",
+      "category": "detection",
+      "category_title": "Detection Lists & Allowlists",
+      "frequency": "weekly",
+      "description": "Variable names that usually hold secrets.",
+      "homepage": "https://github.com/danielmiessler/SecLists",
+      "origin": [
+        "https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/Variables/secret-keywords.txt"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:28+00:00",
+        "duration_s": 0.1,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:28+00:00",
+      "last_change": "2026-10-04T21:03:34+00:00",
+      "bytes": 825,
+      "files": [
+        {
+          "path": "detection/seclists_secret_keywords.txt",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/detection/seclists_secret_keywords.txt",
+          "format": "text",
+          "compressed": false,
+          "bytes": 825,
+          "records": 69,
+          "sha256": "d1932622ea70a456277b9b7a75749d5fccc0712ebc3b15c7f7791fcb21eb0bc8",
+          "updated": "2026-10-04T21:03:34+00:00"
+        }
+      ]
+    },
+    {
+      "id": "seclists_webshells",
+      "name": "SecLists web shells",
+      "category": "detection",
+      "category_title": "Detection Lists & Allowlists",
+      "frequency": "weekly",
+      "description": "Known web shell and backdoor file names.",
+      "homepage": "https://github.com/danielmiessler/SecLists",
+      "origin": [
+        "https://raw.githubusercontent.com/danielmiessler/SecLists/master/Web-Shells/backdoor_list.txt"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:28+00:00",
+        "duration_s": 0.1,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:28+00:00",
+      "last_change": "2026-10-04T21:03:34+00:00",
+      "bytes": 14703,
+      "files": [
+        {
+          "path": "detection/seclists_webshells.txt",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/detection/seclists_webshells.txt",
+          "format": "text",
+          "compressed": false,
+          "bytes": 14703,
+          "records": 772,
+          "sha256": "03c18ae3209dce8e43b4b55454836ea9aae4546469728fd3d96460a65e0e7fa0",
+          "updated": "2026-10-04T21:03:34+00:00"
+        }
+      ]
+    },
+    {
+      "id": "badbot_user_agents",
+      "name": "Bad Bot Blocker - user agents",
+      "category": "detection",
+      "category_title": "Detection Lists & Allowlists",
+      "frequency": "weekly",
+      "description": "Bad bots and scrapers User-Agents.",
+      "homepage": "https://github.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker",
+      "origin": [
+        "https://raw.githubusercontent.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker/master/_generator_lists/bad-user-agents.list"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:28+00:00",
+        "duration_s": 0.0,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:28+00:00",
+      "last_change": "2026-10-04T21:03:34+00:00",
+      "bytes": 7693,
+      "files": [
+        {
+          "path": "detection/badbot_user_agents.txt",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/detection/badbot_user_agents.txt",
+          "format": "text",
+          "compressed": false,
+          "bytes": 7693,
+          "records": 700,
+          "sha256": "afb582c56eb12712bd8192732b0e42b69473bfa38ae6fdbdae3a9f65b82e7257",
+          "updated": "2026-10-04T21:03:34+00:00"
+        }
+      ]
+    },
+    {
+      "id": "badbot_referrers",
+      "name": "Bad Bot Blocker - referrers",
+      "category": "detection",
+      "category_title": "Detection Lists & Allowlists",
+      "frequency": "weekly",
+      "description": "Spam referrer domains.",
+      "homepage": "https://github.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker",
+      "origin": [
+        "https://raw.githubusercontent.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker/master/_generator_lists/bad-referrers.list"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:28+00:00",
+        "duration_s": 0.1,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:28+00:00",
+      "last_change": "2026-10-04T21:03:34+00:00",
+      "bytes": 118010,
+      "files": [
+        {
+          "path": "detection/badbot_referrers.txt",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/detection/badbot_referrers.txt",
+          "format": "text",
+          "compressed": false,
+          "bytes": 118010,
+          "records": 7117,
+          "sha256": "6f85ebea5be2cd7db6941c42caea6115b69dade82014022bfaf63f43e886a226",
+          "updated": "2026-10-04T21:03:34+00:00"
+        }
+      ]
+    },
+    {
+      "id": "badbot_fake_googlebots",
+      "name": "Bad Bot Blocker - fake Googlebots",
+      "category": "detection",
+      "category_title": "Detection Lists & Allowlists",
+      "frequency": "weekly",
+      "description": "IPs pretending to be Googlebot.",
+      "homepage": "https://github.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker",
+      "origin": [
+        "https://raw.githubusercontent.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker/master/_generator_lists/fake-googlebots.list"
+      ],
+      "health": "ok",
+      "last_run": {
+        "status": "not_modified",
+        "at": "2026-10-18T08:09:28+00:00",
+        "duration_s": 0.1,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:28+00:00",
+      "last_change": "2026-10-04T21:03:34+00:00",
+      "bytes": 3075,
+      "files": [
+        {
+          "path": "detection/badbot_fake_googlebots.txt",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/detection/badbot_fake_googlebots.txt",
+          "format": "text",
+          "compressed": false,
+          "bytes": 3075,
+          "records": 218,
+          "sha256": "3d75553c977b353f7c4e70f9c92cc89208ebfeb3a1669782388a3294a0f9773a",
+          "updated": "2026-10-04T21:03:34+00:00"
+        }
+      ]
+    },
+    {
+      "id": "misp_warninglists",
+      "name": "MISP warninglists",
+      "category": "detection",
+      "category_title": "Detection Lists & Allowlists",
+      "frequency": "weekly",
+      "description": "Known-benign indicators (public DNS, CDNs, cloud ranges, known-good Windows hashes...) to cut false positives. One object per list (popularity rankings excluded).",
+      "homepage": "https://github.com/MISP/misp-warninglists",
+      "origin": null,
+      "health": "ok",
+      "last_run": {
+        "status": "updated",
+        "at": "2026-10-18T08:09:28+00:00",
+        "duration_s": 16.6,
+        "error": null
+      },
+      "last_success": "2026-10-18T08:09:28+00:00",
+      "last_change": "2026-10-18T08:09:28+00:00",
+      "bytes": 37196702,
+      "files": [
+        {
+          "path": "detection/misp_warninglists.json.gz",
+          "url": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/detection/misp_warninglists.json.gz",
+          "format": "json",
+          "compressed": true,
+          "bytes": 37196702,
+          "records": null,
+          "sha256": "4bd04c5235bc760bc062a786e23f3fd3eb0bb078b9f0433ca64434e982620438",
+          "updated": "2026-10-18T08:09:45+00:00"
+        }
+      ]
+    }
+  ]
+}
