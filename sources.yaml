@@ -505,36 +505,6 @@ sources:
     url: https://raw.githubusercontent.com/LoTtunnels/LoTtunnels.github.io/main/_lottunnels/CSVs/domains.csv
     output: lol/lottunnels_domains.csv
 
-  lots:
-    name: LOTS Project
-    group: weekly
-    homepage: https://lots-project.com/
-    description: Legitimate trusted sites abused for C2, phishing or exfiltration.
-    processor: html_table
-    url: https://lots-project.com/
-    output: lol/lots.csv
-    user_agent: browser
-
-  filesec_extensions:
-    name: FileSec
-    group: weekly
-    homepage: https://filesec.io/
-    description: File extensions abused by attackers.
-    processor: html_table
-    url: https://filesec.io/
-    output: lol/filesec_extensions.csv
-    user_agent: browser
-
-  malapi_winapi:
-    name: MalAPI.io
-    group: weekly
-    homepage: https://malapi.io/
-    description: Windows APIs abused by malware, by technique.
-    processor: malapi
-    url: https://malapi.io/
-    output: lol/malapi_winapi.csv
-    user_agent: browser
-
   lothardware:
     name: LOTHardware
     group: weekly
@@ -1614,6 +1584,7 @@ sources:
     description: GitHub service IP ranges (actions, hooks, git, pages...).
     url: https://api.github.com/meta
     output: network/github_ip_ranges.json
+    headers: {Authorization: "Bearer ${GITHUB_TOKEN}"}
 
   microsoft365_endpoints:
     name: Microsoft 365 endpoints
@@ -1629,7 +1600,8 @@ sources:
     homepage: https://metrics.torproject.org/onionoo.html
     description: Details of every running Tor relay (Onionoo).
     url: https://onionoo.torproject.org/details
-    output: network/tor_relays.json
+    output: network/tor_relays.json.gz
+    compress: true
 
   tor_exit_relays:
     name: Tor exit relays
@@ -2164,14 +2136,13 @@ sources:
     name: AFNIC .fr open data - domains
     group: weekly
     homepage: https://www.afnic.fr/
-    description: Every registered .fr domain with its registrar, holder country and creation date (monthly archive).
+    description: Every registered .fr domain with its registrar, holder country and creation date, split by initial (a.csv.gz ... z, 0-9, other) - the monthly archive is 713 MB raw.
+    processor: afnic_domains
     url:
       - https://www.afnic.fr/wp-media/ftp/documentsOpenData/{last_month:%Y%m}_OPENDATA_A-NomsDeDomaineEnPointFr.zip
       - https://www.afnic.fr/wp-media/ftp/documentsOpenData/{today:%Y%m}_OPENDATA_A-NomsDeDomaineEnPointFr.zip
-    output: domains/afnic_opendata_domains.csv.gz
-    extract: unzip
-    member: "*.csv"
-    compress: true
+    output: domains/afnic/*.csv.gz
+    options: {dir: domains/afnic}
 
   afnic_opendata_registrars:
     name: AFNIC .fr open data - registrars
@@ -2186,51 +2157,6 @@ sources:
     member: "*.csv"
 
   # ============================================================== registries
-
-  ieee_oui:
-    name: IEEE MA-L (OUI)
-    group: weekly
-    homepage: https://standards.ieee.org/products-programs/regauth/
-    description: MAC address large-block assignments.
-    url: https://standards-oui.ieee.org/oui/oui.csv
-    output: registries/ieee_oui.csv
-    user_agent: browser
-
-  ieee_oui36:
-    name: IEEE MA-S (OUI-36)
-    group: weekly
-    homepage: https://standards.ieee.org/products-programs/regauth/
-    description: MAC address small-block assignments.
-    url: https://standards-oui.ieee.org/oui36/oui36.csv
-    output: registries/ieee_oui36.csv
-    user_agent: browser
-
-  ieee_iab:
-    name: IEEE IAB
-    group: weekly
-    homepage: https://standards.ieee.org/products-programs/regauth/
-    description: Individual Address Blocks (legacy).
-    url: https://standards-oui.ieee.org/iab/iab.csv
-    output: registries/ieee_iab.csv
-    user_agent: browser
-
-  ieee_cid:
-    name: IEEE CID
-    group: weekly
-    homepage: https://standards.ieee.org/products-programs/regauth/
-    description: Company IDs.
-    url: https://standards-oui.ieee.org/cid/cid.csv
-    output: registries/ieee_cid.csv
-    user_agent: browser
-
-  ieee_manid:
-    name: IEEE MANID
-    group: weekly
-    homepage: https://standards.ieee.org/products-programs/regauth/
-    description: Manufacturer IDs.
-    url: https://standards-oui.ieee.org/manid/manid.csv
-    output: registries/ieee_manid.csv
-    user_agent: browser
 
   wireshark_manuf:
     name: Wireshark manuf
@@ -2689,18 +2615,10 @@ sources:
   ieee_ethertypes:
     name: IEEE EtherTypes Registry
     group: weekly
-    homepage: https://standards-oui.ieee.org/
-    description: "Official EtherType registry (layer-2 protocols: IPv4, ARP, VLAN 802.1Q, PROFINET, GOOSE...)."
-    url: https://standards-oui.ieee.org/ethertype/eth.csv
-    output: registries/ieee_ethertypes.csv
-
-  ieee_mam_oui28:
-    name: IEEE MA-M (MAC Medium Block)
-    group: weekly
-    homepage: https://standards-oui.ieee.org/
-    description: "IEEE MA-M: 28-bit MAC address blocks (complements ieee_oui and ieee_oui36)."
-    url: https://standards-oui.ieee.org/oui28/mam.csv
-    output: registries/ieee_mam_oui28.csv
+    homepage: https://github.com/wireshark/wireshark
+    description: "Official EtherType registry (layer-2 protocols: IPv4, ARP, VLAN 802.1Q, PROFINET, GOOSE...), from the Wireshark dissector source."
+    url: https://raw.githubusercontent.com/wireshark/wireshark/master/epan/dissectors/packet-ethertype.c
+    output: registries/ieee_ethertypes.txt
 
   iso_3166_countries:
     name: ISO 3166 Country Codes & Regions

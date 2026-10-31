@@ -39,7 +39,13 @@ def validate(
 ) -> None:
     size = path.stat().st_size
     if size > MAX_FILE_BYTES:
-        raise ValidationError(f"{path.name}: {size >> 20} MB exceeds the GitHub limit, set `compress: true`")
+        # Already compressed means compressing harder will not help: the output must be split.
+        remedy = (
+            "split the output across several files"
+            if path.name.endswith(".gz")
+            else "set `compress: true`"
+        )
+        raise ValidationError(f"{path.name}: {size >> 20} MB exceeds the GitHub limit, {remedy}")
     if size < min_bytes:
         raise ValidationError(f"{path.name}: only {size} bytes (min {min_bytes})")
     if previous_size and shrink_guard and size < previous_size * shrink_guard:

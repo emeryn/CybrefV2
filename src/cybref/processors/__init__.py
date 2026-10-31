@@ -9,7 +9,7 @@ import asyncio
 
 from ..engine import Context, gunzip_file, gzip_file, unzip_member
 from ..http import NotModified
-from . import apis, github, mobile, nvd, osv, registries, scrape
+from . import afnic, apis, github, mobile, nvd, osv, registries
 
 
 async def plain_download(ctx: Context) -> None:
@@ -57,9 +57,8 @@ def _transform(ctx: Context, raw) -> None:
 
 
 PROCESSORS = {
-    "html_table": scrape.html_table,
-    "malapi": scrape.malapi,
     "usb_ids": registries.usb_ids,
+    "afnic_domains": afnic.domains,
     "github_advisories": github.github_advisories,
     "lottunnels": github.lottunnels,
     "misp_warninglists": github.misp_warninglists,

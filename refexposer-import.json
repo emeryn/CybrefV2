@@ -2,10 +2,10 @@
   "refexposer_export": {
     "format": "refexposer-config",
     "version": 1,
-    "exported_at": "2026-10-31T11:45:37+01:00",
+    "exported_at": "2026-10-31T13:03:54+01:00",
     "exported_by": "cybref",
     "mirror": "https://raw.githubusercontent.com/emeryn/CybrefV2/main/",
-    "referentials": 394
+    "referentials": 384
   },
   "referentials": [
     {
@@ -4301,7 +4301,34 @@
       "source": {
         "type": "http",
         "urls": [
-          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/domains/afnic_opendata_domains.csv.gz"
+          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/domains/afnic/a.csv.gz",
+          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/domains/afnic/b.csv.gz",
+          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/domains/afnic/c.csv.gz",
+          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/domains/afnic/d.csv.gz",
+          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/domains/afnic/e.csv.gz",
+          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/domains/afnic/f.csv.gz",
+          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/domains/afnic/g.csv.gz",
+          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/domains/afnic/h.csv.gz",
+          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/domains/afnic/i.csv.gz",
+          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/domains/afnic/j.csv.gz",
+          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/domains/afnic/k.csv.gz",
+          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/domains/afnic/l.csv.gz",
+          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/domains/afnic/m.csv.gz",
+          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/domains/afnic/n.csv.gz",
+          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/domains/afnic/o.csv.gz",
+          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/domains/afnic/p.csv.gz",
+          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/domains/afnic/q.csv.gz",
+          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/domains/afnic/r.csv.gz",
+          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/domains/afnic/s.csv.gz",
+          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/domains/afnic/t.csv.gz",
+          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/domains/afnic/u.csv.gz",
+          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/domains/afnic/v.csv.gz",
+          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/domains/afnic/w.csv.gz",
+          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/domains/afnic/x.csv.gz",
+          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/domains/afnic/y.csv.gz",
+          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/domains/afnic/z.csv.gz",
+          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/domains/afnic/0-9.csv.gz",
+          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/domains/afnic/other.csv.gz"
         ]
       },
       "format": "csv",
@@ -4349,10 +4376,9 @@
       },
       "owner": "Cybref mirror (upstream: www.afnic.fr)",
       "homepage": "https://www.afnic.fr/",
-      "description": "Every registered .fr domain with its registrar, holder country and creation date (monthly archive).",
+      "description": "Every registered .fr domain with its registrar, holder country and creation date, split by initial (a.csv.gz ... z, 0-9, other) - the monthly archive is 713 MB raw.",
       "tags": [
         "cybref",
-        "general",
         "weekly",
         "domains"
       ]
@@ -4391,7 +4417,6 @@
       "description": "AFNIC-accredited .fr registrars (monthly archive).",
       "tags": [
         "cybref",
-        "general",
         "weekly",
         "domains"
       ]
@@ -6205,7 +6230,6 @@
       "description": "Malpedia malware families with aliases, references and attribution.",
       "tags": [
         "cybref",
-        "general",
         "daily",
         "frameworks"
       ]
@@ -7311,7 +7335,6 @@
       "description": "Threat actors with aliases, suspected origin, motivation and references.",
       "tags": [
         "cybref",
-        "general",
         "daily",
         "frameworks"
       ]
@@ -9244,79 +9267,6 @@
       }
     },
     {
-      "id": "filesec_extensions",
-      "name": "FileSec",
-      "description": "File extensions abused by attackers.",
-      "category": "Living Off The Land",
-      "tags": [
-        "cybref",
-        "lol",
-        "weekly"
-      ],
-      "homepage": "https://filesec.io/",
-      "owner": "CybrefV2 (from filesec.io)",
-      "visibility": "public",
-      "source": {
-        "type": "http",
-        "urls": [
-          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/lol/filesec_extensions.csv"
-        ]
-      },
-      "format": "csv",
-      "key": "Extension",
-      "schedule": "33 7 * * *",
-      "validation": {
-        "min_rows": 1,
-        "unique_key": false
-      },
-      "quality": {
-        "rules": [
-          {
-            "name": null,
-            "column": "Extension",
-            "check": "not_null",
-            "format": null,
-            "pattern": null,
-            "values": [],
-            "min": null,
-            "max": null,
-            "min_length": null,
-            "max_length": null,
-            "expression": null,
-            "threshold": 100.0,
-            "severity": "error"
-          },
-          {
-            "name": null,
-            "column": "Extension",
-            "check": "unique",
-            "format": null,
-            "pattern": null,
-            "values": [],
-            "min": null,
-            "max": null,
-            "min_length": null,
-            "max_length": null,
-            "expression": null,
-            "threshold": 100.0,
-            "severity": "warning"
-          }
-        ]
-      },
-      "enabled": true,
-      "confidential": false,
-      "storage": {
-        "row_group_size": 122880,
-        "keep_raw": true,
-        "keep_previous": true,
-        "profile": "full",
-        "track_changes": true,
-        "check_key": true,
-        "time_travel": false,
-        "max_snapshots": 10
-      }
-    },
-    {
       "id": "gtfobins",
       "name": "GTFOBins",
       "description": "Unix binaries usable to bypass local security restrictions.",
@@ -10132,79 +10082,6 @@
       }
     },
     {
-      "id": "lots",
-      "name": "LOTS Project",
-      "description": "Legitimate trusted sites abused for C2, phishing or exfiltration.",
-      "category": "Living Off The Land",
-      "tags": [
-        "cybref",
-        "lol",
-        "weekly"
-      ],
-      "homepage": "https://lots-project.com/",
-      "owner": "CybrefV2 (from lots-project.com)",
-      "visibility": "public",
-      "source": {
-        "type": "http",
-        "urls": [
-          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/lol/lots.csv"
-        ]
-      },
-      "format": "csv",
-      "key": "Website",
-      "schedule": "16 7 * * *",
-      "validation": {
-        "min_rows": 1,
-        "unique_key": false
-      },
-      "quality": {
-        "rules": [
-          {
-            "name": null,
-            "column": "Website",
-            "check": "not_null",
-            "format": null,
-            "pattern": null,
-            "values": [],
-            "min": null,
-            "max": null,
-            "min_length": null,
-            "max_length": null,
-            "expression": null,
-            "threshold": 100.0,
-            "severity": "error"
-          },
-          {
-            "name": null,
-            "column": "Website",
-            "check": "unique",
-            "format": null,
-            "pattern": null,
-            "values": [],
-            "min": null,
-            "max": null,
-            "min_length": null,
-            "max_length": null,
-            "expression": null,
-            "threshold": 100.0,
-            "severity": "warning"
-          }
-        ]
-      },
-      "enabled": true,
-      "confidential": false,
-      "storage": {
-        "row_group_size": 122880,
-        "keep_raw": true,
-        "keep_previous": true,
-        "profile": "full",
-        "track_changes": true,
-        "check_key": true,
-        "time_travel": false,
-        "max_snapshots": 10
-      }
-    },
-    {
       "id": "lottunnels_binaries",
       "name": "LoTtunnels",
       "description": "Tunneling binaries usable for proxying or exfiltration.",
@@ -10323,79 +10200,6 @@
           {
             "name": null,
             "column": "domain",
-            "check": "unique",
-            "format": null,
-            "pattern": null,
-            "values": [],
-            "min": null,
-            "max": null,
-            "min_length": null,
-            "max_length": null,
-            "expression": null,
-            "threshold": 100.0,
-            "severity": "warning"
-          }
-        ]
-      },
-      "enabled": true,
-      "confidential": false,
-      "storage": {
-        "row_group_size": 122880,
-        "keep_raw": true,
-        "keep_previous": true,
-        "profile": "full",
-        "track_changes": true,
-        "check_key": true,
-        "time_travel": false,
-        "max_snapshots": 10
-      }
-    },
-    {
-      "id": "malapi_winapi",
-      "name": "MalAPI.io",
-      "description": "Windows APIs abused by malware, by technique.",
-      "category": "Living Off The Land",
-      "tags": [
-        "cybref",
-        "lol",
-        "weekly"
-      ],
-      "homepage": "https://malapi.io/",
-      "owner": "CybrefV2 (from malapi.io)",
-      "visibility": "public",
-      "source": {
-        "type": "http",
-        "urls": [
-          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/lol/malapi_winapi.csv"
-        ]
-      },
-      "format": "csv",
-      "key": "API",
-      "schedule": "45 7 * * *",
-      "validation": {
-        "min_rows": 1,
-        "unique_key": false
-      },
-      "quality": {
-        "rules": [
-          {
-            "name": null,
-            "column": "API",
-            "check": "not_null",
-            "format": null,
-            "pattern": null,
-            "values": [],
-            "min": null,
-            "max": null,
-            "min_length": null,
-            "max_length": null,
-            "expression": null,
-            "threshold": 100.0,
-            "severity": "warning"
-          },
-          {
-            "name": null,
-            "column": "API",
             "check": "unique",
             "format": null,
             "pattern": null,
@@ -11608,80 +11412,6 @@
       "validation": {
         "min_rows": 1,
         "unique_key": false
-      },
-      "enabled": true,
-      "confidential": false,
-      "storage": {
-        "row_group_size": 122880,
-        "keep_raw": true,
-        "keep_previous": true,
-        "profile": "full",
-        "track_changes": true,
-        "check_key": true,
-        "time_travel": false,
-        "max_snapshots": 10
-      }
-    },
-    {
-      "id": "fastly_ip_ranges",
-      "name": "Fastly IP ranges",
-      "description": "Fastly CDN public IP ranges.",
-      "category": "Network: Cloud, ASN, Geo, Anonymizers, Crawlers",
-      "tags": [
-        "cybref",
-        "network",
-        "weekly"
-      ],
-      "homepage": "https://www.fastly.com/documentation/reference/api/utils/public-ip-list/",
-      "owner": "CybrefV2 (from api.fastly.com)",
-      "visibility": "public",
-      "source": {
-        "type": "http",
-        "urls": [
-          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/network/fastly_ip_ranges.json"
-        ]
-      },
-      "format": "json",
-      "transform": "SELECT unnest(addresses || ipv6_addresses) AS cidr FROM {source}",
-      "key": "cidr",
-      "schedule": "5 7 * * *",
-      "validation": {
-        "min_rows": 1,
-        "unique_key": false
-      },
-      "quality": {
-        "rules": [
-          {
-            "name": null,
-            "column": "cidr",
-            "check": "not_null",
-            "format": null,
-            "pattern": null,
-            "values": [],
-            "min": null,
-            "max": null,
-            "min_length": null,
-            "max_length": null,
-            "expression": null,
-            "threshold": 100.0,
-            "severity": "error"
-          },
-          {
-            "name": null,
-            "column": "cidr",
-            "check": "unique",
-            "format": null,
-            "pattern": null,
-            "values": [],
-            "min": null,
-            "max": null,
-            "min_length": null,
-            "max_length": null,
-            "expression": null,
-            "threshold": 100.0,
-            "severity": "warning"
-          }
-        ]
       },
       "enabled": true,
       "confidential": false,
@@ -14042,7 +13772,7 @@
       "source": {
         "type": "http",
         "urls": [
-          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/network/tor_relays.json"
+          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/network/tor_relays.json.gz"
         ]
       },
       "format": "json",
@@ -16742,95 +16472,22 @@
       }
     },
     {
-      "id": "ieee_cid",
-      "name": "IEEE CID",
-      "description": "Company IDs.",
-      "category": "Standards & Hardware Registries",
-      "tags": [
-        "cybref",
-        "registries",
-        "weekly"
-      ],
-      "homepage": "https://standards.ieee.org/products-programs/regauth/",
-      "owner": "CybrefV2 (from standards-oui.ieee.org)",
-      "visibility": "public",
-      "source": {
-        "type": "http",
-        "urls": [
-          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/registries/ieee_cid.csv"
-        ]
-      },
-      "format": "csv",
-      "key": "Assignment",
-      "schedule": "5 7 * * *",
-      "validation": {
-        "min_rows": 1,
-        "unique_key": false
-      },
-      "quality": {
-        "rules": [
-          {
-            "name": null,
-            "column": "Assignment",
-            "check": "not_null",
-            "format": null,
-            "pattern": null,
-            "values": [],
-            "min": null,
-            "max": null,
-            "min_length": null,
-            "max_length": null,
-            "expression": null,
-            "threshold": 100.0,
-            "severity": "error"
-          },
-          {
-            "name": null,
-            "column": "Assignment",
-            "check": "unique",
-            "format": null,
-            "pattern": null,
-            "values": [],
-            "min": null,
-            "max": null,
-            "min_length": null,
-            "max_length": null,
-            "expression": null,
-            "threshold": 100.0,
-            "severity": "warning"
-          }
-        ]
-      },
-      "enabled": true,
-      "confidential": false,
-      "storage": {
-        "row_group_size": 122880,
-        "keep_raw": true,
-        "keep_previous": true,
-        "profile": "full",
-        "track_changes": true,
-        "check_key": true,
-        "time_travel": false,
-        "max_snapshots": 10
-      }
-    },
-    {
       "id": "ieee_ethertypes",
       "name": "IEEE EtherTypes Registry",
-      "description": "Official EtherType registry (layer-2 protocols: IPv4, ARP, VLAN 802.1Q, PROFINET, GOOSE...).",
+      "description": "Official EtherType registry (layer-2 protocols: IPv4, ARP, VLAN 802.1Q, PROFINET, GOOSE...), from the Wireshark dissector source.",
       "category": "Standards & Hardware Registries",
       "tags": [
         "cybref",
         "registries",
         "weekly"
       ],
-      "homepage": "https://standards-oui.ieee.org/",
-      "owner": "Cybref mirror (upstream: standards-oui.ieee.org)",
+      "homepage": "https://github.com/wireshark/wireshark",
+      "owner": "Cybref mirror (upstream: raw.githubusercontent.com)",
       "visibility": "public",
       "source": {
         "type": "http",
         "urls": [
-          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/registries/ieee_ethertypes.csv"
+          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/registries/ieee_ethertypes.txt"
         ]
       },
       "format": "csv",
@@ -16850,371 +16507,10 @@
         "check_key": true,
         "time_travel": false,
         "max_snapshots": 10
-      }
-    },
-    {
-      "id": "ieee_iab",
-      "name": "IEEE IAB",
-      "description": "Individual Address Blocks (legacy).",
-      "category": "Standards & Hardware Registries",
-      "tags": [
-        "cybref",
-        "registries",
-        "weekly"
-      ],
-      "homepage": "https://standards.ieee.org/products-programs/regauth/",
-      "owner": "CybrefV2 (from standards-oui.ieee.org)",
-      "visibility": "public",
-      "source": {
-        "type": "http",
-        "urls": [
-          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/registries/ieee_iab.csv"
-        ]
       },
-      "format": "csv",
-      "key": "Assignment",
-      "schedule": "39 7 * * *",
-      "validation": {
-        "min_rows": 1,
-        "unique_key": false
-      },
-      "quality": {
-        "rules": [
-          {
-            "name": null,
-            "column": "Assignment",
-            "check": "not_null",
-            "format": null,
-            "pattern": null,
-            "values": [],
-            "min": null,
-            "max": null,
-            "min_length": null,
-            "max_length": null,
-            "expression": null,
-            "threshold": 100.0,
-            "severity": "error"
-          },
-          {
-            "name": null,
-            "column": "Assignment",
-            "check": "unique",
-            "format": null,
-            "pattern": null,
-            "values": [],
-            "min": null,
-            "max": null,
-            "min_length": null,
-            "max_length": null,
-            "expression": null,
-            "threshold": 100.0,
-            "severity": "warning"
-          }
-        ]
-      },
-      "enabled": true,
-      "confidential": false,
-      "storage": {
-        "row_group_size": 122880,
-        "keep_raw": true,
-        "keep_previous": true,
-        "profile": "full",
-        "track_changes": true,
-        "check_key": true,
-        "time_travel": false,
-        "max_snapshots": 10
-      }
-    },
-    {
-      "id": "ieee_mam_oui28",
-      "name": "IEEE MA-M (MAC Medium Block)",
-      "description": "IEEE MA-M: 28-bit MAC address blocks (complements ieee_oui and ieee_oui36).",
-      "category": "Standards & Hardware Registries",
-      "tags": [
-        "cybref",
-        "registries",
-        "weekly"
-      ],
-      "homepage": "https://standards-oui.ieee.org/",
-      "owner": "Cybref mirror (upstream: standards-oui.ieee.org)",
-      "visibility": "public",
-      "source": {
-        "type": "http",
-        "urls": [
-          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/registries/ieee_mam_oui28.csv"
-        ]
-      },
-      "format": "csv",
-      "key": "Assignment",
-      "schedule": "21 6 * * 4",
-      "validation": {
-        "min_rows": 1,
-        "unique_key": false
-      },
-      "quality": {
-        "rules": [
-          {
-            "name": null,
-            "column": "Assignment",
-            "check": "not_null",
-            "format": null,
-            "pattern": null,
-            "values": [],
-            "min": null,
-            "max": null,
-            "min_length": null,
-            "max_length": null,
-            "expression": null,
-            "threshold": 100.0,
-            "severity": "warning"
-          },
-          {
-            "name": null,
-            "column": "Assignment",
-            "check": "unique",
-            "format": null,
-            "pattern": null,
-            "values": [],
-            "min": null,
-            "max": null,
-            "min_length": null,
-            "max_length": null,
-            "expression": null,
-            "threshold": 100.0,
-            "severity": "warning"
-          }
-        ]
-      },
-      "enabled": true,
-      "confidential": false,
-      "storage": {
-        "row_group_size": 122880,
-        "keep_raw": true,
-        "keep_previous": true,
-        "profile": "full",
-        "track_changes": true,
-        "check_key": true,
-        "time_travel": false,
-        "max_snapshots": 10
-      }
-    },
-    {
-      "id": "ieee_manid",
-      "name": "IEEE MANID",
-      "description": "Manufacturer IDs.",
-      "category": "Standards & Hardware Registries",
-      "tags": [
-        "cybref",
-        "registries",
-        "weekly"
-      ],
-      "homepage": "https://standards.ieee.org/products-programs/regauth/",
-      "owner": "CybrefV2 (from standards-oui.ieee.org)",
-      "visibility": "public",
-      "source": {
-        "type": "http",
-        "urls": [
-          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/registries/ieee_manid.csv"
-        ]
-      },
-      "format": "csv",
-      "key": "Assignment",
-      "schedule": "50 7 * * *",
-      "validation": {
-        "min_rows": 1,
-        "unique_key": false
-      },
-      "quality": {
-        "rules": [
-          {
-            "name": null,
-            "column": "Assignment",
-            "check": "not_null",
-            "format": null,
-            "pattern": null,
-            "values": [],
-            "min": null,
-            "max": null,
-            "min_length": null,
-            "max_length": null,
-            "expression": null,
-            "threshold": 100.0,
-            "severity": "error"
-          },
-          {
-            "name": null,
-            "column": "Assignment",
-            "check": "unique",
-            "format": null,
-            "pattern": null,
-            "values": [],
-            "min": null,
-            "max": null,
-            "min_length": null,
-            "max_length": null,
-            "expression": null,
-            "threshold": 100.0,
-            "severity": "warning"
-          }
-        ]
-      },
-      "enabled": true,
-      "confidential": false,
-      "storage": {
-        "row_group_size": 122880,
-        "keep_raw": true,
-        "keep_previous": true,
-        "profile": "full",
-        "track_changes": true,
-        "check_key": true,
-        "time_travel": false,
-        "max_snapshots": 10
-      }
-    },
-    {
-      "id": "ieee_oui",
-      "name": "IEEE MA-L (OUI)",
-      "description": "MAC address large-block assignments.",
-      "category": "Standards & Hardware Registries",
-      "tags": [
-        "cybref",
-        "registries",
-        "weekly"
-      ],
-      "homepage": "https://standards.ieee.org/products-programs/regauth/",
-      "owner": "CybrefV2 (from standards-oui.ieee.org)",
-      "visibility": "public",
-      "source": {
-        "type": "http",
-        "urls": [
-          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/registries/ieee_oui.csv"
-        ]
-      },
-      "format": "csv",
-      "key": "Assignment",
-      "schedule": "41 7 * * *",
-      "validation": {
-        "min_rows": 1,
-        "unique_key": false
-      },
-      "quality": {
-        "rules": [
-          {
-            "name": null,
-            "column": "Assignment",
-            "check": "not_null",
-            "format": null,
-            "pattern": null,
-            "values": [],
-            "min": null,
-            "max": null,
-            "min_length": null,
-            "max_length": null,
-            "expression": null,
-            "threshold": 100.0,
-            "severity": "warning"
-          },
-          {
-            "name": null,
-            "column": "Assignment",
-            "check": "unique",
-            "format": null,
-            "pattern": null,
-            "values": [],
-            "min": null,
-            "max": null,
-            "min_length": null,
-            "max_length": null,
-            "expression": null,
-            "threshold": 100.0,
-            "severity": "warning"
-          }
-        ]
-      },
-      "enabled": true,
-      "confidential": false,
-      "storage": {
-        "row_group_size": 122880,
-        "keep_raw": true,
-        "keep_previous": true,
-        "profile": "full",
-        "track_changes": true,
-        "check_key": true,
-        "time_travel": false,
-        "max_snapshots": 10
-      }
-    },
-    {
-      "id": "ieee_oui36",
-      "name": "IEEE MA-S (OUI-36)",
-      "description": "MAC address small-block assignments.",
-      "category": "Standards & Hardware Registries",
-      "tags": [
-        "cybref",
-        "registries",
-        "weekly"
-      ],
-      "homepage": "https://standards.ieee.org/products-programs/regauth/",
-      "owner": "CybrefV2 (from standards-oui.ieee.org)",
-      "visibility": "public",
-      "source": {
-        "type": "http",
-        "urls": [
-          "https://raw.githubusercontent.com/emeryn/CybrefV2/main/registries/ieee_oui36.csv"
-        ]
-      },
-      "format": "csv",
-      "key": "Assignment",
-      "schedule": "26 7 * * *",
-      "validation": {
-        "min_rows": 1,
-        "unique_key": false
-      },
-      "quality": {
-        "rules": [
-          {
-            "name": null,
-            "column": "Assignment",
-            "check": "not_null",
-            "format": null,
-            "pattern": null,
-            "values": [],
-            "min": null,
-            "max": null,
-            "min_length": null,
-            "max_length": null,
-            "expression": null,
-            "threshold": 100.0,
-            "severity": "error"
-          },
-          {
-            "name": null,
-            "column": "Assignment",
-            "check": "unique",
-            "format": null,
-            "pattern": null,
-            "values": [],
-            "min": null,
-            "max": null,
-            "min_length": null,
-            "max_length": null,
-            "expression": null,
-            "threshold": 100.0,
-            "severity": "warning"
-          }
-        ]
-      },
-      "enabled": true,
-      "confidential": false,
-      "storage": {
-        "row_group_size": 122880,
-        "keep_raw": true,
-        "keep_previous": true,
-        "profile": "full",
-        "track_changes": true,
-        "check_key": true,
-        "time_travel": false,
-        "max_snapshots": 10
+      "options": {
+        "ignore_errors": true,
+        "all_varchar": true
       }
     },
     {
@@ -20240,7 +19536,6 @@
       "category": "Threat Intelligence & IOCs",
       "tags": [
         "cybref",
-        "general",
         "weekly",
         "threat_intel"
       ],
@@ -23169,7 +22464,6 @@
       "description": "endoflife.date: every tracked product with all of its release cycles and support dates.",
       "tags": [
         "cybref",
-        "general",
         "daily",
         "vulnerabilities"
       ]
@@ -24567,7 +23861,6 @@
       "description": "Every OSV advisory affecting PyPI packages, merged into one JSON array.",
       "tags": [
         "cybref",
-        "general",
         "daily",
         "vulnerabilities"
       ]
